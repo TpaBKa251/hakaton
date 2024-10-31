@@ -1,0 +1,52 @@
+.history-section {
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+    background-image: url('../assets/images/history.jpg'); /* Путь к фоновому изображению */
+    background-size: cover;
+    background-position: center;
+}
+
+.history-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Использует фоновое изображение секции */
+    filter: blur(10px);
+    z-index: 1;
+}
+
+.history-content {
+    position: relative;
+    z-index: 2;
+}
+
+.history-section h2 {
+    font-size: 8rem;
+    margin-bottom: 8rem;
+}
+
+.history-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.history-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,37 @@
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Скрывает лишние части размытого фона */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Использует фоновое изображение секции */
+    filter: blur(10px); /* Настройте уровень размытия */
+    z-index: 1; /* Помещает наложение под текст */
+}
+
+.hero-content {
+    position: relative; /* Для правильного наложения текста */
+    z-index: 2; /* Помещает текст выше размытого фона */
+}
+
+.hero-content h1 {
+    font-size: 8rem;
+}
+
+.hero-content p {
+    font-size: 3rem;
+}

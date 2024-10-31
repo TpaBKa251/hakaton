@@ -1,0 +1,59 @@
+.news-section {
+    position: relative; /* Для правильного наложения текста */
+    padding: 2rem;
+    color: #333;
+    text-align: center;
+    overflow: hidden; /* Скрывает лишние части размытого фона */
+    display: flex; /* Включаем Flexbox */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    min-height: 100vh; /* Минимальная высота секции */
+}
+
+.news-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Использует фоновое изображение секции */
+    filter: blur(10px); /* Настройте уровень размытия */
+    z-index: 1; /* Помещает наложение под текст */
+}
+
+.news-content {
+    position: relative; /* Для правильного наложения текста */
+    z-index: 2; /* Помещает текст выше размытого фона */
+}
+
+.news-section h2 {
+    font-size: 8rem;
+    margin-bottom: 8rem;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%; /* Чтобы элементы занимали полную ширину */
+}
+
+.news-item {
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.news-item h3 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.news-item p {
+    font-size: 2rem;
+    color: #666;
+    margin: 0.5rem 0 0;
+}

@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Высота каждого блока равна высоте экрана */
+  opacity: 0; /* Начальное состояние прозрачности */
+  transform: translateY(20px); /* Сдвиг вниз */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Плавный переход */
+}
+
+.section.visible {
+  opacity: 1; /* Прозрачность при видимости */
+  transform: translateY(0); /* Восстановление первоначального положения */
+}
+
