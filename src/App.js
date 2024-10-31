@@ -31,11 +31,13 @@ function App() {
 
     const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
     const [isScrolling, setIsScrolling] = useState(false);
+    const [fadeOutSectionIndex, setFadeOutSectionIndex] = useState(null);
 
     useEffect(() => {
         const handleScroll = (e) => {
             e.preventDefault();
-            if (isScrolling) return; // Если происходит переключение, игнорируем прокрутку
+            if (isScrolling) return;
+
             const { deltaY } = e;
             let newIndex = currentSectionIndex;
 
@@ -46,7 +48,8 @@ function App() {
             }
 
             if (newIndex !== currentSectionIndex) {
-                setIsScrolling(true); // Устанавливаем флаг, чтобы игнорировать дальнейшую прокрутку
+                setIsScrolling(true);
+                setFadeOutSectionIndex(currentSectionIndex); // Устанавливаем текущий индекс как "скрывающийся"
                 setCurrentSectionIndex(newIndex);
             }
         };
@@ -61,41 +64,74 @@ function App() {
     useEffect(() => {
         const currentSectionRef = sectionsRefs[sections[currentSectionIndex]].current;
         if (currentSectionRef) {
-            currentSectionRef.scrollIntoView({
+            const topPosition = currentSectionRef.offsetTop;
+            window.scrollTo({
+                top: topPosition,
                 behavior: 'smooth',
                 block: 'start',
             });
 
-            // После завершения прокрутки, снимаем флаг через 1 секунду
             const timer = setTimeout(() => {
                 setIsScrolling(false);
-            }, 1000); // Время ожидания (1 секунда) должно совпадать с временем анимации
+                setFadeOutSectionIndex(null); // Сбрасываем "скрывающийся" индекс
+            }, 1000);
 
             return () => clearTimeout(timer);
         }
     }, [currentSectionIndex]);
 
+    useEffect(() => {
+        if (fadeOutSectionIndex !== null) {
+            const restoreTimer = setTimeout(() => {
+                setFadeOutSectionIndex(null); // Снимаем эффект полного исчезновения
+            }, 500);
+
+            return () => clearTimeout(restoreTimer);
+        }
+    }, [fadeOutSectionIndex]);
+
     return (
         <div className="App">
-            <div ref={sectionsRefs.hero} className={`section ${currentSectionIndex === 0 ? 'visible' : ''}`}>
+            <div
+                ref={sectionsRefs.hero}
+                className={`section ${currentSectionIndex === 0 ? 'visible' : ''} ${fadeOutSectionIndex === 0 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 0 ? 'restore' : ''}`}
+            >
                 <HeroSection />
             </div>
-            <div ref={sectionsRefs.schedule} className={`section ${currentSectionIndex === 1 ? 'visible' : ''}`}>
+            <div
+                ref={sectionsRefs.schedule}
+                className={`section ${currentSectionIndex === 1 ? 'visible' : ''} ${fadeOutSectionIndex === 1 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 1 ? 'restore' : ''}`}
+            >
                 <ScheduleSection />
             </div>
-            <div ref={sectionsRefs.news} className={`section ${currentSectionIndex === 2 ? 'visible' : ''}`}>
+            <div
+                ref={sectionsRefs.news}
+                className={`section ${currentSectionIndex === 2 ? 'visible' : ''} ${fadeOutSectionIndex === 2 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 2 ? 'restore' : ''}`}
+            >
                 <NewsSection />
             </div>
-            <div ref={sectionsRefs.history} className={`section ${currentSectionIndex === 3 ? 'visible' : ''}`}>
+            <div
+                ref={sectionsRefs.history}
+                className={`section ${currentSectionIndex === 3 ? 'visible' : ''} ${fadeOutSectionIndex === 3 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 3 ? 'restore' : ''}`}
+            >
                 <HistorySection />
             </div>
-            <div ref={sectionsRefs.partners} className={`section ${currentSectionIndex === 4 ? 'visible' : ''}`}>
+            <div
+                ref={sectionsRefs.partners}
+                className={`section ${currentSectionIndex === 4 ? 'visible' : ''} ${fadeOutSectionIndex === 4 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 4 ? 'restore' : ''}`}
+            >
                 <PartnersSection />
             </div>
-            <div ref={sectionsRefs.contact} className={`section ${currentSectionIndex === 5 ? 'visible' : ''}`}>
+            <div
+                ref={sectionsRefs.contact}
+                className={`section ${currentSectionIndex === 5 ? 'visible' : ''} ${fadeOutSectionIndex === 5 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 5 ? 'restore' : ''}`}
+            >
                 <ContactSection />
             </div>
-            <div ref={sectionsRefs.map} className={`section ${currentSectionIndex === 6 ? 'visible' : ''}`}>
+            <div
+                ref={sectionsRefs.map}
+                className={`section ${currentSectionIndex === 6 ? 'visible' : ''} ${fadeOutSectionIndex === 6 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 6 ? 'restore' : ''}`}
+            >
                 <MapSection />
             </div>
         </div>
