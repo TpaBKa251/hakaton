@@ -4,6 +4,9 @@ import './SideNavigation.css';
 function SideNavigation({ sections, currentSectionIndex, onSectionClick }) {
     const [hovered, setHovered] = useState(false);
 
+    // Функция для проверки, является ли устройство мобильным
+    const isMobile = window.innerWidth <= 768;
+
     return (
         <div
             className="side-navigation"
@@ -16,7 +19,7 @@ function SideNavigation({ sections, currentSectionIndex, onSectionClick }) {
                     className={`nav-dot ${currentSectionIndex === index ? 'active' : ''} ${hovered ? 'hover' : ''}`}
                     onClick={() => onSectionClick(index)}
                 >
-                    {hovered ? section.label : ''}
+                    {isMobile ? '111' : (hovered ? section.label : '')}
                 </div>
             ))}
         </div>

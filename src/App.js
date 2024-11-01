@@ -115,26 +115,47 @@ function MainPage() {
                 currentSectionIndex={currentSectionIndex}
                 onSectionClick={handleSectionClick}
             />
-            <div ref={sectionsRefs.hero} className={`section ${currentSectionIndex === 0 ? 'visible' : ''}`}>
-                <HeroSection />
+            <div
+                ref={sectionsRefs.hero}
+                className={`section ${currentSectionIndex === 0 ? 'visible' : ''} ${fadeOutSectionIndex === 0 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 0 ? 'restore' : ''}`}
+            >
+                <HeroSection/>
             </div>
-            <div ref={sectionsRefs.schedule} className={`section ${currentSectionIndex === 1 ? 'visible' : ''}`}>
-                <ScheduleSection />
+            <div
+                ref={sectionsRefs.schedule}
+                className={`section ${currentSectionIndex === 1 ? 'visible' : ''} ${fadeOutSectionIndex === 1 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 1 ? 'restore' : ''}`}
+            >
+                <ScheduleSection/>
             </div>
-            <div ref={sectionsRefs.news} className={`section ${currentSectionIndex === 2 ? 'visible' : ''}`}>
-                <NewsSection />
+            <div
+                ref={sectionsRefs.news}
+                className={`section ${currentSectionIndex === 2 ? 'visible' : ''} ${fadeOutSectionIndex === 2 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 2 ? 'restore' : ''}`}
+            >
+                <NewsSection/>
             </div>
-            <div ref={sectionsRefs.history} className={`section ${currentSectionIndex === 3 ? 'visible' : ''}`}>
-                <HistorySection />
+            <div
+                ref={sectionsRefs.history}
+                className={`section ${currentSectionIndex === 3 ? 'visible' : ''} ${fadeOutSectionIndex === 3 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 3 ? 'restore' : ''}`}
+            >
+                <HistorySection/>
             </div>
-            <div ref={sectionsRefs.partners} className={`section ${currentSectionIndex === 4 ? 'visible' : ''}`}>
-                <PartnersSection />
+            <div
+                ref={sectionsRefs.partners}
+                className={`section ${currentSectionIndex === 4 ? 'visible' : ''} ${fadeOutSectionIndex === 4 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 4 ? 'restore' : ''}`}
+            >
+                <PartnersSection/>
             </div>
-            <div ref={sectionsRefs.contact} className={`section ${currentSectionIndex === 5 ? 'visible' : ''}`}>
-                <ContactSection />
+            <div
+                ref={sectionsRefs.contact}
+                className={`section ${currentSectionIndex === 5 ? 'visible' : ''} ${fadeOutSectionIndex === 5 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 5 ? 'restore' : ''}`}
+            >
+                <ContactSection/>
             </div>
-            <div ref={sectionsRefs.map} className={`section ${currentSectionIndex === 6 ? 'visible' : ''}`}>
-                <MapSection />
+            <div
+                ref={sectionsRefs.map}
+                className={`section ${currentSectionIndex === 6 ? 'visible' : ''} ${fadeOutSectionIndex === 6 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 6 ? 'restore' : ''}`}
+            >
+                <MapSection/>
             </div>
         </div>
     );

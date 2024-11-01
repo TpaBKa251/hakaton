@@ -89,4 +89,8 @@
     .social-media a {
         margin: 0 0.5rem;
     }
+
+    .contact-content {
+        width: 98%;
+    }
 }

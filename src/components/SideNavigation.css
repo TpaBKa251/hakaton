@@ -20,26 +20,25 @@
     border-radius: 50%;
     background-color: #888888;
     cursor: pointer;
-    transition: background-color 0.5s, transform 0.5s, width 0.5s, border-radius 1s; /*Здесь нужно добавить задержку начала анимации смены цвета на 0.5s*/
+    transition: background-color 0.5s 0.5s, transform 0.5s, width 0.5s, border-radius 1s;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Для использования абсолютного позиционирования */
+    position: relative;
     color: rgba(136, 136, 136, 0);
 }
 
 .nav-dot.active {
-    background-color: black; /* Цвет для активной точки */
-    transform: scale(1.25); /* Увеличение точки при активации без смещения */
+    background-color: black;
+    transform: scale(1.25);
     color: rgba(0, 0, 0, 0);
 }
 
-/*Это не тот ховер какой обычно, обычный ховер ниже*/
 .nav-dot.hover {
-    width: 120px; /* Ширина прямоугольника при наведении */
+    width: 120px;
     height: 24px;
-    border-radius: 12px; /* Закругленные углы */
-    color: white; /* Цвет текста */
+    border-radius: 12px;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +46,6 @@
     transition: background-color 0.5s, transform 0.5s, width 0.5s, color 0.5s 0.5s, border-radius 1s;
 }
 
-/*Вот этообычный ховер*/
 .nav-dot:hover {
     transform: scale(1.5) translateX(-25px);
 }
@@ -55,4 +53,36 @@
 .section-label {
     color: white;
     font-size: 0.8em;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .side-navigation {
+        color: transparent;
+        right: 10px; /* Слегка смещаем ближе к краю */
+        gap: 8px;
+    }
+
+    .nav-dot {
+        width: 18px; /* Уменьшение размера точек */
+        height: 18px;
+        transition: none; /* Отключаем анимацию на мобильных */
+    }
+
+    .nav-dot:hover {
+        transform: scale(1.25) translateX(0); /* Лёгкое увеличение при наведении без смещения */
+    }
+
+    .nav-dot.hover,
+    .nav-dot:hover {
+        font-size: 0.8em;
+        color: transparent;
+        width: 18px; /* Без увеличения ширины на мобильных */
+        height: 18px;
+        border-radius: 50%;
+    }
+
+    .section-label {
+        display: none; /* Скрываем подписи к точкам для экономии пространства */
+    }
 }
