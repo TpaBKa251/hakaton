@@ -1,0 +1,58 @@
+.side-navigation {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+    transition: gap 0.5s;
+}
+
+.side-navigation:hover {
+    gap: 15px;
+}
+
+.nav-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #888888;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.5s, width 0.5s, border-radius 1s; /*Здесь нужно добавить задержку начала анимации смены цвета на 0.5s*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Для использования абсолютного позиционирования */
+    color: rgba(136, 136, 136, 0);
+}
+
+.nav-dot.active {
+    background-color: black; /* Цвет для активной точки */
+    transform: scale(1.25); /* Увеличение точки при активации без смещения */
+    color: rgba(0, 0, 0, 0);
+}
+
+/*Это не тот ховер какой обычно, обычный ховер ниже*/
+.nav-dot.hover {
+    width: 120px; /* Ширина прямоугольника при наведении */
+    height: 24px;
+    border-radius: 12px; /* Закругленные углы */
+    color: white; /* Цвет текста */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    transition: background-color 0.5s, transform 0.5s, width 0.5s, color 0.5s 0.5s, border-radius 1s;
+}
+
+/*Вот этообычный ховер*/
+.nav-dot:hover {
+    transform: scale(1.5) translateX(-25px);
+}
+
+.section-label {
+    color: white;
+    font-size: 0.8em;
+}
