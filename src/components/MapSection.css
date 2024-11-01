@@ -56,3 +56,16 @@
     height: 100%; /* Высота 100% для iframe */
     border: none; /* Убираем рамку */
 }
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .map-header {
+        font-size: 2.5rem; /* Уменьшаем размер шрифта заголовка */
+        padding: 0.5rem 0;
+    }
+
+    .map-container {
+        height: 50vh; /* Снижаем высоту карты для удобства просмотра */
+        border-radius: 6px;
+    }
+}

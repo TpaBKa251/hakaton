@@ -1,13 +1,13 @@
 .news-section {
-    position: relative; /* Для правильного наложения текста */
+    position: relative;
     padding: 2rem;
     color: #333;
     text-align: center;
-    overflow: hidden; /* Скрывает лишние части размытого фона */
-    display: flex; /* Включаем Flexbox */
-    align-items: center; /* Вертикальное выравнивание по центру */
-    justify-content: center; /* Горизонтальное выравнивание по центру */
-    min-height: 100vh; /* Минимальная высота секции */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .news-section::before {
@@ -17,43 +17,70 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: inherit; /* Использует фоновое изображение секции */
-    filter: blur(10px); /* Настройте уровень размытия */
-    z-index: 1; /* Помещает наложение под текст */
+    background: inherit;
+    filter: blur(10px);
+    z-index: 1;
 }
 
 .news-content {
-    position: relative; /* Для правильного наложения текста */
-    z-index: 2; /* Помещает текст выше размытого фона */
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px; /* Ограничиваем ширину контента */
+    padding: 1rem;
 }
 
 .news-section h2 {
-    font-size: 8rem;
-    margin-bottom: 8rem;
+    font-size: 5rem;
+    margin-bottom: 3rem;
 }
 
 .news-list {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    width: 100%; /* Чтобы элементы занимали полную ширину */
+    gap: 2rem;
+    width: 100%;
+    max-height: 71vh; /* Ограничиваем максимальную высоту списка новостей */
+    overflow-y: auto; /* Включаем прокрутку, если новости не умещаются */
+    padding-right: 0.5rem; /* Оставляем место для полосы прокрутки */
 }
 
 .news-item {
     background: #ffffff;
-    padding: 3rem;
-    border-radius: 50px;
+    padding: 2rem;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
+    font-size: 1.8rem;
 }
 
 .news-item h3 {
-    font-size: 3rem;
-    margin: 0;
+    font-size: 2.4rem;
+    margin: 0 0 1rem;
 }
 
 .news-item p {
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #666;
-    margin: 0.5rem 0 0;
+    margin: 0;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .news-section h2 {
+        font-size: 3.5rem; /* Уменьшаем размер заголовка */
+        margin-bottom: 2rem;
+    }
+
+    .news-item {
+        padding: 1.5rem; /* Уменьшаем внутренние отступы */
+    }
+
+    .news-item h3 {
+        font-size: 2rem;
+    }
+
+    .news-item p {
+        font-size: 1.4rem;
+    }
 }

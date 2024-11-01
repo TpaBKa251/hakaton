@@ -56,3 +56,19 @@
     height: auto;
     margin-bottom: 0.5rem;
 }
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .partners-section h2 {
+        font-size: 3.5rem; /* Уменьшаем размер заголовка для мобильных */
+        margin-bottom: 2rem; /* Уменьшаем отступ */
+    }
+
+    .partner-item {
+        width: 120px; /* Уменьшаем ширину логотипов на мобильных */
+    }
+
+    .partner-logo {
+        width: 80px; /* Уменьшаем размер логотипов на мобильных */
+    }
+}

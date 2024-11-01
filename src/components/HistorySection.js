@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './HistorySection.css';
-import historyImage from '../assets/images/history.jpg'; // Путь к изображению
+import historyImage from '../assets/images/history.jpg';
 
 const historyImages = [
     'https://avatars.mds.yandex.net/i?id=679720f2a94327342bb6a0e160ce7bb8_l-8497208-images-thumbs&n=13',
@@ -10,14 +10,36 @@ const historyImages = [
 ];
 
 const HistorySection = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % historyImages.length);
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + historyImages.length) % historyImages.length);
+    };
+
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % historyImages.length);
+    };
+
     return (
         <section className="history-section" style={{ backgroundImage: `url(${historyImage})` }}>
             <div className="history-content">
                 <h2>История хакатона</h2>
-                <div className="history-gallery">
-                    {historyImages.map((image, index) => (
-                        <img key={index} src={image} alt={`Момент ${index + 1}`} className="history-image" />
-                    ))}
+                <div className="carousel">
+                    <button className="carousel-control prev" onClick={handlePrev}>
+                        ‹
+                    </button>
+                    <img src={historyImages[currentIndex]} alt={`Момент ${currentIndex + 1}`} className="carousel-image" />
+                    <button className="carousel-control next" onClick={handleNext}>
+                        ›
+                    </button>
                 </div>
             </div>
         </section>

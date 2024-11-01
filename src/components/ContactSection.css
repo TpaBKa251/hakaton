@@ -66,3 +66,27 @@
 .social-media a:hover {
     text-decoration: underline;
 }
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 1rem;
+    }
+
+    .contact-section h2 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-info {
+        font-size: 1.5rem;
+    }
+
+    .contact-info p {
+        margin: 0.25rem 0;
+    }
+
+    .social-media a {
+        margin: 0 0.5rem;
+    }
+}
