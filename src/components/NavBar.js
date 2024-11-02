@@ -21,7 +21,7 @@ function NavBar({ className }) {
                 <Link to="/history" onClick={toggleMenu}>История</Link>
                 <Link to="/partners" onClick={toggleMenu}>Партнеры</Link>
                 <a
-                    href="https://forms.gle/Zbbd6PLALrGmcF4k9"
+                    href="https://forms.gle/fE2cNBDmo8Yty8pJ9"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="register-button"
