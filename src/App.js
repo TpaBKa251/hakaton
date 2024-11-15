@@ -44,6 +44,13 @@ function MainPage() {
         setCurrentSectionIndex(index);
     };
 
+    const [backgroundOffset, setBackgroundOffset] = useState(0);
+
+    useEffect(() => {
+        const offset = currentSectionIndex * 16.666; // Настройте значение смещения
+        setBackgroundOffset(offset);
+    }, [currentSectionIndex]);
+
     useEffect(() => {
         if (currentSectionIndex >= 1) {
             setTimeout(() => setShowNavbar(true), 10);
@@ -108,7 +115,9 @@ function MainPage() {
     }, [fadeOutSectionIndex]);
 
     return (
-        <div>
+        <div className="App" style={{
+            backgroundPosition: `center calc(${backgroundOffset}%)`,
+        }}>
             {<Navbar className={`navbar ${showNavbar ? "visible" : ""}`} />}
             <SideNavigation
                 sections={sections}

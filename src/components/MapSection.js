@@ -4,7 +4,7 @@ import mapBackground from '../assets/images/map.jpg';
 
 const MapSection = () => {
     return (
-        <section className="map-section" style={{ backgroundImage: `url(${mapBackground})` }}>
+        <section className="map-section">
             <div className="map-header">
                 <h2>Место проведения</h2>
             </div>

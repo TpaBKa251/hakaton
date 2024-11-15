@@ -19,7 +19,7 @@ const newsData = [
 
 const NewsSection = () => {
     return (
-        <section className="news-section" style={{ backgroundImage: `url(${newsImage})` }}>
+        <section className="news-section">
             <div className="news-content">
                 <h2>Последние новости</h2>
                 <div className="news-list">

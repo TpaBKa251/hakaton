@@ -23,6 +23,10 @@
     z-index: 1;
 }
 
+.map-section h2 {
+    font-size: 5rem;
+}
+
 .map-header {
     position: relative;
     z-index: 2;
@@ -67,5 +71,9 @@
     .map-container {
         height: 50vh; /* Снижаем высоту карты для удобства просмотра */
         border-radius: 6px;
+    }
+
+    .map-section h2 {
+        font-size: 3.5rem;
     }
 }

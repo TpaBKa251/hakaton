@@ -1,31 +1,35 @@
 .hero {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    height: 100vh; /* Высота секции 100% экрана */
     display: flex;
+    flex-direction: column; /* Элементы располагаются в колонку */
     align-items: center;
     justify-content: center;
-    color: #000000;
     text-align: center;
-    position: relative;
-    overflow: hidden; /* Скрывает лишние части размытого фона */
+    overflow: hidden; /* Скрывает лишние части изображения */
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit; /* Использует фоновое изображение секции */
-    filter: blur(10px); /* Настройте уровень размытия */
-    z-index: 1; /* Помещает наложение под текст */
+.hero-images {
+    display: flex; /* Выравниваем изображения в линию */
+    justify-content: center;
+    align-items: center;
+     /* Отступ от изображений до текста */
+}
+
+.hero-image {
+    width: 20%; /* Примерная ширина каждого изображения */
+    height: auto; /* Сохраняет пропорции */
+    margin-bottom: calc(2 / 3 * 20%);
+}
+
+.hero-image:not(:first-child) {
+    margin-left: calc(2 / 3 * 20%); /* Отступ между изображениями (2/3 от ширины изображения) */
 }
 
 .hero-content {
-    position: relative; /* Для правильного наложения текста */
-    z-index: 2; /* Помещает текст выше размытого фона */
+    position: relative;
+    z-index: 2; /* Текст размещается поверх фона */
+    color: #000; /* Цвет текста */
 }
 
 .hero-content h1 {
@@ -36,18 +40,33 @@
     font-size: 3rem;
 }
 
+.hero-content h2 {
+    font-size: 5rem;
+}
+
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
-    .hero {
-        height: 100vh;
-        padding: 20px;
-    }
-
     .hero-content h1 {
         font-size: 4rem;
     }
 
     .hero-content p {
         font-size: 1.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-images {
+        flex-wrap: wrap; /* Если места недостаточно, изображения будут переноситься на следующую строку */
+    }
+
+    .hero-image {
+        width: 15%; /* Уменьшаем размер изображений на мобильных */
+    }
+
+    .hero-image:not(:first-child) {
+        margin-left: calc(2 / 3 * 15%);
     }
 }

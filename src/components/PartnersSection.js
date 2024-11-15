@@ -5,21 +5,21 @@ import partnersBackground from '../assets/images/partners.jpg'; // Путь к �
 const partnersData = [
     {
         name: 'Компания А',
-        logo: 'https://sun1-13.userapi.com/s/v1/if1/KOV7FBj6tkFkMkFiuEAJuNrQSK2HzWxKPDxkIQsE38vMXekp9IfzF_8kz2LlCfZwRpiXJMve.jpg?size=842x842&quality=96&crop=0,0,842,842&ava=1'
+        logo: 'https://cache3.youla.io/files/images/780_780/5b/29/5b29166df2b23360a605dbac.jpg'
     },
     {
         name: 'Компания Б',
-        logo: 'https://avatars.mds.yandex.net/i?id=10e2fbc7e6cc94a788f5e8579f8a812880add050-5656190-images-thumbs&n=13'
+        logo: 'https://avatars.mds.yandex.net/i?id=4464c552332e75bf4b667aa3b417d9c6_l-5232852-images-thumbs&n=13'
     },
     {
         name: 'Компания В',
-        logo: 'https://i.ytimg.com/vi/pZFZItMj3AY/maxresdefault.jpg'
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_the_Group_of_77.svg/2560px-Flag_of_the_Group_of_77.svg.png'
     }
 ];
 
 const PartnersSection = () => {
     return (
-        <section className="partners-section" style={{ backgroundImage: `url(${partnersBackground})` }}>
+        <section className="partners-section">
             <div className="partners-content">
                 <h2>Наши партнёры</h2>
                 <div className="partners-list">

@@ -16,6 +16,16 @@
     z-index: 1000;
 }
 
+.navbar-logo {
+    max-width: 100%; /* Укажите нужный размер */
+    max-height: 50px; /* Укажите нужный размер */
+    margin-right: 10px; /* Расстояние между изображением и текстом */
+    border-radius: 50%; /* Если нужно сделать изображение круглым */
+    object-fit: cover; /* Для правильного масштабирования изображения */
+    /margin-bottom: 20px;
+}
+
+
 .navbar.visible {
     opacity: 1;
     transform: translateY(0);
@@ -24,6 +34,8 @@
 .navbar-left {
     font-weight: bold;
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-right {

@@ -9,7 +9,7 @@
     justify-content: center;
     min-height: 100vh;
     color: #333;
-    background-image: url('../assets/images/history.jpg');
+    /background-image: url('../assets/images/history.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -38,7 +38,7 @@
 }
 
 .history-section h2 {
-    font-size: 8rem;
+    font-size: 5rem;
     margin-bottom: 2rem;
     color: #000000;
 }

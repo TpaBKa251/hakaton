@@ -4,7 +4,7 @@ import scheduleImage from '../assets/images/schedule.jpg'; // Путь к ваш
 
 const ScheduleSection = () => {
     return (
-        <section className="schedule" style={{ backgroundImage: `url(${scheduleImage})` }}>
+        <section className="schedule">
             <div className="schedule-content">
                 <h2>Программа</h2>
                 <ul>

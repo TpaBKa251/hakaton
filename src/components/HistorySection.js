@@ -29,7 +29,7 @@ const HistorySection = () => {
     };
 
     return (
-        <section className="history-section" style={{ backgroundImage: `url(${historyImage})` }}>
+        <section className="history-section">
             <div className="history-content">
                 <h2>История хакатона</h2>
                 <div className="carousel">

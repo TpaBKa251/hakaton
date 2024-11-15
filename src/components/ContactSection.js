@@ -5,7 +5,7 @@ import contactBackground from '../assets/images/contacts.jpg'; // Путь к и
 
 const ContactSection = () => {
     return (
-        <section className="contact-section" style={{ backgroundImage: `url(${contactBackground})` }}>
+        <section className="contact-section">
             <div className="contact-content">
                 <h2>Контакты</h2>
                 <div className="contact-info">

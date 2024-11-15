@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
+import kot from '../assets/images/kot (1) (1).png'; // Путь к вашему изображению
 
 function NavBar({ className }) {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +13,10 @@ function NavBar({ className }) {
 
     return (
         <nav className={`navbar ${className} ${menuOpen ? 'menu-open' : ''}`}>
-            <div className="navbar-left">Предпринимательский хакатон</div>
+            <div className="navbar-left">
+                <img src={kot} alt="кот" className="navbar-logo" />
+                Бизнес-кот
+            </div>
             <button className="menu-toggle" onClick={toggleMenu}>
                 ☰ {/* Иконка меню */}
             </button>
