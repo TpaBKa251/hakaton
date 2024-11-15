@@ -4,7 +4,7 @@
   padding: 0;
   /height: 100%;
   overflow: hidden; /* Это предотвратит прокрутку, если контент превышает высоту экрана */
-  background-image: url("assets/images/main_back-final.webp");
+  background-image: url("assets/images/main-final-tochno.svg");
   background-size: cover; /* Масштабируем для заполнения */
   background-attachment: fixed; /* Фиксируем фон */
   background-position: center;
