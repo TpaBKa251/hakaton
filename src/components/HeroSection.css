@@ -85,4 +85,41 @@
     .hero-image:not(:first-child) {
         margin-left: calc(2 / 3 * 15%);
     }
+
+
+    /* Адаптация для мобильных устройств (425px и меньше) */
+    @media (max-width: 425px) {
+        .hero-content h1 {
+            font-size: 3rem; /* Еще меньше размер текста */
+            padding: 0 15px; /* Уменьшенные отступы для узких экранов */
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem; /* Еще меньше размер текста */
+            padding: 0 15px; /* Уменьшенные отступы для узких экранов */
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-content h2 {
+            font-size: 1.8rem; /* Еще меньше размер текста */
+            padding: 0 15px; /* Уменьшенные отступы для узких экранов */
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-images {
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            width: 20%; /* Делаем изображения немного крупнее для более комфортного просмотра */
+        }
+
+        .hero-image:not(:first-child) {
+            margin-left: 5%; /* Регулируем отступы между изображениями */
+        }
+    }
 }
