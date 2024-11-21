@@ -42,20 +42,36 @@
 
 .hero-content h2 {
     font-size: 5rem;
+    /*max-width: 800px; !* Ограничение на ширину текста *!*/
+    margin: 0 auto; /* Центрирование с отступами */
+    padding: 0 20px; /* Отступы по краям */
+    text-align: center; /* Дополнительно выравнивание по центру текста */
 }
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 4rem;
+        padding: 0 20px; /* Отступы для мобильных устройств */
+        margin: 0 auto; /* Центрирование с отступами */
+        text-align: center; /* Дополнительно выравнивание по центру текста */
+
     }
 
     .hero-content p {
         font-size: 1.5rem;
+        padding: 0 20px; /* Отступы для мобильных устройств */
+        margin: 0 auto; /* Центрирование с отступами */
+        text-align: center; /* Дополнительно выравнивание по центру текста */
+
     }
 
     .hero-content h2 {
         font-size: 2rem;
+        padding: 0 20px; /* Отступы для мобильных устройств */
+        margin: 0 auto; /* Центрирование с отступами */
+        text-align: center; /* Дополнительно выравнивание по центру текста */
+
     }
 
     .hero-images {
