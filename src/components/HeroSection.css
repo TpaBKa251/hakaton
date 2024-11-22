@@ -17,9 +17,9 @@
 }
 
 .hero-image {
-    width: 20%; /* Примерная ширина каждого изображения */
+    width: 80%; /* Примерная ширина каждого изображения */
     height: auto; /* Сохраняет пропорции */
-    margin-bottom: calc(2 / 3 * 20%);
+    margin-bottom: calc(2 / 3 * 5%);
 }
 
 .hero-image:not(:first-child) {
@@ -33,15 +33,15 @@
 }
 
 .hero-content h1 {
-    font-size: 8rem;
+    font-size: 6rem;
 }
 
 .hero-content p {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .hero-content h2 {
-    font-size: 5rem;
+    font-size: 3rem;
     /*max-width: 800px; !* Ограничение на ширину текста *!*/
     margin: 0 auto; /* Центрирование с отступами */
     padding: 0 20px; /* Отступы по краям */
@@ -79,7 +79,7 @@
     }
 
     .hero-image {
-        width: 15%; /* Уменьшаем размер изображений на мобильных */
+        width: 70%; /* Уменьшаем размер изображений на мобильных */
     }
 
     .hero-image:not(:first-child) {
@@ -116,7 +116,7 @@
         }
 
         .hero-image {
-            width: 20%; /* Делаем изображения немного крупнее для более комфортного просмотра */
+            width: 70%; /* Делаем изображения немного крупнее для более комфортного просмотра */
         }
 
         .hero-image:not(:first-child) {
@@ -152,7 +152,7 @@
     }
 
     .hero-image {
-        width: 20%; /* Увеличиваем изображения на самых маленьких экранах */
+        width: 70%; /* Увеличиваем изображения на самых маленьких экранах */
     }
 
     .hero-image:not(:first-child) {
