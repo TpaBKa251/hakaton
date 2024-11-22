@@ -58,7 +58,31 @@ function MainPage() {
     }, [currentSectionIndex]);
 
     useEffect(() => {
-        const handleScroll = (e) => {
+        const handleScroll = () => {
+            if (isScrolling) return;
+
+            // Определяем текущую секцию по вертикальной прокрутке
+            const sectionHeights = sections.map(
+                (section, index) => index * window.innerHeight
+            );
+            const scrollPosition = window.scrollY;
+
+            // Выбираем ближайшую секцию
+            const closestIndex = sectionHeights.reduce((closest, height, index) => {
+                return Math.abs(scrollPosition - height) <
+                Math.abs(scrollPosition - sectionHeights[closest])
+                    ? index
+                    : closest;
+            }, currentSectionIndex);
+
+            if (closestIndex !== currentSectionIndex) {
+                setIsScrolling(true);
+                setFadeOutSectionIndex(currentSectionIndex);
+                setCurrentSectionIndex(closestIndex);
+            }
+        };
+
+        const handleWheel = (e) => {
             e.preventDefault();
             if (isScrolling) return;
 
@@ -66,9 +90,9 @@ function MainPage() {
             let newIndex = currentSectionIndex;
 
             if (deltaY > 0 && currentSectionIndex < sections.length - 1) {
-                newIndex = currentSectionIndex + 1;
+                newIndex = currentSectionIndex + 1; // Вниз
             } else if (deltaY < 0 && currentSectionIndex > 0) {
-                newIndex = currentSectionIndex - 1;
+                newIndex = currentSectionIndex - 1; // Вверх
             }
 
             if (newIndex !== currentSectionIndex) {
@@ -78,10 +102,12 @@ function MainPage() {
             }
         };
 
-        window.addEventListener('wheel', handleScroll, { passive: false });
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('wheel', handleWheel, { passive: false });
 
         return () => {
-            window.removeEventListener('wheel', handleScroll);
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('wheel', handleWheel);
         };
     }, [currentSectionIndex, isScrolling, sections.length]);
 
