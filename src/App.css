@@ -1,85 +1,81 @@
+/* Добавим плавный параллакс */
 .App {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  /height: 100%;
-  overflow: hidden; /* Это предотвратит прокрутку, если контент превышает высоту экрана */
-  background-image: url("assets/images/main-final-tochno.svg");
-  background-size: cover; /* Масштабируем для заполнения */
-  background-attachment: fixed; /* Фиксируем фон */
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: background-position 1s ease;
-/overflow-y: auto; /* Разрешает прокрутку колесиком внутри приложения */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url("assets/images/main-final-tochno.svg");
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background-position 1s ease; /* Сделаем смену параллакса более плавной */
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .section.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .section.fade-out {
-  opacity: 0;
-  transition: opacity 0.5s ease; /* Переход для исчезновения */
+    opacity: 0;
 }
 
 .section.restore {
-  opacity: 1;
-  transition: opacity 0.5s ease; /* Переход для восстановления */
+    opacity: 1;
 }
 
-/* Добавляем медиа-запрос для мобильных устройств */
+/* Медиа-запросы для мобильных устройств */
 @media (max-width: 768px) {
+    .App {
+        background-attachment: scroll; /* Отключим фиксированный фон на мобильных */
+    }
 
-  .section {
-    height: 100vh;
-    min-height: 100vh;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
+    .section {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
 }

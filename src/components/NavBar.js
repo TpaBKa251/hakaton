@@ -1,5 +1,4 @@
-// components/NavBar.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 import kot from '../assets/images/kot (1) (1).png'; // Путь к вашему изображению
@@ -11,16 +10,48 @@ function NavBar({ className }) {
         setMenuOpen(!menuOpen);
     };
 
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
+
+    useEffect(() => {
+        // Функция для закрытия меню при клике или касании вне navbar
+        const handleOutsideInteraction = (event) => {
+            const navbar = document.querySelector('.navbar');
+            if (navbar && !navbar.contains(event.target)) {
+                closeMenu(); // Закрываем меню
+            }
+        };
+
+        // Добавляем слушатели событий
+        document.addEventListener('click', handleOutsideInteraction);
+        document.addEventListener('touchstart', handleOutsideInteraction); // Для обработки касаний
+
+        // Убираем слушатели при размонтировании
+        return () => {
+            document.removeEventListener('click', handleOutsideInteraction);
+            document.removeEventListener('touchstart', handleOutsideInteraction);
+        };
+    }, []);
+
+    // useEffect(() => {
+    //     const navbar = document.querySelector('.navbar');
+    //     if (navbar) {
+    //         const navbarHeight = navbar.offsetHeight; // Получаем высоту
+    //         navbar.style.borderRadius = `${navbarHeight / 2}px`; // Устанавливаем радиус
+    //     }
+    // }, []);
+
     return (
         <nav className={`navbar ${className} ${menuOpen ? 'menu-open' : ''}`}>
             <div className="navbar-left">
-                <img src={kot} alt="кот" className="navbar-logo" />
-                Бизнес-кот
+                <img src={kot} alt="кот" className="navbar-logo"/>
+                <div className="navbar-center">Бизнес-кот</div>
+                <button className="menu-toggle" onClick={toggleMenu}>
+                    ☰ {/* Иконка меню */}
+                </button>
             </div>
-            <button className="menu-toggle" onClick={toggleMenu}>
-                ☰ {/* Иконка меню */}
-            </button>
-            <div className="navbar-right">
+            <div className={`navbar-right ${!menuOpen ? 'inactive' : ''}`}>
                 <Link to="/news" onClick={toggleMenu}>Новости</Link>
                 <Link to="/history" onClick={toggleMenu}>История</Link>
                 <Link to="/partners" onClick={toggleMenu}>Партнеры</Link>
