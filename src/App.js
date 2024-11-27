@@ -42,7 +42,7 @@ function MainPage() {
         const handleScroll = () => {
             const viewportHeight = window.innerHeight;
 
-            // Вычисляем, какая секция наиболее заметна
+            // Определяем текущую видимую секцию
             let mostVisibleIndex = currentSectionIndex;
 
             if (window.scrollY > 0 && !navbarVisible) {
@@ -55,7 +55,6 @@ function MainPage() {
                     const visibleHeight =
                         Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
 
-                    // Считаем секцию текущей, если она больше всего видна
                     if (visibleHeight > viewportHeight * 0.5) {
                         mostVisibleIndex = index;
                     }
@@ -63,6 +62,22 @@ function MainPage() {
             });
 
             if (mostVisibleIndex !== currentSectionIndex) {
+                const isScrollingDown = mostVisibleIndex > currentSectionIndex;
+
+                // Убираем старые классы у текущей секции
+                const currentRef = sectionRefs.current[currentSectionIndex]?.current;
+                if (currentRef) {
+                    currentRef.classList.remove('visible');
+                    currentRef.classList.add(isScrollingDown ? 'hidden-up' : 'hidden-down'); // Сначала удаляем "visible"
+                }
+
+                const nextRef = sectionRefs.current[mostVisibleIndex]?.current;
+                if (nextRef) {
+                    nextRef.classList.remove('hidden-up', 'hidden-down'); // Убираем "скрытые" классы
+                    nextRef.classList.add('visible'); // Добавляем "visible" последним
+                }
+
+
                 setCurrentSectionIndex(mostVisibleIndex);
             }
         };
@@ -84,12 +99,17 @@ function MainPage() {
                     key={section.name}
                     ref={sectionRefs.current[index]}
                     className={`section ${
-                        currentSectionIndex === index ? 'visible' : 'hidden'
+                        currentSectionIndex === index
+                            ? 'visible'
+                            : index > currentSectionIndex
+                                ? 'hidden-down'
+                                : 'hidden-up'
                     }`}
                 >
                     {React.createElement(section.component)}
                 </div>
             ))}
+
         </div>
     );
 }
