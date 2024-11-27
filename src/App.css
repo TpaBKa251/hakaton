@@ -52,6 +52,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
+    margin-top: 70px;
     transition: opacity 0.5s ease, transform 1s ease;
     opacity: 0; /* Скрыта по умолчанию */
     z-index: 1;
