@@ -16,118 +16,78 @@ import History from './components/History';
 
 function MainPage() {
     const sections = [
-        { name: 'hero', label: 'Главная' },
-        // { name: 'schedule', label: 'Расписание' },
-        { name: 'news', label: 'Новости' },
-        { name: 'history', label: 'История' },
-        { name: 'partners', label: 'Партнеры' },
-        { name: 'contact', label: 'Контакты' },
-        { name: 'map', label: 'Карта' },
+        { name: 'hero', label: 'Главная', component: HeroSection },
+        { name: 'news', label: 'Новости', component: NewsSection },
+        { name: 'history', label: 'История', component: HistorySection },
+        { name: 'partners', label: 'Партнеры', component: PartnersSection },
+        { name: 'contact', label: 'Контакты', component: ContactSection },
+        { name: 'map', label: 'Карта', component: MapSection },
     ];
 
-    const sectionsRefs = {
-        hero: useRef(null),
-        // schedule: useRef(null),
-        news: useRef(null),
-        history: useRef(null),
-        partners: useRef(null),
-        contact: useRef(null),
-        map: useRef(null),
-    };
-
+    const sectionRefs = useRef(sections.map(() => React.createRef())); // Массив рефов для каждой секции
     const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
-    const [scrollTimeout, setScrollTimeout] = useState(null);
-    const [navbarVisible, setNavbarVisible] = useState(false); // состояние для видимости Navbar
+    const [navbarVisible, setNavbarVisible] = useState(false);
 
     const scrollToSection = (index) => {
-        const targetSection = sectionsRefs[sections[index].name].current;
+        const targetSection = sectionRefs.current[index]?.current;
         if (targetSection) {
             window.scrollTo({
                 top: targetSection.offsetTop,
                 behavior: 'smooth',
             });
-            setCurrentSectionIndex(index); // Обновляем состояние
         }
     };
 
     useEffect(() => {
         const handleScroll = () => {
-            if (scrollTimeout) {
-                clearTimeout(scrollTimeout);
-            }
+            const viewportHeight = window.innerHeight;
 
-            // Проверяем начало прокрутки
+            // Вычисляем, какая секция наиболее заметна
+            let mostVisibleIndex = currentSectionIndex;
+
             if (window.scrollY > 0 && !navbarVisible) {
                 setNavbarVisible(true); // Показываем Navbar, когда начинается прокрутка
             }
 
-            const scrollPosition = window.scrollY;
-            const sectionOffsets = sections.map((section) => {
-                const ref = sectionsRefs[section.name].current;
-                return {
-                    top: ref.offsetTop,
-                    bottom: ref.offsetTop + ref.offsetHeight,
-                };
+            sectionRefs.current.forEach((ref, index) => {
+                if (ref.current) {
+                    const rect = ref.current.getBoundingClientRect();
+                    const visibleHeight =
+                        Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
+
+                    // Считаем секцию текущей, если она больше всего видна
+                    if (visibleHeight > viewportHeight * 0.5) {
+                        mostVisibleIndex = index;
+                    }
+                }
             });
 
-            // Определяем текущую ближайшую секцию
-            const closestIndex = sectionOffsets.reduce(
-                (closest, { top }, index) => {
-                    const distance = Math.abs(top - scrollPosition);
-                    return distance < closest.distance
-                        ? { index, distance }
-                        : closest;
-                },
-                { index: 0, distance: Infinity }
-            ).index;
-
-            // Обновляем состояние на ближайшую секцию
-            if (closestIndex !== currentSectionIndex) {
-                setCurrentSectionIndex(closestIndex);
+            if (mostVisibleIndex !== currentSectionIndex) {
+                setCurrentSectionIndex(mostVisibleIndex);
             }
-
-            // Притягивание после остановки
-            const timeout = setTimeout(() => {
-                scrollToSection(closestIndex);
-            }, 300); // Таймаут для притягивания
-
-            setScrollTimeout(timeout);
         };
 
         window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-            if (scrollTimeout) clearTimeout(scrollTimeout);
-        };
-    }, [scrollTimeout, currentSectionIndex, navbarVisible]);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [currentSectionIndex]);
 
     return (
         <div className="App">
-            {/* Navbar будет всегда отображаться после начала прокрутки */}
             <Navbar className={`navbar ${navbarVisible ? 'visible' : ''}`} />
             <SideNavigation
                 sections={sections}
                 currentSectionIndex={currentSectionIndex}
                 onSectionClick={scrollToSection}
             />
-            {sections.map((section) => (
+            {sections.map((section, index) => (
                 <div
                     key={section.name}
-                    ref={sectionsRefs[section.name]}
-                    className="section"
+                    ref={sectionRefs.current[index]}
+                    className={`section ${
+                        currentSectionIndex === index ? 'visible' : 'hidden'
+                    }`}
                 >
-                    {React.createElement(
-                        {
-                            hero: HeroSection,
-                            // schedule: ScheduleSection,
-                            news: NewsSection,
-                            history: HistorySection,
-                            partners: PartnersSection,
-                            contact: ContactSection,
-                            map: MapSection,
-                        }[section.name]
-                    )}
+                    {React.createElement(section.component)}
                 </div>
             ))}
         </div>
