@@ -101,11 +101,11 @@
     }
 
     .section.hidden-up {
-        transform: translateY(-20%) !important; /* Принудительно применяем стиль */
+        transform: translateY(-10%) !important; /* Принудительно применяем стиль */
         scroll-behavior: revert;
     }
 
     .section.hidden-down {
-        transform: translateY(20%) !important; /* Принудительно применяем стиль */
+        transform: translateY(10%) !important; /* Принудительно применяем стиль */
     }
 }
