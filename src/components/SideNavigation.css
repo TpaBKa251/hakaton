@@ -20,7 +20,7 @@
     border-radius: 50%;
     background-color: #888888;
     cursor: pointer;
-    transition: background-color 0.5s 0.5s, transform 0.5s, width 0.5s, border-radius 1s;
+    transition: background-color 0.5s, transform 0.5s, width 0.5s, border-radius 1s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +66,7 @@
     .nav-dot {
         width: 18px; /* Уменьшение размера точек */
         height: 18px;
-        transition: none; /* Отключаем анимацию на мобильных */
+        /transition: none; /* Отключаем анимацию на мобильных */
     }
 
     .nav-dot:hover {
@@ -77,9 +77,17 @@
     .nav-dot:hover {
         font-size: 0.8em;
         color: transparent;
-        width: 18px; /* Без увеличения ширины на мобильных */
+        width: 18px;
         height: 18px;
         border-radius: 50%;
+    }
+
+    .side-navigation:hover {
+        gap: 8px;
+    }
+
+    .nav-dot:active {
+        transform: scale(.7)
     }
 
     .section-label {

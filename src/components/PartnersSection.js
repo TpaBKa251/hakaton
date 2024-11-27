@@ -1,19 +1,60 @@
 import React from 'react';
 import './PartnersSection.css';
-import partnersBackground from '../assets/images/partners.jpg'; // Путь к изображению
+import partnersBackground1 from '../assets/images/Рисунок1.png';
+import partnersBackground2 from '../assets/images/Рисунок2.png';
+import partnersBackground3 from '../assets/images/Рисунок3.png';
+import partnersBackground4 from '../assets/images/Рисунок4.png';
+import partnersBackground5 from '../assets/images/Рисунок5.png';
+import partnersBackground6 from '../assets/images/Рисунок6.png';
+import partnersBackground7 from '../assets/images/Рисунок7.png';
+import partnersBackground8 from '../assets/images/Рисунок8.png';
+import partnersBackground9 from '../assets/images/Рисунок12.png';
 
 const partnersData = [
     {
-        name: 'Компания А',
-        logo: 'https://cache3.youla.io/files/images/780_780/5b/29/5b29166df2b23360a605dbac.jpg'
+        name: 'Росатом',
+        logo: partnersBackground1,
+        href: 'https://www.rosatom.ru/index.html'
     },
     {
-        name: 'Компания Б',
-        logo: 'https://avatars.mds.yandex.net/i?id=4464c552332e75bf4b667aa3b417d9c6_l-5232852-images-thumbs&n=13'
+        name: 'Сбер',
+        logo: partnersBackground2,
+        href: 'https://www.sberbank.ru'
     },
     {
-        name: 'Компания В',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_the_Group_of_77.svg/2560px-Flag_of_the_Group_of_77.svg.png'
+        name: 'Администрация Томской области',
+        logo: partnersBackground3,
+        href: 'https://tomsk.gov.ru/'
+    },
+    {
+        name: 'Ням-Ням',
+        logo: partnersBackground4,
+        href: 'https://nyam-nyam.me/'
+    },
+    {
+        name: 'Sava',
+        logo: partnersBackground5,
+        href: 'https://tpksava.ru/'
+    },
+    {
+        name: 'Роснефть',
+        logo: partnersBackground6,
+        href: 'https://www.rosneft.ru/'
+    },
+    {
+        name: 'Томское пиво',
+        logo: partnersBackground7,
+        href: 'https://tomskbeer.ru/'
+    },
+    {
+        name: 'Академия управления WINFbd',
+        logo: partnersBackground8,
+        href: 'https://winbd.ru/'
+    },
+    {
+        name: 'Level Up',
+        logo: partnersBackground9,
+        href: 'https://club-level-up.ru/'
     }
 ];
 
@@ -26,7 +67,7 @@ const PartnersSection = () => {
                     {partnersData.map((partner, index) => (
                         <div key={index} className="partner-item">
                             <img src={partner.logo} alt={`${partner.name} Логотип`} className="partner-logo" />
-                            <p>{partner.name}</p>
+                            <p><a href={partner.href} className='partner-a'>{partner.name}</a> </p>
                         </div>
                     ))}
                 </div>

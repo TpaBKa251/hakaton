@@ -15,8 +15,8 @@ const HeroSection = () => {
             <div className="hero-content">
                 <h2>Всероссийский предпринимательский хакатон</h2>
                 <h1>Бизнес-кот</h1>
-                <p>18 - 20 марта 2025</p>
-                <p>Прием заявок до 8 марта 2025</p>
+                <p className="data">18 - 20 марта 2025</p>
+                <p className="request">Прием заявок до 8 марта 2025</p>
             </div>
         </section>
 

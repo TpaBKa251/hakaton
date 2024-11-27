@@ -40,21 +40,36 @@
 }
 
 .partners-list {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .partner-item {
+    flex-direction: column;
     width: 150px;
     text-align: center;
+    /*justify-content: center;*/
+    justify-content: space-between;
+    align-items: center;
 }
 
 .partner-logo {
     width: 100px;
     height: auto;
     margin-bottom: 0.5rem;
+}
+
+.partner-a {
+    color: #2a5d9e;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.partner-a:hover {
+    color: #1d3f6e; /* Изменяем цвет ссылки при наведении */
+    text-decoration: underline; /* Добавляем подчеркивание */
 }
 
 /* Адаптация для мобильных устройств */

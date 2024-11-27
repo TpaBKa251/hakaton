@@ -9,13 +9,10 @@ const ContactSection = () => {
             <div className="contact-content">
                 <h2>Контакты</h2>
                 <div className="contact-info">
-                    <p><strong>Телефон:</strong> +7 (123) 456-78-90</p>
-                    <p><strong>Email:</strong> <a href="mailto:info@hackathon.ru">info@hackathon.ru</a></p>
-                    <p><strong>Адрес:</strong> Москва, ул. Примерная, 12</p>
+                    <p><strong>Телефон:</strong> +7 (903) 951-51-73</p>
+                    <p><strong>Email: </strong>tvkalash@tpu.ru</p>
                     <div className="social-media">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://vk.com/id303047664" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
                     </div>
                 </div>
             </div>

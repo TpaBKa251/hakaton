@@ -32,8 +32,8 @@
     z-index: 2;
     text-align: center;
     font-size: 4rem;
-    margin-bottom: 1rem;
-    padding: 1rem 0;
+    margin-bottom: 0rem;
+    padding: 1.8rem 0;
 }
 
 .map-container {
@@ -66,6 +66,8 @@
     .map-header {
         font-size: 2.5rem; /* Уменьшаем размер шрифта заголовка */
         padding: 0.5rem 0;
+        margin-bottom: 0;
+        margin-top: 1rem;
     }
 
     .map-container {
@@ -75,5 +77,23 @@
 
     .map-section h2 {
         font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .map-header {
+        font-size: 2.5rem; /* Уменьшаем размер шрифта заголовка */
+        padding: 0.5rem 0;
+        margin-bottom: 0;
+        margin-top: 1.5rem;
+    }
+
+    .map-container {
+        height: 50vh; /* Снижаем высоту карты для удобства просмотра */
+        border-radius: 6px;
+    }
+
+    .map-section h2 {
+        font-size: 3rem;
     }
 }

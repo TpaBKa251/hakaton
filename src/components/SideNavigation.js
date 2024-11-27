@@ -19,7 +19,7 @@ function SideNavigation({ sections, currentSectionIndex, onSectionClick }) {
                     className={`nav-dot ${currentSectionIndex === index ? 'active' : ''} ${hovered ? 'hover' : ''}`}
                     onClick={() => onSectionClick(index)}
                 >
-                    {isMobile ? '111' : (hovered ? section.label : '')}
+                    {isMobile ? '' : (hovered ? section.label : '')}
                 </div>
             ))}
         </div>

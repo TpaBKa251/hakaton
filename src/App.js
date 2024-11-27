@@ -11,13 +11,13 @@ import MapSection from './components/MapSection';
 import Navbar from './components/NavBar';
 import SideNavigation from './components/SideNavigation';
 import News from './components/News';
-import Partners from "./components/Partners";
-import History from "./components/History";
+import Partners from './components/Partners';
+import History from './components/History';
 
 function MainPage() {
     const sections = [
         { name: 'hero', label: 'Главная' },
-        { name: 'schedule', label: 'Расписание' },
+        // { name: 'schedule', label: 'Расписание' },
         { name: 'news', label: 'Новости' },
         { name: 'history', label: 'История' },
         { name: 'partners', label: 'Партнеры' },
@@ -27,7 +27,7 @@ function MainPage() {
 
     const sectionsRefs = {
         hero: useRef(null),
-        schedule: useRef(null),
+        // schedule: useRef(null),
         news: useRef(null),
         history: useRef(null),
         partners: useRef(null),
@@ -36,162 +36,100 @@ function MainPage() {
     };
 
     const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
-    const [isScrolling, setIsScrolling] = useState(false);
-    const [fadeOutSectionIndex, setFadeOutSectionIndex] = useState(null);
-    const [showNavbar, setShowNavbar] = useState(false);
+    const [scrollTimeout, setScrollTimeout] = useState(null);
+    const [navbarVisible, setNavbarVisible] = useState(false); // состояние для видимости Navbar
 
-    const handleSectionClick = (index) => {
-        setCurrentSectionIndex(index);
-    };
-
-    const [backgroundOffset, setBackgroundOffset] = useState(0);
-
-    useEffect(() => {
-        const offset = currentSectionIndex * 16.666; // Настройте значение смещения
-        setBackgroundOffset(offset);
-    }, [currentSectionIndex]);
-
-    useEffect(() => {
-        if (currentSectionIndex >= 1) {
-            setTimeout(() => setShowNavbar(true), 10);
+    const scrollToSection = (index) => {
+        const targetSection = sectionsRefs[sections[index].name].current;
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth',
+            });
+            setCurrentSectionIndex(index); // Обновляем состояние
         }
-    }, [currentSectionIndex]);
+    };
 
     useEffect(() => {
         const handleScroll = () => {
-            if (isScrolling) return;
+            if (scrollTimeout) {
+                clearTimeout(scrollTimeout);
+            }
 
-            // Определяем текущую секцию по вертикальной прокрутке
-            const sectionHeights = sections.map(
-                (section, index) => index * window.innerHeight
-            );
+            // Проверяем начало прокрутки
+            if (window.scrollY > 0 && !navbarVisible) {
+                setNavbarVisible(true); // Показываем Navbar, когда начинается прокрутка
+            }
+
             const scrollPosition = window.scrollY;
+            const sectionOffsets = sections.map((section) => {
+                const ref = sectionsRefs[section.name].current;
+                return {
+                    top: ref.offsetTop,
+                    bottom: ref.offsetTop + ref.offsetHeight,
+                };
+            });
 
-            // Выбираем ближайшую секцию
-            const closestIndex = sectionHeights.reduce((closest, height, index) => {
-                return Math.abs(scrollPosition - height) <
-                Math.abs(scrollPosition - sectionHeights[closest])
-                    ? index
-                    : closest;
-            }, currentSectionIndex);
+            // Определяем текущую ближайшую секцию
+            const closestIndex = sectionOffsets.reduce(
+                (closest, { top }, index) => {
+                    const distance = Math.abs(top - scrollPosition);
+                    return distance < closest.distance
+                        ? { index, distance }
+                        : closest;
+                },
+                { index: 0, distance: Infinity }
+            ).index;
 
+            // Обновляем состояние на ближайшую секцию
             if (closestIndex !== currentSectionIndex) {
-                setIsScrolling(true);
-                setFadeOutSectionIndex(currentSectionIndex);
                 setCurrentSectionIndex(closestIndex);
             }
-        };
 
-        const handleWheel = (e) => {
-            e.preventDefault();
-            if (isScrolling) return;
+            // Притягивание после остановки
+            const timeout = setTimeout(() => {
+                scrollToSection(closestIndex);
+            }, 300); // Таймаут для притягивания
 
-            const { deltaY } = e;
-            let newIndex = currentSectionIndex;
-
-            if (deltaY > 0 && currentSectionIndex < sections.length - 1) {
-                newIndex = currentSectionIndex + 1; // Вниз
-            } else if (deltaY < 0 && currentSectionIndex > 0) {
-                newIndex = currentSectionIndex - 1; // Вверх
-            }
-
-            if (newIndex !== currentSectionIndex) {
-                setIsScrolling(true);
-                setFadeOutSectionIndex(currentSectionIndex);
-                setCurrentSectionIndex(newIndex);
-            }
+            setScrollTimeout(timeout);
         };
 
         window.addEventListener('scroll', handleScroll);
-        window.addEventListener('wheel', handleWheel, { passive: false });
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('wheel', handleWheel);
+            if (scrollTimeout) clearTimeout(scrollTimeout);
         };
-    }, [currentSectionIndex, isScrolling, sections.length]);
-
-    useEffect(() => {
-        const currentSectionRef = sectionsRefs[sections[currentSectionIndex].name].current;
-        if (currentSectionRef) {
-            const topPosition = currentSectionRef.offsetTop;
-            window.scrollTo({
-                top: topPosition,
-                behavior: 'smooth',
-                block: 'start',
-            });
-
-            const timer = setTimeout(() => {
-                setIsScrolling(false);
-                setFadeOutSectionIndex(null);
-            }, 1000);
-
-            return () => clearTimeout(timer);
-        }
-    }, [currentSectionIndex]);
-
-    useEffect(() => {
-        if (fadeOutSectionIndex !== null) {
-            const restoreTimer = setTimeout(() => {
-                setFadeOutSectionIndex(null);
-            }, 500);
-
-            return () => clearTimeout(restoreTimer);
-        }
-    }, [fadeOutSectionIndex]);
+    }, [scrollTimeout, currentSectionIndex, navbarVisible]);
 
     return (
-        <div className="App" style={{
-            backgroundPosition: `center calc(${backgroundOffset}%)`,
-        }}>
-            {<Navbar className={`navbar ${showNavbar ? "visible" : ""}`} />}
+        <div className="App">
+            {/* Navbar будет всегда отображаться после начала прокрутки */}
+            <Navbar className={`navbar ${navbarVisible ? 'visible' : ''}`} />
             <SideNavigation
                 sections={sections}
                 currentSectionIndex={currentSectionIndex}
-                onSectionClick={handleSectionClick}
+                onSectionClick={scrollToSection}
             />
-            <div
-                ref={sectionsRefs.hero}
-                className={`section ${currentSectionIndex === 0 ? 'visible' : ''} ${fadeOutSectionIndex === 0 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 0 ? 'restore' : ''}`}
-            >
-                <HeroSection/>
-            </div>
-            <div
-                ref={sectionsRefs.schedule}
-                className={`section ${currentSectionIndex === 1 ? 'visible' : ''} ${fadeOutSectionIndex === 1 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 1 ? 'restore' : ''}`}
-            >
-                <ScheduleSection/>
-            </div>
-            <div
-                ref={sectionsRefs.news}
-                className={`section ${currentSectionIndex === 2 ? 'visible' : ''} ${fadeOutSectionIndex === 2 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 2 ? 'restore' : ''}`}
-            >
-                <NewsSection/>
-            </div>
-            <div
-                ref={sectionsRefs.history}
-                className={`section ${currentSectionIndex === 3 ? 'visible' : ''} ${fadeOutSectionIndex === 3 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 3 ? 'restore' : ''}`}
-            >
-                <HistorySection/>
-            </div>
-            <div
-                ref={sectionsRefs.partners}
-                className={`section ${currentSectionIndex === 4 ? 'visible' : ''} ${fadeOutSectionIndex === 4 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 4 ? 'restore' : ''}`}
-            >
-                <PartnersSection/>
-            </div>
-            <div
-                ref={sectionsRefs.contact}
-                className={`section ${currentSectionIndex === 5 ? 'visible' : ''} ${fadeOutSectionIndex === 5 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 5 ? 'restore' : ''}`}
-            >
-                <ContactSection/>
-            </div>
-            <div
-                ref={sectionsRefs.map}
-                className={`section ${currentSectionIndex === 6 ? 'visible' : ''} ${fadeOutSectionIndex === 6 ? 'fade-out' : ''} ${fadeOutSectionIndex === null && currentSectionIndex !== 6 ? 'restore' : ''}`}
-            >
-                <MapSection/>
-            </div>
+            {sections.map((section) => (
+                <div
+                    key={section.name}
+                    ref={sectionsRefs[section.name]}
+                    className="section"
+                >
+                    {React.createElement(
+                        {
+                            hero: HeroSection,
+                            // schedule: ScheduleSection,
+                            news: NewsSection,
+                            history: HistorySection,
+                            partners: PartnersSection,
+                            contact: ContactSection,
+                            map: MapSection,
+                        }[section.name]
+                    )}
+                </div>
+            ))}
         </div>
     );
 }
