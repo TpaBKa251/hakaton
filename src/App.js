@@ -17,7 +17,7 @@ import History from './components/History';
 function MainPage() {
     const sections = [
         { name: 'hero', label: 'Главная' },
-        { name: 'schedule', label: 'Расписание' },
+        // { name: 'schedule', label: 'Расписание' },
         { name: 'news', label: 'Новости' },
         { name: 'history', label: 'История' },
         { name: 'partners', label: 'Партнеры' },
@@ -27,7 +27,7 @@ function MainPage() {
 
     const sectionsRefs = {
         hero: useRef(null),
-        schedule: useRef(null),
+        // schedule: useRef(null),
         news: useRef(null),
         history: useRef(null),
         partners: useRef(null),
@@ -120,7 +120,7 @@ function MainPage() {
                     {React.createElement(
                         {
                             hero: HeroSection,
-                            schedule: ScheduleSection,
+                            // schedule: ScheduleSection,
                             news: NewsSection,
                             history: HistorySection,
                             partners: PartnersSection,

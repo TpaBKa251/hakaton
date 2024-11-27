@@ -1,12 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import './HistorySection.css';
-import historyImage from '../assets/images/history.jpg';
+import historyImage1 from '../assets/images/хакатон 1.jpg';
+import historyImage2 from '../assets/images/хакатон 2.jpg';
+import historyImage3 from '../assets/images/хакатон 3.jpg';
+import historyImage4 from '../assets/images/хакатон 4.jpg';
+import historyImage5 from '../assets/images/хакатон 5.jpg';
+import historyImage6 from '../assets/images/хакатон 6.jpg';
+import historyImage7 from '../assets/images/хакатон 7.jpg';
 
 const historyImages = [
-    'https://avatars.mds.yandex.net/i?id=679720f2a94327342bb6a0e160ce7bb8_l-8497208-images-thumbs&n=13',
-    'https://images.wallpaperscraft.com/image/single/cat_face_eyes_29447_1280x720.jpg',
-    'https://avatars.mds.yandex.net/i?id=250f93637cfca7e405ec166ccfd2c562843d2211-5887755-images-thumbs&n=13',
-    'https://cs.pikabu.ru/post_img/big/2013/08/22/5/1377152076_1639789449.jpg'
+    historyImage1,
+    historyImage2,
+    historyImage3,
+    historyImage4,
+    historyImage5,
+    historyImage6,
+    historyImage7
 ];
 
 const HistorySection = () => {
@@ -31,7 +40,7 @@ const HistorySection = () => {
     return (
         <section className="history-section">
             <div className="history-content">
-                <h2>История хакатона</h2>
+                <h2>О хакатоне</h2>
                 <div className="carousel">
                     <button className="carousel-control prev" onClick={handlePrev}>
                         ‹

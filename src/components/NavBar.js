@@ -53,7 +53,7 @@ function NavBar({ className }) {
             </div>
             <div className={`navbar-right ${!menuOpen ? 'inactive' : ''}`}>
                 <Link to="/news" onClick={toggleMenu}>Новости</Link>
-                <Link to="/history" onClick={toggleMenu}>История</Link>
+                <Link to="/history" onClick={toggleMenu}>О хакатоне</Link>
                 <Link to="/partners" onClick={toggleMenu}>Партнеры</Link>
                 <a
                     href="https://forms.gle/fE2cNBDmo8Yty8pJ9"

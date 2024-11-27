@@ -1,0 +1,53 @@
+/* Контейнер страницы */
+.history-container {
+    text-align: center;
+    /*margin-top: 50px;*/
+    padding: 20px;
+    background-image: url('../assets/images/main-final-tochno.svg'); /* Указываем путь к изображению */
+    background-size: cover; /* Масштабируем изображение, чтобы покрыть весь фон */
+    background-position: center; /* Центрируем изображение */
+    /*background-repeat: no-repeat; !* Отключаем повторение изображения *!*/
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh; /* Устанавливает высоту экрана */
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+}
+
+/* Заголовок страницы */
+.history-title {
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+/* Абзацы текста */
+.history-paragraph {
+    font-size: 1.5rem;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #272626;
+}
+
+/* Подзаголовок */
+.history-subtitle {
+    color: #000000;
+    margin-top: 40px;
+}
+
+/* Стили для ссылок */
+.history-a {
+    display: block; /* Отображение как блочный элемент, чтобы ссылки шли друг под другом */
+    font-size: 1.5rem;
+    color: #2a5d9e;
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 10px auto; /* Отступы между ссылками */
+    max-width: 800px; /* Ограничиваем ширину для центрирования */
+    word-break: break-word; /* Разрешаем перенос длинных ссылок */
+}
+
+/* Стили для ссылки при наведении */
+.history-a:hover {
+    color: #1d3f6e; /* Изменяем цвет ссылки при наведении */
+    text-decoration: underline; /* Добавляем подчеркивание */
+}

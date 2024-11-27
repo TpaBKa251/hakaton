@@ -36,8 +36,17 @@
     font-size: 6rem;
 }
 
-.hero-content p {
+.data {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.request {
     font-size: 2rem;
+}
+
+.hero-content p {
+    /font-size: 2rem;
 }
 
 .hero-content h2 {
@@ -47,6 +56,8 @@
     padding: 0 20px; /* Отступы по краям */
     text-align: center; /* Дополнительно выравнивание по центру текста */
 }
+
+
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
@@ -142,6 +153,41 @@
 
     .hero-content h2 {
         font-size: 1.5rem; /* Еще меньше размер текста */
+        padding: 0 10px; /* Минимальные отступы по краям */
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero-images {
+        flex-wrap: wrap;
+    }
+
+    .hero-image {
+        width: 70%; /* Увеличиваем изображения на самых маленьких экранах */
+    }
+
+    .hero-image:not(:first-child) {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-content h1 {
+        font-size: 2.5rem; /* Еще меньше размер текста */
+        padding: 0 10px; /* Минимальные отступы по краям */
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Еще меньше размер текста */
+        padding: 0 10px; /* Минимальные отступы по краям */
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 1.3rem; /* Еще меньше размер текста */
         padding: 0 10px; /* Минимальные отступы по краям */
         margin: 0 auto;
         text-align: center;
