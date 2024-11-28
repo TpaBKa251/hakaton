@@ -68,7 +68,7 @@
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .news-section h2 {
-        font-size: 3.5rem; /* Уменьшаем размер заголовка */
+        font-size: 3rem; /* Уменьшаем размер заголовка */
         margin-bottom: 2rem;
     }
 
