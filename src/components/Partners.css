@@ -1,0 +1,148 @@
+/* Секция для отображения партнеров */
+.partners-wrapper {
+    position: relative;
+    padding: 3rem;
+    text-align: left;
+    /color: #333;
+    background-image: url('../assets/images/main-final-tochno.svg');
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.partners-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    /*filter: blur(10px);*/
+    z-index: 0;
+}
+
+.partners-content-new {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.partners-header {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: #2a5d9e;
+    text-align: center;
+}
+
+.partner-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #444;
+    text-align: justify;
+}
+
+/* Партнеры в виде списка с параграфами */
+.partner-item-new {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.partner-item-new:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.partner-logo-new {
+    float: left;
+    margin-right: 1rem;
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #2a5d9e;
+    /object-fit: cover;
+    max-height: 100px;
+}
+
+.partner-details {
+    overflow: hidden;
+}
+
+.partner-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2a5d9e;
+    margin-bottom: 0.5rem;
+}
+
+.partner-link {
+    color: #1d3f6e;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.partner-link:hover {
+    text-decoration: underline;
+    color: #144269;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .partners-header {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .partner-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .partner-item-new {
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .partner-logo-new {
+        width: 60px;
+        margin-right: 0.8rem;
+    }
+
+    .partner-name {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .partners-header {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .partner-description {
+        font-size: 0.9rem;
+    }
+
+    .partner-logo-new {
+        width: 50px;
+    }
+
+    .partner-name {
+        font-size: 1rem;
+    }
+
+    .partner-link {
+        font-size: 0.9rem;
+    }
+}

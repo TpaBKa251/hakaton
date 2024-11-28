@@ -34,34 +34,34 @@ function History() {
             <h2 className="history-subtitle">
                 Вузы участники 2024:
             </h2>
-            <p className="history-paragraph">
+            <p className="history-paragraph-2">
                 <a className="history-a" href="https://www.ranepa.ru/?utm_source=google.com&utm_medium=organic&utm_campaign=google.com&utm_referrer=google.com">Российская академия народного хозяйства и государственной службы при Президенте РФ (РАНХиГС)</a>
             </p>
-            <p className="history-paragraph">
+            <p className="history-paragraph-2">
                 <a className="history-a" href="https://www.novsu.ru/structure/ptk/" >Политехнический колледж Новгородского Государственного университета имени Ярослава Мудрого (ПТК НоВГУ)</a>
             </p>
-            <p className="history-paragraph">
+            <p className="history-paragraph-2">
                 <a className="history-a" href="https://www.susu.ru/ru">Южно-Уральский государственный университет (ЮУрГУ)</a>
             </p>
-            <p className="history-paragraph">
+            <p className="history-paragraph-2">
                 <a className="history-a" href="https://www.nstu.ru/">Новосибирский государственный технический университет (НГТУ)</a>
             </p>
-            <p className="history-paragraph">
+            <p className="history-paragraph-2">
                 <a className="history-a" href="http://www.fa.ru/fil/barnaul/Pages/Home.aspx">Алтайский филиал Финансового университета при
                     Правительстве РФ</a>
             </p>
-            <p className="history-paragraph">
+            <p className="history-paragraph-2">
                 <a className="history-a" href="https://kuzstu.ru/">Кузбасский государственный технический
                     университет им Т. Ф. Горбачева (КузГТУ)</a>
             </p>
-            <p className="history-paragraph">
+            <p className="history-paragraph-2">
                 <a className="history-a" href="https://tsu.ru/">Национальный исследовательский Томский государственный университет (ТГУ)</a>
             </p>
-            <p className="history-paragraph">
+            <p className="history-paragraph-2">
                 <a className="history-a" href="https://tusur.ru/ru">Томский государственный университет систем управления и радиоэлектроники
                     (ТУСУР)</a>
             </p>
-            <p className="history-paragraph">
+            <p className="history-paragraph-2">
                 <a className="history-a" href="https://wsb.rgup.ru/">Западно-Сибирский филиал Российского государственного университета
                     правосудия</a>
             </p>
