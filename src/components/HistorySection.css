@@ -40,7 +40,7 @@
 .history-section h2 {
     font-size: 5rem;
     margin-bottom: 2rem;
-    color: #000000;
+    color: #333;
 }
 
 /* Стили для карусели */
@@ -96,7 +96,7 @@
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .history-section h2 {
-        font-size: 4rem;
+        font-size: 3rem;
         margin-bottom: 2rem;
     }
 
