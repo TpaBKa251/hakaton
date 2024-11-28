@@ -3,6 +3,7 @@
     text-align: center;
     margin: 0;
     padding: 0;
+    display: block;
     overflow: hidden;
     background-image: url("assets/images/main-final-tochno.svg");
     background-size: cover;
@@ -51,19 +52,40 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    margin: 0;
-    padding: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    padding-top: 30px;
+    transition: opacity 0.5s ease, transform 1s ease;
+    opacity: 0; /* Скрыта по умолчанию */
+    z-index: 1;
+    transform: translateY(-30%); /* Начальное положение для прокрутки вниз */
 }
 
 .section.visible {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Делается видимой */
+    z-index: 10; /* Поверх остальных */
+    transform: translateY(0); /* На своём месте */
 }
 
-.section.fade-out {
+.section.hidden-up,
+.section.hidden-down {
     opacity: 0;
+    z-index: 0;
 }
+
+.section.hidden-up {
+    transform: translateY(-30%) !important; /* Принудительно применяем стиль */
+}
+
+.section.hidden-down {
+    transform: translateY(30%) !important; /* Принудительно применяем стиль */
+}
+
+
+/*.section.fade-out {*/
+/*    opacity: 0;*/
+/*    z-index: 1;*/
+/*    transform: translateY(-50%); !* Убираем секцию сверху *!*/
+/*}*/
+
 
 .section.restore {
     opacity: 1;
@@ -76,6 +98,15 @@
     }
 
     .section {
-        transition: opacity 0.3s ease, transform 0.3s ease;
+        transition: opacity 0.5s ease, transform 1s ease;
+    }
+
+    .section.hidden-up {
+        transform: translateY(-10%) !important; /* Принудительно применяем стиль */
+        scroll-behavior: revert;
+    }
+
+    .section.hidden-down {
+        transform: translateY(10%) !important; /* Принудительно применяем стиль */
     }
 }
