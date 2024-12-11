@@ -25,6 +25,25 @@
     z-index: 1;
 }
 
+.contact-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.contact-image {
+    width: 80%; /* Размер изображения */
+    height: 80%;
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 50%; /* Делаем изображение круглым */
+    object-fit: cover; /* Убедимся, что изображение вписывается в круг */
+    border: 3px solid #ccc; /* Граница вокруг изображения */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавляем тень для акцента */
+}
+
+
 .contact-content {
     position: relative;
     z-index: 2;

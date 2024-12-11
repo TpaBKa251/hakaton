@@ -23,6 +23,69 @@
     z-index: 1;
 }
 
+.map-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.map-header h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.map-image {
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.map-details {
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.map-locations {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.map-locations li {
+    margin-bottom: 10px;
+}
+
+.map-qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.qr-code {
+    width: 200px;
+    max-width: 50%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+
 .map-section h2 {
     font-size: 5rem;
 }
@@ -77,6 +140,18 @@
 
     .map-section h2 {
         font-size: 3rem;
+    }
+
+    .map-image {
+        max-width: 100%;
+    }
+
+    .map-details {
+        font-size: 1.2rem;
+    }
+
+    .qr-code {
+        width: 150px;
     }
 }
 

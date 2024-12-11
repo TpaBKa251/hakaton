@@ -88,7 +88,7 @@ function MainPage() {
 
     return (
         <div className="App">
-            <Navbar className={`navbar ${navbarVisible ? 'visible' : ''}`} />
+            <Navbar className={`navbar ${navbarVisible ? 'visible' : 'visible'}`} />
             <SideNavigation
                 sections={sections}
                 currentSectionIndex={currentSectionIndex}

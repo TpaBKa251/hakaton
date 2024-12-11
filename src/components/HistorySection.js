@@ -41,17 +41,39 @@ const HistorySection = () => {
         <section className="history-section">
             <div className="history-content">
                 <h2>О хакатоне</h2>
+                <p className="history-paragraph">
+                    С 2024 года мы проводим Всероссийский предпринимательский хакатон в городе Томске.
+                    Это уникальное событие, где молодые и талантливые участники создают инновационную среду,
+                    отражающую будущее студенческого предпринимательства в студенческой столице России — Томске.
+                </p>
+                <p className="history-paragraph">
+                    Хакатон не просто собирает молодых предпринимателей для разработки стартап-идей,
+                    но и становится местом, где наука и бизнес сольются воедино, создавая новые формы
+                    успешного взаимодействия. Участники работают над кейсами, освещающими перспективное развитие города
+                    с богатым культурным наследием, что неизбежно привлекает туристические потоки.
+                </p>
+                <p className="history-paragraph">
+                    Предпринимательский Хакатон в Томске стимулирует развитие стартап-сообщества
+                    и способствует формированию новых бизнес-идей, которые могут изменить облик города,
+                    делая его более привлекательным для жителей и гостей.
+                </p>
+                <p className="history-paragraph">
+                    Присоединяйтесь к нам, чтобы совместно воплотить мечты в жизнь и создать новую, вдохновляющую
+                    среду для будущих поколений предпринимателей!
+                </p>
                 <div className="carousel">
                     <button className="carousel-control prev" onClick={handlePrev}>
                         ‹
                     </button>
-                    <img src={historyImages[currentIndex]} alt={`Момент ${currentIndex + 1}`} className="carousel-image" />
+                    <img src={historyImages[currentIndex]} alt={`Момент ${currentIndex + 1}`}
+                         className="carousel-image"/>
                     <button className="carousel-control next" onClick={handleNext}>
                         ›
                     </button>
                 </div>
             </div>
         </section>
+
     );
 };
 

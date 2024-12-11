@@ -1,22 +1,33 @@
 /* Контейнер страницы */
 .history-container {
     text-align: center;
-    /*margin-top: 50px;*/
     padding: 20px;
-    background-image: url('../assets/images/main-final-tochno.svg'); /* Указываем путь к изображению */
-    background-size: cover; /* Масштабируем изображение, чтобы покрыть весь фон */
-    background-position: center; /* Центрируем изображение */
-    /*background-repeat: no-repeat; !* Отключаем повторение изображения *!*/
+    background-image: url('../assets/images/main-final-tochno.svg');
+    background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    min-height: 100vh; /* Устанавливает высоту экрана */
-    /*display: flex;*/
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
 }
 
+.history-list {
+    list-style-type: disc;
+    text-align: left;
+    margin: 20px auto;
+    padding-left: 40px;
+    max-width: 1000px; /* Увеличиваем максимальную ширину списка */
+}
+
+.history-item {
+    margin: 10px 0; /* Отступы между элементами списка */
+    font-size: 1.5rem;
+}
+
 /* Заголовок страницы */
 .history-title {
+    margin-top: 50px;
     color: #000000;
     margin-bottom: 30px;
 }
@@ -25,8 +36,12 @@
 .history-paragraph {
     font-size: 1.5rem;
     margin: 20px auto;
-    max-width: 800px;
+    text-align: justify;
+    max-width: 1100px; /* Увеличиваем максимальную ширину */
+    padding-left: 2rem;
     color: #272626;
+    line-height: 1.8;
+    text-indent: 2rem; /* Добавляем табуляцию в начало абзаца */
 }
 
 /* Подзаголовок */
@@ -36,46 +51,43 @@
 }
 
 /* Стили для ссылок */
-.history-a {
-    display: block; /* Отображение как блочный элемент, чтобы ссылки шли друг под другом */
-    font-size: 1.5rem;
-    color: #2a5d9e;
-    text-decoration: none; /* Убираем подчеркивание */
-    margin: 10px auto; /* Отступы между ссылками */
-    max-width: 800px; /* Ограничиваем ширину для центрирования */
-    word-break: break-word; /* Разрешаем перенос длинных ссылок */
+.history-list li {
+    margin: 10px 0;
 }
 
-/* Стили для ссылки при наведении */
+/* Стили для ссылок */
+.history-a {
+    font-size: 1.2rem;
+    color: #2a5d9e;
+    text-decoration: none;
+}
+
 .history-a:hover {
-    color: #1d3f6e; /* Изменяем цвет ссылки при наведении */
-    text-decoration: underline; /* Добавляем подчеркивание */
+    color: #1d3f6e;
+    text-decoration: underline;
 }
 
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .history-container {
         padding: 25px;
-        overflow-x: hidden; /* Убираем горизонтальный скроллинг */
+        overflow-x: hidden;
     }
 
     .history-title {
-        font-size: 1.8rem; /* Уменьшаем размер заголовка */
+        font-size: 1.8rem;
         margin-bottom: 20px;
-        /margin-right: 7px;
     }
 
     .history-paragraph,
     .history-a {
-        font-size: 1.2rem; /* Уменьшаем шрифт */
-        /margin: 15px auto;
-        max-width: 100%; /* Гарантируем, что текст не выйдет за пределы экрана */
-        word-wrap: break-word; /* Переносим длинные слова */
-        /margin-right: 7px;
+        font-size: 1.2rem;
+        max-width: 100%;
+        word-wrap: break-word;
     }
 
     .history-subtitle {
-        font-size: 1.5rem; /* Уменьшаем размер подзаголовков */
+        font-size: 1.5rem;
         margin-top: 30px;
     }
 
@@ -87,39 +99,30 @@
 @media (max-width: 425px) {
     .history-container {
         padding: 25px;
-        overflow-x: hidden; /* Убираем горизонтальный скроллинг */
+        overflow-x: hidden;
     }
 
     .history-title {
-        font-size: 1.8rem; /* Уменьшаем размер заголовка */
+        font-size: 1.8rem;
         margin-bottom: 20px;
         margin-right: 7px;
     }
 
     .history-paragraph,
     .history-a {
-        font-size: 1.2rem; /* Уменьшаем шрифт */
-        /margin: 15px auto;
-        max-width: 100%; /* Гарантируем, что текст не выйдет за пределы экрана */
-        word-wrap: break-word; /* Переносим длинные слова */
+        font-size: 1.2rem;
+        max-width: 100%;
+        word-wrap: break-word;
         margin-right: 7px;
     }
 
     .history-subtitle {
-        font-size: 1.5rem; /* Уменьшаем размер подзаголовков */
+        font-size: 1.5rem;
         margin-top: 30px;
         margin-right: 7px;
     }
 
     .history-a {
-        /margin: 8px auto;
-        margin-right: 7px;
-    }
-
-    .history-paragraph-2 {
-        font-size: 1.2rem; /* Уменьшаем шрифт */
-        max-width: 100%; /* Гарантируем, что текст не выйдет за пределы экрана */
-        word-wrap: break-word; /* Переносим длинные слова */
         margin-right: 7px;
     }
 }
@@ -127,39 +130,30 @@
 @media (max-width: 375px) {
     .history-container {
         padding: 25px;
-        overflow-x: hidden; /* Убираем горизонтальный скроллинг */
+        overflow-x: hidden;
     }
 
     .history-title {
-        font-size: 1.6rem; /* Уменьшаем размер заголовка */
+        font-size: 1.6rem;
         margin-bottom: 20px;
         margin-right: 7px;
     }
 
     .history-paragraph,
     .history-a {
-        font-size: 1.2rem; /* Уменьшаем шрифт */
-    /margin: 15px auto;
-        max-width: 100%; /* Гарантируем, что текст не выйдет за пределы экрана */
-        word-wrap: break-word; /* Переносим длинные слова */
+        font-size: 1.2rem;
+        max-width: 100%;
+        word-wrap: break-word;
         margin-right: 7px;
     }
 
     .history-subtitle {
-        font-size: 1.5rem; /* Уменьшаем размер подзаголовков */
+        font-size: 1.5rem;
         margin-top: 30px;
         margin-right: 7px;
     }
 
     .history-a {
-    /margin: 8px auto;
-        margin-right: 7px;
-    }
-
-    .history-paragraph-2 {
-        font-size: 1.2rem; /* Уменьшаем шрифт */
-        max-width: 100%; /* Гарантируем, что текст не выйдет за пределы экрана */
-        word-wrap: break-word; /* Переносим длинные слова */
         margin-right: 7px;
     }
 }
@@ -167,39 +161,30 @@
 @media (max-width: 320px) {
     .history-container {
         padding: 25px;
-        overflow-x: hidden; /* Убираем горизонтальный скроллинг */
+        overflow-x: hidden;
     }
 
     .history-title {
-        font-size: 1.5rem; /* Уменьшаем размер заголовка */
+        font-size: 1.5rem;
         margin-bottom: 20px;
         margin-right: 7px;
     }
 
     .history-paragraph,
     .history-a {
-        font-size: 1.2rem; /* Уменьшаем шрифт */
-    /margin: 15px auto;
-        max-width: 100%; /* Гарантируем, что текст не выйдет за пределы экрана */
-        word-wrap: break-word; /* Переносим длинные слова */
+        font-size: 1.2rem;
+        max-width: 100%;
+        word-wrap: break-word;
         margin-right: 7px;
     }
 
     .history-subtitle {
-        font-size: 1.5rem; /* Уменьшаем размер подзаголовков */
+        font-size: 1.5rem;
         margin-top: 30px;
         margin-right: 7px;
     }
 
     .history-a {
-    /margin: 8px auto;
-        margin-right: 7px;
-    }
-
-    .history-paragraph-2 {
-        font-size: 1.2rem; /* Уменьшаем шрифт */
-        max-width: 100%; /* Гарантируем, что текст не выйдет за пределы экрана */
-        word-wrap: break-word; /* Переносим длинные слова */
         margin-right: 7px;
     }
 }

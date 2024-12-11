@@ -1,4 +1,3 @@
-// src/components/ContactSection.js
 import React from 'react';
 import './ContactSection.css';
 import contactBackground from '../assets/images/contacts.jpg'; // Путь к изображению
@@ -9,6 +8,15 @@ const ContactSection = () => {
             <div className="contact-content">
                 <h2>Контакты</h2>
                 <div className="contact-info">
+                    <p><strong>Председатель организационного комитета</strong></p>
+                    <div className="contact-image-wrapper">
+                        <img
+                            src={contactBackground}
+                            alt="Татьяна Владимировна Калашникова"
+                            className="contact-image"
+                        />
+                    </div>
+                    <p><strong>Татьяна Владимировна Калашникова</strong></p>
                     <p><strong>Телефон:</strong> +7 (903) 951-51-73</p>
                     <p><strong>Email: </strong>tvkalash@tpu.ru</p>
                     <div className="social-media">
