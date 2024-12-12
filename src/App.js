@@ -122,6 +122,7 @@ function App() {
                 <Route path="/news" element={<News />} />
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/history" element={<History />} />
+                <Route path="*" element={<h1>404 - Страница не найдена</h1>} />
             </Routes>
         </Router>
     );
