@@ -25,7 +25,6 @@
     background: inherit;
     filter: blur(10px);
     z-index: 1;
-
 }
 
 .history-content {
@@ -41,6 +40,11 @@
     font-size: 5rem;
     margin-bottom: 2rem;
     color: #333;
+}
+
+.history-section p {
+    font-size: 1.5rem;
+    margin-right: 3rem;
 }
 
 /* Стили для карусели */
@@ -98,6 +102,12 @@
     .history-section h2 {
         font-size: 3rem;
         margin-bottom: 2rem;
+    }
+
+    .history-section p {
+        font-size: 1rem;
+        margin-right: 3rem;
+        display: none;
     }
 
     .carousel {
