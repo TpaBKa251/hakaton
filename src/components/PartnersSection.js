@@ -25,9 +25,9 @@ const partnersData = [
         href: 'https://www.sberbank.ru'
     },
     {
-        name: 'Администрация Томской области',
+        name: 'Администрация города Томска',
         logo: partnersBackground3,
-        href: 'https://tomsk.gov.ru/'
+        href: 'https://admin.tomsk.ru/'
     },
     {
         name: 'Ням-Ням',

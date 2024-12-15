@@ -35,7 +35,7 @@
 /* Абзацы текста */
 .history-paragraph {
     font-size: 1.5rem;
-    margin: 20px auto;
+    margin: auto;
     text-align: justify;
     max-width: 1100px; /* Увеличиваем максимальную ширину */
     padding-left: 2rem;
