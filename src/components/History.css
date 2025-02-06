@@ -84,6 +84,7 @@
         margin-right: 2rem;
         max-width: 100%;
         word-wrap: break-word;
+        hyphens: auto;
     }
 
     .history-a {
@@ -118,6 +119,7 @@
         margin-right: 2rem;
         max-width: 100%;
         word-wrap: break-word;
+        hyphens: auto;
     }
 
     .history-a {
@@ -154,7 +156,10 @@
         font-size: 1.2rem;
         margin-right: 2rem;
         max-width: 100%;
-        word-wrap: break-word;
+        /word-wrap: break-word;
+        /word-break: break-all; /* Разбивает даже целые слова */
+        hyphens: auto;
+
     }
 
     .history-a {
@@ -192,6 +197,7 @@
         margin-right: 2rem;
         max-width: 100%;
         word-wrap: break-word;
+        hyphens: auto;
     }
 
     .history-a {

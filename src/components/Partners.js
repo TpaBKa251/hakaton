@@ -96,7 +96,7 @@ const PartnersSection = () => {
             <div className="partners-content-new">
                 <h2 className="partners-header">Наши партнёры</h2>
                 {partnersData.map((partner, index) => (
-                    <div key={index} className="partner-item-new">
+                    <div key={index} className="partner-item-new" lang="ru">
                         <img
                             src={partner.logo}
                             alt={`${partner.name} Логотип`}

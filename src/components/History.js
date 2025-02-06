@@ -4,7 +4,7 @@ import Navbar from "./NavBar";
 
 function History() {
     return (
-        <div className="history-container">
+        <div className="history-container" lang="ru">
             <Navbar className={`navbar visible`}/>
             <h1 className="history-title">
                 Бизнес-школа Национального исследовательского Томского политехнического университета

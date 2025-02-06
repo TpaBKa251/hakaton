@@ -183,6 +183,106 @@
     }
 }
 
+@media (max-width: 425px) {
+    .map-header {
+        font-size: 2.5rem; /* Уменьшаем размер шрифта заголовка */
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 1rem;
+    }
+
+    .map-locations {
+        text-align: center;
+    }
+
+    .map-content {
+        flex-direction: column; /* Меняем направление на колонку */
+        align-items: center;   /* Центрируем содержимое */
+    }
+
+    .map-container {
+        height: 50vh; /* Снижаем высоту карты для удобства просмотра */
+        border-radius: 6px;
+    }
+
+    .map-section h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .map-image {
+        display: none; /* Убираем картинку на мобильных устройствах */
+    }
+
+    .map-details {
+        font-size: 1.2rem;
+        margin-bottom: 0rem;
+    }
+
+    .map-qr {
+        display: block; /* Изменяем на блочный элемент */
+        justify-content: center;
+        margin-top: 0rem; /* Добавляем отступ сверху */
+        text-align: center; /* Центрируем содержимое */
+        margin-bottom: 15rem;
+    }
+
+    .qr-code {
+        width: 150px;
+        margin: 0 auto; /* Размещаем QR-код под текстом */
+    }
+}
+
+@media (max-width: 375px) {
+    .map-header {
+        font-size: 2.5rem; /* Уменьшаем размер шрифта заголовка */
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 1rem;
+    }
+
+    .map-locations {
+        text-align: center;
+    }
+
+    .map-content {
+        flex-direction: column; /* Меняем направление на колонку */
+        align-items: center;   /* Центрируем содержимое */
+    }
+
+    .map-container {
+        height: 50vh; /* Снижаем высоту карты для удобства просмотра */
+        border-radius: 6px;
+    }
+
+    .map-section h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .map-image {
+        display: none; /* Убираем картинку на мобильных устройствах */
+    }
+
+    .map-details {
+        font-size: 1.2rem;
+        margin-bottom: 0rem;
+    }
+
+    .map-qr {
+        display: block; /* Изменяем на блочный элемент */
+        justify-content: center;
+        margin-top: 0rem; /* Добавляем отступ сверху */
+        text-align: center; /* Центрируем содержимое */
+        margin-bottom: 15rem;
+    }
+
+    .qr-code {
+        width: 150px;
+        margin: 0 auto; /* Размещаем QR-код под текстом */
+    }
+}
+
 @media (max-width: 320px) {
     .map-header {
         font-size: 2.5rem; /* Уменьшаем размер шрифта заголовка */
