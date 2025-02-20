@@ -49,6 +49,19 @@ const NewsSection = () => {
                                     </a>
                                 )}
                             </p>
+
+                            <p className="news-text">
+                                {news.file && (
+                                    <a
+                                        href={`//hakaton-zeta.vercel.app/Inf_pismo_biznes-kot.docx`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="news-link"
+                                    >
+                                        📄 Открыть документ в браузере
+                                    </a>
+                                )}
+                            </p>
                         </div>
                     ))}
                 </div>
