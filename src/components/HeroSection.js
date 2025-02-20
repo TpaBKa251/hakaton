@@ -18,9 +18,7 @@ const HeroSection = () => {
                 <p className="data">18 - 20 марта 2025</p>
                 <p className="request">Прием заявок до 8 марта 2025</p>
                 <a href="https://forms.gle/fE2cNBDmo8Yty8pJ9" className="register-button2" target="_blank"
-                   rel="noopener noreferrer">Зарегистрироваться</a><a href="https://forms.gle/fE2cNBDmo8Yty8pJ9"
-                                                                      className="register-button2" target="_blank"
-                                                                      rel="noopener noreferrer">Зарегистрироваться</a>
+                   rel="noopener noreferrer">Зарегистрироваться</a>
             </div>
         </section>
 
