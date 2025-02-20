@@ -153,6 +153,7 @@
     .map-container {
         height: 50vh; /* Снижаем высоту карты для удобства просмотра */
         border-radius: 6px;
+        margin-top: 0;
     }
 
     .map-section h2 {
@@ -174,7 +175,7 @@
         justify-content: center;
         margin-top: 1rem; /* Добавляем отступ сверху */
         text-align: center; /* Центрируем содержимое */
-        margin-bottom: 10rem;
+        margin-bottom: 15rem;
     }
 
     .qr-code {
@@ -203,6 +204,7 @@
     .map-container {
         height: 50vh; /* Снижаем высоту карты для удобства просмотра */
         border-radius: 6px;
+        margin-top: 0;
     }
 
     .map-section h2 {
@@ -253,6 +255,7 @@
     .map-container {
         height: 50vh; /* Снижаем высоту карты для удобства просмотра */
         border-radius: 6px;
+        margin-top: 0;
     }
 
     .map-section h2 {
@@ -294,6 +297,7 @@
     .map-container {
         height: 50vh; /* Снижаем высоту карты для удобства просмотра */
         border-radius: 6px;
+        margin-top: 0;
     }
 
     .map-section h2 {
