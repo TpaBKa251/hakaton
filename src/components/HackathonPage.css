@@ -1,0 +1,113 @@
+.hackathon-container {
+    text-align: center;
+    padding-top: 70px;
+    background-image: url('../assets/images/main-final-tochno.svg'); /* Добавляем фоновое изображение */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.hackathon-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.hackathon-subtitle {
+    font-size: 1.8rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.hackathon-section {
+    background: rgba(255, 255, 255, 0.85); /* Полупрозрачный фон */
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 1100px; /* Увеличиваем ширину секций */
+}
+
+.hackathon-section h2 {
+    font-size: 1.8rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.hackathon-section ul {
+    list-style: disc;
+    padding-left: 40px; /* Отступ для списка */
+}
+
+.hackathon-section li {
+    margin-bottom: 10px;
+    font-size: 1.5rem; /* Увеличенный размер шрифта */
+}
+
+.hackathon-section p {
+    font-size: 1.5rem;
+    margin: auto;
+    text-align: justify;
+    max-width: 1100px;
+    padding-left: 2rem;
+    color: #272626;
+    line-height: 1.8;
+    text-indent: 2rem; /* Отступ в начале абзацев */
+}
+
+.hackathon-section a {
+    color: #2a5d9e;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.hackathon-section a:hover {
+    text-decoration: underline;
+    color: #1d3f6e;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hackathon-container {
+        padding-top: 75px;
+        padding-left: 5px;
+        padding-right: 5px;
+        overflow-x: hidden;
+    }
+
+    .hackathon-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .hackathon-section {
+        max-width: 100%;
+        margin: 5px auto;
+    }
+
+    .hackathon-section p {
+        font-size: 1.2rem;
+        max-width: 100%;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .hackathon-section li {
+        font-size: 1.2rem;
+    }
+
+    .hackathon-section a {
+        font-size: 1.2rem;
+    }
+
+    .hackathon-section h2 {
+        font-size: 1.35rem;
+        color: #222;
+        margin-bottom: 10px;
+    }
+}

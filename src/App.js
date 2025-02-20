@@ -13,6 +13,7 @@ import SideNavigation from './components/SideNavigation';
 import News from './components/News';
 import Partners from './components/Partners';
 import History from './components/History';
+import Document from './components/HackathonPage';
 
 function MainPage() {
     const sections = [
@@ -122,6 +123,7 @@ function App() {
                 <Route path="/news" element={<News />} />
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/history" element={<History />} />
+                <Route path="/doc" element={<Document />} />
                 <Route path="*" element={<h1>404 - Страница не найдена</h1>} />
             </Routes>
         </Router>

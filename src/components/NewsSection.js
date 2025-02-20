@@ -1,11 +1,17 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './NewsSection.css';
-import newsImage from '../assets/images/news.jpg'; // Путь к вашему изображению
 
 const newsData = [
     {
         title: 'Предлагаем размещение',
         description: 'Санаторий-профилакторий ТПУ, ул. Усова д. 13\nСтоимость размещения: 700 руб./сутки на человека'
+    },
+    {
+        title: 'Информационное письмо',
+        description: 'Ознакомьтесь с информационным письмом о хакатоне Бизнес-кот',
+        link: '/doc', // Ссылка на страницу новостей
+        file: '/Inf_pismo_biznes-kot.docx'
     }
 ];
 
@@ -13,7 +19,7 @@ const formatTextWithNewLines = (text) => {
     return text.split('\n').map((line, index) => (
         <React.Fragment key={index}>
             {line}
-            <br />
+            <br/>
         </React.Fragment>
     ));
 };
@@ -28,6 +34,21 @@ const NewsSection = () => {
                         <div key={index} className="news-item">
                             <h3>{news.title}</h3>
                             <p>{formatTextWithNewLines(news.description)}</p>
+                            <p className="news-text">
+                                {news.link && (
+                                    <Link to={news.link} target="_blank" className="news-link">
+                                        Читать подробнее →
+                                    </Link>
+                                )}
+                            </p>
+
+                            <p className="news-text">
+                                {news.file && (
+                                    <a href={news.file} download className="news-link">
+                                        📄 Скачать документ
+                                    </a>
+                                )}
+                            </p>
                         </div>
                     ))}
                 </div>
@@ -37,4 +58,3 @@ const NewsSection = () => {
 };
 
 export default NewsSection;
-

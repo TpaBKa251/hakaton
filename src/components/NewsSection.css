@@ -65,6 +65,22 @@
     margin: 0;
 }
 
+.news-text {
+    font-size: 1.6rem;
+    color: #666;
+    margin: 0;
+}
+
+.news-link {
+    color: #2a5d9e; /* Цвет ссылки */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-link:hover {
+    color: #1d3f6e;
+}
+
 /* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
     .news-section h2 {
