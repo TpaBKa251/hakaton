@@ -16,7 +16,8 @@ const ContactSection = () => {
                             className="contact-image"
                         />
                     </div>
-                    <p><strong>к.т.н. доцент Бизнес-школы Татьяна Владимировна Калашникова</strong></p>
+                    <p><strong>к.т.н. доцент Бизнес-школы</strong></p>
+                    <p><strong>Татьяна Владимировна Калашникова</strong></p>
                     <p><strong>Телефон:</strong> +7 (903) 951-51-73</p>
                     <p><strong>Email: </strong>tvkalash@tpu.ru</p>
                     <div className="social-media">

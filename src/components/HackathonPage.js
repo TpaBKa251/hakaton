@@ -5,12 +5,14 @@ import Navbar from "./NavBar"; // Подключаем Navbar
 const HackathonPage = () => {
     return (
         <div className="hackathon-container">
-            <Navbar className={`navbar visible`} /> {/* Добавляем навбар */}
-            <h1 className="hackathon-title">II Всероссийский предпринимательский хакатон «Бизнес-кот»-2025 с международным участием</h1>
+            <Navbar className={`navbar visible`}/> {/* Добавляем навбар */}
+            <h1 className="hackathon-title">II Всероссийский предпринимательский хакатон «Бизнес-кот»-2025 с
+                международным участием</h1>
 
             <section className="hackathon-section">
                 <p>
-                    Бизнес-школа Национального исследовательского Томского политехнического университета приглашает студентов принять участие в
+                    Бизнес-школа Национального исследовательского Томского политехнического университета приглашает
+                    студентов принять участие в
                     II Всероссийском предпринимательском хакатоне с международным участием «Бизнес-кот»-2025.
                 </p>
                 <p><strong>Дата проведения:</strong> 18-20 марта 2025 г.</p>
@@ -46,6 +48,14 @@ const HackathonPage = () => {
                 <p>
                     🌐 <a href="https://hakaton-zeta.vercel.app/" target="_blank" rel="noopener noreferrer">
                     hakaton-zeta.vercel.app
+                </a>
+                </p>
+            </section>
+            <section className="hackathon-section">
+                <h2>Документ</h2>
+                <p>
+                    📄 <a href="//hakaton-zeta.vercel.app/Inf_pismo_biznes-kot.docx" target="_blank" rel="noopener noreferrer">
+                    Открыть/скачать документ
                 </a>
                 </p>
             </section>

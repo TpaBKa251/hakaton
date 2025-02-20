@@ -112,6 +112,13 @@
     .contact-content {
         width: 98%;
     }
+
+    .contact-image {
+        width: 50%; /* Размер изображения */
+        height: 50%;
+        max-width: 200px;
+        max-height: 200px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -139,6 +146,13 @@
     .contact-content {
         width: 98%;
     }
+
+    .contact-image {
+        width: 50%; /* Размер изображения */
+        height: 50%;
+        max-width: 200px;
+        max-height: 200px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -165,5 +179,12 @@
 
     .contact-content {
         width: 98%;
+    }
+
+    .contact-image {
+        width: 50%; /* Размер изображения */
+        height: 50%;
+        max-width: 200px;
+        max-height: 200px;
     }
 }
