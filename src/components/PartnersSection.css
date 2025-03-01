@@ -40,27 +40,45 @@
 }
 
 .partners-list {
+    /*display: grid;*/
+    /*grid-template-columns: repeat(auto-fit, minmax(10px, 40px));*/
+    /*flex-wrap: wrap;*/
+    /*gap: 5rem;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-between;
+    grid-template-columns: repeat(6, 1fr); /* По умолчанию 6 колонок */
+    gap: 2rem 3rem; /* Отступы */
+    justify-content: center;
     align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .partner-item {
-    /display: table-row;
-    flex-direction: column;
-    width: 150px;
+    /*/display: table-row;*/
+    /*flex-direction: column;*/
+    /*width: 150px;*/
+    /*text-align: center;*/
+    /*!*justify-content: center;*!*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
     text-align: center;
-    /*justify-content: center;*/
-    justify-content: space-between;
-    align-items: center;
+    width: 150px;
+}
+
+.partner-item:nth-child(13),
+.partner-item:nth-child(14) {
+    grid-column: span 1; /* Убеждаемся, что последние 2 лого занимают 1 колонку */
+}
+
+.partners-list:has(.partner-item:nth-child(13)) {
+    grid-template-columns: repeat(7, 1fr);
 }
 
 .partner-logo {
 
-    width: 100px;
+    width: 150px;
     height: auto;
     margin-bottom: 0.5rem;
 }
@@ -77,96 +95,41 @@
     text-decoration: underline; /* Добавляем подчеркивание */
 }
 
-/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
-    .partners-section h2 {
-        font-size: 3rem; /* Уменьшаем размер заголовка для мобильных */
-        margin-bottom: 2rem; /* Уменьшаем отступ */
-    }
-
-    .partners-list {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Меньшая минимальная ширина элементов */
-        gap: 10px; /* Уменьшаем расстояние между элементами */
-    }
-
-    .partner-item {
-        padding: 8px; /* Уменьшаем внутренние отступы */
-        border: none; /* Убираем рамку для упрощения дизайна */
-        box-shadow: none; /* Убираем тень */
-    }
-
     .partner-logo {
-        width: 70px; /* Уменьшаем размер логотипов */
-        height: auto;
-        margin-bottom: 5px;
+        width: 110px; /* Уменьшаем логотипы для планшетов */
+    }
+    .partner-item p {
+        display: none;
+    }
+    .partners-list {
+        /* Автоматически подбираем количество колонок, но минимальная ширина равна логотипу */
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1.5rem;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .partners-section h2 {
+        font-size: 3rem;
+        margin-bottom: 5rem;
     }
 }
 
-@media (max-width: 500px) {
-    .partners-section h2 {
-        font-size: 3rem; /* Уменьшаем размер заголовка для мобильных */
-        margin-bottom: 2rem;
-        margin-top: 2rem/* Уменьшаем отступ */
-    }
-
-    .partner-item {
-        width: 120px; /* Уменьшаем ширину логотипов на мобильных */
-    }
-
-    .partners-list {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Меньшая минимальная ширина */
-    }
-
-    .partner-logo {
-        width: 80px; /* Уменьшаем размер логотипов на мобильных */
-    }
-}
-
+/* Для узких телефонов до 425px – ещё уменьшаем */
 @media (max-width: 425px) {
-    .partners-section h2 {
-        font-size: 2.5rem; /* Уменьшаем размер заголовка для мобильных */
-        margin-bottom: 1rem; /* Уменьшаем отступ */
-        margin-top: 1.6rem; /* Уменьшаем отступ */
+    :root {
+        --logo-size: 80px;
+        --heading-size: 3rem;
     }
-
-    .partners-list {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Меньшая минимальная ширина */
-    }
-
-    .partner-item {
-        width: 115px; /* Уменьшаем ширину логотипов на мобильных */
-    }
-
     .partner-logo {
-        width: 80px; /* Уменьшаем размер логотипов на мобильных */
+        width: 70px; /* Уменьшаем логотипы для планшетов */
     }
-
-    .partner-a {
-        font-size: 0.8rem; /* Ещё меньше размер текста */
-    }
-}
-
-@media (max-width: 375px) {
-    .partners-section h2 {
-        font-size: 2.7rem; /* Уменьшаем размер заголовка для мобильных */
-        margin-bottom: 1rem; /* Уменьшаем отступ */
-        margin-top: 2rem; /* Уменьшаем отступ */
-    }
-
     .partners-list {
-        grid-template-columns: repeat(2, 1fr); /* Ограничиваем два элемента в ряд */
-        gap: 5px; /* Ещё меньше расстояние между элементами */
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 1rem;
     }
 
-    .partner-item {
-        padding: 5px; /* Минимальные отступы */
-    }
-
-    .partner-logo {
-        width: 80px; /* Минимальный размер логотипов */
-    }
-
-    .partner-a {
-        font-size: 0.8rem; /* Минимальный размер текста */
+    .partner-item p {
+        display: none;
     }
 }

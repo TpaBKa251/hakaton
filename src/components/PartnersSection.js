@@ -1,17 +1,22 @@
 import React from 'react';
 import './PartnersSection.css';
-import partnersBackground1 from '../assets/images/Рисунок1.png';
-import partnersBackground2 from '../assets/images/Рисунок2.png';
-import partnersBackground3 from '../assets/images/томск.png';
-import partnersBackground4 from '../assets/images/Рисунок4.png';
-import partnersBackground5 from '../assets/images/Рисунок5.png';
-import partnersBackground6 from '../assets/images/роснефть.png';
+import partnersBackground1 from '../assets/images/partners/Rrosatom.png';
+import partnersBackground2 from '../assets/images/partners/Sber.png';
+import partnersBackground3 from '../assets/images/partners/Администрация Томска.png';
+import partnersBackground4 from '../assets/images/partners/Оранжевое лого.png';
+import partnersBackground5 from '../assets/images/partners/ca2d361a7d63d66c3ff0fb96420e6569.png';
+import partnersBackground6 from '../assets/images/partners/НИПИнефть.png';
 import partnersBackground7 from '../assets/images/Рисунок7.png';
-import partnersBackground8 from '../assets/images/Рисунок8.png';
+import partnersBackground8 from '../assets/images/partners/Risunok8.png';
 import partnersBackground9 from '../assets/images/Рисунок12.png';
-import partnersBackground10 from '../assets/images/Столовка.png';
-import partnersBackground11 from '../assets/images/союз машиностроителей.png';
-import partnersBackground12 from '../assets/images/микран.png';
+import partnersBackground10 from '../assets/images/partners/Stolovka.png';
+import partnersBackground11 from '../assets/images/partners/soyuz_mashinostroiteley.png';
+import partnersBackground12 from '../assets/images/partners/mikran.png';
+import tomskEnergoSbit from '../assets/images/partners/512x512bb.png';
+import lubatovo from '../assets/images/partners/Любятово.png';
+import rgd from '../assets/images/partners/ржд.png';
+import chernogolovka from '../assets/images/partners/черноголовка.png';
+
 
 const partnersData = [
     {
@@ -19,11 +24,11 @@ const partnersData = [
         logo: partnersBackground1,
         href: 'https://www.rosatom.ru/index.html'
     },
-    {
-        name: 'Сбер',
-        logo: partnersBackground2,
-        href: 'https://www.sberbank.ru'
-    },
+    // {
+    //     name: 'Сбер',
+    //     logo: partnersBackground2,
+    //     href: 'https://www.sberbank.ru'
+    // },
     {
         name: 'Администрация города Томска',
         logo: partnersBackground3,
@@ -45,11 +50,6 @@ const partnersData = [
         href: 'https://www.rosneft.ru/'
     },
     {
-        name: 'Томское пиво',
-        logo: partnersBackground7,
-        href: 'https://tomskbeer.ru/'
-    },
-    {
         name: 'Академия управления WINFbd',
         logo: partnersBackground8,
         href: 'https://winbd.ru/'
@@ -60,19 +60,35 @@ const partnersData = [
         href: 'https://yandex.ru/maps/org/stolovaya/1141781494/?ll=84.950164%2C56.465391&z=17'
     },
     {
+        name: 'Западно-Сибирская железная дорога',
+        logo: rgd,
+        href: 'https://zszd.rzd.ru/#'
+    },
+    {
+        name: 'Черноголовка',
+        logo: chernogolovka,
+        href: 'https://chernogolovka.com/'
+    },
+
+    {
+        name: 'Любятово',
+        logo: lubatovo,
+        href: 'https://chernogolovka.com/'
+    },
+    {
         name: 'Союз машиностроителей России',
         logo: partnersBackground11,
         href: 'https://soyuzmash.ru/regional-offices/tomskoe-regionalnoe-otdelenie/'
     },
+    // {
+    //     name: 'Микран',
+    //     logo: partnersBackground12,
+    //     href: 'https://www.micran.ru/'
+    // },
     {
-        name: 'Микран',
-        logo: partnersBackground12,
-        href: 'https://www.micran.ru/'
-    },
-    {
-        name: 'Level Up',
-        logo: partnersBackground9,
-        href: 'https://club-level-up.ru/'
+        name: 'Томскэнергосбыт',
+        logo: tomskEnergoSbit,
+        href: 'https://tomskenergosbyt.ru/'
     }
 ];
 
@@ -80,7 +96,7 @@ const PartnersSection = () => {
     return (
         <section className="partners-section">
             <div className="partners-content">
-                <h2>Наши партнёры</h2>
+                <h2>Партнёры 2025</h2>
                 <div className="partners-list">
                     {partnersData.map((partner, index) => (
                         <div key={index} className="partner-item">

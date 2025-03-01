@@ -3,7 +3,7 @@ import './Partners.css';
 import partnersBackground1 from '../assets/images/Рисунок1.png';
 import partnersBackground2 from '../assets/images/Рисунок2.png';
 import partnersBackground3 from '../assets/images/томск.png';
-import partnersBackground4 from '../assets/images/Рисунок4.png';
+import partnersBackground4 from '../assets/images/partners/Оранжевое лого.png';
 import partnersBackground5 from '../assets/images/Рисунок5.png';
 import partnersBackground6 from '../assets/images/роснефть.png';
 import partnersBackground7 from '../assets/images/Рисунок7.png';
@@ -12,6 +12,10 @@ import partnersBackground9 from '../assets/images/Рисунок12.png';
 import partnersBackground10 from '../assets/images/TPU-logo.png';
 import partnersBackground11 from '../assets/images/союз машиностроителей.png';
 import partnersBackground12 from '../assets/images/микран.png';
+import tomskEnergoSbit from '../assets/images/partners/512x512bb.png';
+import lubatovo from '../assets/images/partners/Любятово.png';
+import rgd from '../assets/images/partners/ржд.png';
+import chernogolovka from '../assets/images/partners/черноголовка.png';
 import Navbar from "./NavBar";
 
 const partnersData = [
@@ -86,6 +90,30 @@ const partnersData = [
         logo: partnersBackground9,
         href: 'https://club-level-up.ru/',
         description: 'Level Up — мужской клуб предпринимателей'
+    },
+    {
+        name: 'АО "Томскэнергосбыт"',
+        logo: tomskEnergoSbit,
+        href: 'https://tomskenergosbyt.ru/',
+        description: 'Томскэнергосбыт — российская энергосбытовая компания'
+    },
+    {
+        name: 'ГК "Черноголовка"',
+        logo: lubatovo,
+        href: 'https://chernogolovka.com/',
+        description: 'Российский бренд печенья и каш быстрого приготовления. Дочерняя компания "ГК Черноголовка"'
+    },
+    {
+        name: 'ГК "Черноголовка"',
+        logo: chernogolovka,
+        href: 'https://chernogolovka.com/',
+        description: 'Компания "Черноголовка" является крупным производителем воды, безалкогольных напитков, кондитерских изделий и снековой продукции'
+    },
+    {
+        name: 'Западно-Сибирская железная дорога',
+        logo: rgd,
+        href: 'https://zszd.rzd.ru/#',
+        description: 'Филиал ОАО «РЖД», одна из крупнейших дорог сети'
     }
 ];
 
