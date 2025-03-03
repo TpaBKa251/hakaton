@@ -16,6 +16,7 @@ import tomskEnergoSbit from '../assets/images/partners/512x512bb.png';
 import lubatovo from '../assets/images/partners/Любятово.png';
 import rgd from '../assets/images/partners/ржд.png';
 import chernogolovka from '../assets/images/partners/черноголовка.png';
+import interrao from '../assets/images/partners/img.png'
 import Navbar from "./NavBar";
 
 const partnersData = [
@@ -114,6 +115,12 @@ const partnersData = [
         logo: rgd,
         href: 'https://zszd.rzd.ru/#',
         description: 'Филиал ОАО «РЖД», одна из крупнейших дорог сети'
+    },
+    {
+        name: 'АО «Томская генерация»',
+        logo: interrao,
+        href: 'https://energo.tom.ru/',
+        description: 'Компания, осуществляющая производство электрической и тепловой энергии. Объединяет генерирующие мощности города Томска'
     }
 ];
 

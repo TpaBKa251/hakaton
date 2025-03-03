@@ -14,6 +14,7 @@ import News from './components/News';
 import Partners from './components/Partners';
 import History from './components/History';
 import Document from './components/HackathonPage';
+import ProgramPage from "./components/ProgramPage";
 
 function MainPage() {
     const sections = [
@@ -124,6 +125,7 @@ function App() {
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/history" element={<History />} />
                 <Route path="/doc" element={<Document />} />
+                <Route path="/program" element={<ProgramPage />} />
                 <Route path="*" element={<h1>404 - Страница не найдена</h1>} />
             </Routes>
         </Router>

@@ -16,6 +16,7 @@ import tomskEnergoSbit from '../assets/images/partners/512x512bb.png';
 import lubatovo from '../assets/images/partners/Любятово.png';
 import rgd from '../assets/images/partners/ржд.png';
 import chernogolovka from '../assets/images/partners/черноголовка.png';
+import interrao from '../assets/images/partners/img.png'
 
 
 const partnersData = [
@@ -89,6 +90,11 @@ const partnersData = [
         name: 'Томскэнергосбыт',
         logo: tomskEnergoSbit,
         href: 'https://tomskenergosbyt.ru/'
+    },
+    {
+        name: 'Томская генерация',
+        logo: interrao,
+        href: 'https://energo.tom.ru/'
     }
 ];
 

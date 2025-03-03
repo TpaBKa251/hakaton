@@ -7,7 +7,13 @@ const newsData = [
         title: 'Информационное письмо',
         description: 'Ознакомьтесь с информационным письмом о хакатоне Бизнес-кот. Участие бесплатно!',
         link: '/doc', // Ссылка на страницу новостей
-        file: '/Inf_pismo_biznes-kot.docx'
+        file: '//hakaton-zeta.vercel.app/Inf_pismo_biznes-kot.docx'
+    },
+    {
+        title: 'Программа хакатона',
+        description: 'Ознакомьтесь с программой хакатона Бизнес-кот. Вы узнаете, что Вас ждет в каждый из дней провдения, а также сможете ознакомиться с правилами, критериями и составом жюри.',
+        link: '/program', // Ссылка на страницу новостей
+        file: '//hakaton-zeta.vercel.app/Programma_el_vid_2025_03_03.pdf'
     },
     {
         title: 'Предлагаем размещение',
@@ -45,7 +51,7 @@ const NewsSection = () => {
                             <p className="news-text">
                                 {news.file && (
                                     <a
-                                        href={`//hakaton-zeta.vercel.app/Inf_pismo_biznes-kot.docx`}
+                                        href={news.file}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="news-link"

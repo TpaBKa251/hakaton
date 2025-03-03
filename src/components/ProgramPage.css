@@ -1,0 +1,152 @@
+.program-container {
+    text-align: center;
+    padding-top: 70px;
+    background-image: url('../assets/images/main-final-tochno.svg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    /display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.program-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.program-subtitle {
+    font-size: 1.8rem;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.program-section {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 1100px;
+}
+
+.program-section h2 {
+    font-size: 1.8rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.program-section ul {
+    list-style: disc;
+    padding-left: 40px;
+}
+
+.program-section li {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.program-section p {
+    font-size: 1.5rem;
+    margin: auto;
+    text-align: justify;
+    max-width: 1100px;
+    padding-left: 2rem;
+    color: #272626;
+    line-height: 1.8;
+    text-indent: 2rem;
+}
+
+.program-section a {
+    color: #2a5d9e;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.program-section a:hover {
+    text-decoration: underline;
+    color: #1d3f6e;
+}
+
+
+.evaluation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.evaluation-table th,
+.evaluation-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.evaluation-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.evaluation-table td {
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .program-container {
+        padding-top: 75px;
+        padding-left: 5px;
+        padding-right: 5px;
+        overflow-x: hidden;
+    }
+
+    .program-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .program-subtitle {
+        font-size: 1.3rem;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+
+    .program-section {
+        max-width: 100%;
+        margin: 5px auto;
+    }
+
+    .program-section p {
+        font-size: 1.2rem;
+        max-width: 100%;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+
+    .program-section li {
+        font-size: 1.2rem;
+    }
+
+    .program-section a {
+        font-size: 1.2rem;
+    }
+
+    .program-section h2 {
+        font-size: 1.35rem;
+        color: #222;
+        margin-bottom: 10px;
+    }
+
+    .evaluation-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 1.2rem;
+    }
+}
