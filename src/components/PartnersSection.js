@@ -107,7 +107,7 @@ const PartnersSection = () => {
                     {partnersData.map((partner, index) => (
                         <div key={index} className="partner-item">
                             <img src={partner.logo} alt={`${partner.name} Логотип`} className="partner-logo" />
-                            <p><a href={partner.href} className='partner-a'>{partner.name}</a> </p>
+                            <p><a href={partner.href} className='partner-a' target="_blank" rel="noopener noreferrer">{partner.name}</a> </p>
                         </div>
                     ))}
                 </div>
