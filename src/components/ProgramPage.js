@@ -158,6 +158,9 @@ const ProgramPage = () => {
                     <li><strong>Васильев Александр Владимирович</strong>, заместитель генерального директора по научной работе АО
                         «НИИПП»
                     </li>
+                    <li><strong>Шишкарев Сергей Александрович</strong>, руководитель службы цифровых технологий компании СИБУР
+                        ООО "Томскнефтехим"
+                    </li>
                     <li><strong>Зернин Иван Федорович</strong>, председатель совета директоров ООО «Стартап студия университетов
                         Томска»
                     </li>
@@ -194,7 +197,7 @@ const ProgramPage = () => {
                 <h2>Документ</h2>
                 <p>
                     <a
-                        href="//hakaton-zeta.vercel.app/Programma_el_vid_2025_03_03.pdf"
+                        href="//hakaton-zeta.vercel.app/Programma_el_vid_10_03.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="program-link"

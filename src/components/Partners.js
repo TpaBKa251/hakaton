@@ -21,6 +21,12 @@ import Navbar from "./NavBar";
 
 const partnersData = [
     {
+        name: 'Администрация города Томска',
+        logo: partnersBackground3,
+        href: 'https://admin.tomsk.ru/',
+        description: 'Администрация города Томска — орган исполнительной власти, реализующий государственные программы региона'
+    },
+    {
         name: 'ГОСКОРПОРАЦИЯ "РОСАТОМ"',
         logo: partnersBackground1,
         href: 'https://www.rosatom.ru/index.html',
@@ -31,12 +37,6 @@ const partnersData = [
         logo: partnersBackground2,
         href: 'https://www.sberbank.ru',
         description: 'Сбер — крупнейший банк России, предоставляющий широкий спектр финансовых услуг'
-    },
-    {
-        name: 'Администрация города Томска',
-        logo: partnersBackground3,
-        href: 'https://admin.tomsk.ru/',
-        description: 'Администрация города Томска — орган исполнительной власти, реализующий государственные программы региона'
     },
     {
         name: 'ООО "НЯМ-НЯМ"',
@@ -57,12 +57,6 @@ const partnersData = [
         description: 'Роснефть — одна из крупнейших нефтегазовых компаний мира'
     },
     {
-        name: 'ОАО "Томское пиво"',
-        logo: partnersBackground7,
-        href: 'https://tomskbeer.ru/',
-        description: 'Томское пиво — известный производитель высококачественного пива и напитков'
-    },
-    {
         name: 'ООО "ВИН БИЗНЕС РЕШЕНИЯ"',
         logo: partnersBackground8,
         href: 'https://winbd.ru/',
@@ -79,18 +73,6 @@ const partnersData = [
         logo: partnersBackground11,
         href: 'https://soyuzmash.ru/regional-offices/tomskoe-regionalnoe-otdelenie/',
         description: 'Союз машиностроителей России — организация, поддерживающая машиностроительные предприятия'
-    },
-    {
-        name: 'АО "НПФ "МИКРАН"',
-        logo: partnersBackground12,
-        href: 'https://www.micran.ru/',
-        description: 'Микран — ведущий разработчик и производитель радиоэлектронного оборудования'
-    },
-    {
-        name: 'Level Up',
-        logo: partnersBackground9,
-        href: 'https://club-level-up.ru/',
-        description: 'Level Up — мужской клуб предпринимателей'
     },
     {
         name: 'АО "Томскэнергосбыт"',
@@ -121,6 +103,24 @@ const partnersData = [
         logo: interrao,
         href: 'https://energo.tom.ru/',
         description: 'Компания, осуществляющая производство электрической и тепловой энергии. Объединяет генерирующие мощности города Томска'
+    },
+    {
+        name: 'АО "НПФ "МИКРАН"',
+        logo: partnersBackground12,
+        href: 'https://www.micran.ru/',
+        description: 'Микран — ведущий разработчик и производитель радиоэлектронного оборудования'
+    },
+    {
+        name: 'Level Up',
+        logo: partnersBackground9,
+        href: 'https://club-level-up.ru/',
+        description: 'Level Up — мужской клуб предпринимателей'
+    },
+    {
+        name: 'ОАО "Томское пиво"',
+        logo: partnersBackground7,
+        href: 'https://tomskbeer.ru/',
+        description: 'Томское пиво — известный производитель высококачественного пива и напитков'
     }
 ];
 

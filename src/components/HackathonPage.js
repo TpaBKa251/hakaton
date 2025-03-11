@@ -4,7 +4,7 @@ import Navbar from "./NavBar"; // Подключаем Navbar
 
 const HackathonPage = () => {
     return (
-        <div className="hackathon-container">
+        <div className="hackathon-container" lang="ru">
             <Navbar className={`navbar visible`}/> {/* Добавляем навбар */}
             <h1 className="hackathon-title">II Всероссийский предпринимательский хакатон «Бизнес-кот»-2025 с
                 международным участием</h1>

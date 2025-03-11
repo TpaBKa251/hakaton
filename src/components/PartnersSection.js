@@ -21,19 +21,19 @@ import interrao from '../assets/images/partners/img.png'
 
 const partnersData = [
     {
+        name: 'Администрация города Томска',
+        logo: partnersBackground3,
+        href: 'https://admin.tomsk.ru/'
+    },
+    {
         name: 'Росатом',
         logo: partnersBackground1,
         href: 'https://www.rosatom.ru/index.html'
     },
-    // {
-    //     name: 'Сбер',
-    //     logo: partnersBackground2,
-    //     href: 'https://www.sberbank.ru'
-    // },
     {
-        name: 'Администрация города Томска',
-        logo: partnersBackground3,
-        href: 'https://admin.tomsk.ru/'
+        name: 'Сбер',
+        logo: partnersBackground2,
+        href: 'https://www.sberbank.ru'
     },
     {
         name: 'Ням-Ням',
