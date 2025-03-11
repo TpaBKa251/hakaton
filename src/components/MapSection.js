@@ -1,6 +1,6 @@
 import React from 'react';
 import './MapSection.css';
-import mapBackground from '../assets/images/map.png';
+import mapBackground from '../assets/images/main_map.png';
 import mapQRcode from '../assets/images/qrCodeMap.png';
 
 const MapSection = () => {

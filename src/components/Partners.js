@@ -12,6 +12,7 @@ import partnersBackground9 from '../assets/images/Рисунок12.png';
 import partnersBackground10 from '../assets/images/TPU-logo.png';
 import partnersBackground11 from '../assets/images/союз машиностроителей.png';
 import partnersBackground12 from '../assets/images/микран.png';
+import partnersBackground13 from '../assets/images/sibur.png';
 import tomskEnergoSbit from '../assets/images/partners/512x512bb.png';
 import lubatovo from '../assets/images/partners/Любятово.png';
 import rgd from '../assets/images/partners/ржд.png';
@@ -43,6 +44,12 @@ const partnersData = [
         logo: partnersBackground4,
         href: 'https://nyam-nyam.me/',
         description: 'Ням-Ням — кафе вкусной и качественной еды в Томске'
+    },
+    {
+        name: 'СИБУР ООО "Томскнефтехим"',
+        logo: partnersBackground13,
+        href: 'https://www.sibur.ru/TomskNeftehim/',
+        description: 'Томскнефтехим — один из крупнейших российских производителей полимеров, крупная производственная площадка СИБУРа'
     },
     {
         name: 'ООО ТПК "САВА"',

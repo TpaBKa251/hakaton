@@ -12,6 +12,7 @@ import partnersBackground9 from '../assets/images/Рисунок12.png';
 import partnersBackground10 from '../assets/images/partners/Stolovka.png';
 import partnersBackground11 from '../assets/images/partners/soyuz_mashinostroiteley.png';
 import partnersBackground12 from '../assets/images/partners/mikran.png';
+import partnersBackground13 from '../assets/images/sibur.png';
 import tomskEnergoSbit from '../assets/images/partners/512x512bb.png';
 import lubatovo from '../assets/images/partners/Любятово.png';
 import rgd from '../assets/images/partners/ржд.png';
@@ -44,6 +45,11 @@ const partnersData = [
         name: 'Sava',
         logo: partnersBackground5,
         href: 'https://tpksava.ru/'
+    },
+    {
+        name: 'СИБУР',
+        logo: partnersBackground13,
+        href: 'https://www.sibur.ru/TomskNeftehim/'
     },
     {
         name: 'Роснефть',
