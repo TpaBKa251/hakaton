@@ -94,7 +94,7 @@
 /* Медиа-запросы для мобильных устройств */
 @media (max-width: 768px) {
     .App {
-        background-attachment: scroll; /* Отключим фиксированный фон на мобильных */
+        background-attachment: scroll; /* Отключим фиксированный фон */
     }
 
     .section {
