@@ -13,6 +13,7 @@ import partnersBackground10 from '../assets/images/partners/Stolovka.png';
 import partnersBackground11 from '../assets/images/partners/soyuz_mashinostroiteley.png';
 import partnersBackground12 from '../assets/images/partners/mikran.png';
 import partnersBackground13 from '../assets/images/sibur.png';
+import partnersBackground14 from '../assets/images/partners/TIZ.png';
 import tomskEnergoSbit from '../assets/images/partners/512x512bb.png';
 import lubatovo from '../assets/images/partners/Любятово.png';
 import rgd from '../assets/images/partners/ржд.png';
@@ -50,6 +51,11 @@ const partnersData = [
         name: 'СИБУР',
         logo: partnersBackground13,
         href: 'https://www.sibur.ru/TomskNeftehim/'
+    },
+    {
+        name: 'Томский инструментальный завод',
+        logo: partnersBackground14,
+        href: 'http://tiz.ru/'
     },
     {
         name: 'Роснефть',

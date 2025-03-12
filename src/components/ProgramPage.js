@@ -8,12 +8,12 @@ const ProgramPage = () => {
         <div className="program-container">
             <Navbar className="navbar visible"/>
             <h1 className="program-title">
-                Программа Всероссийского предпринимательского хакатона «Бизнес-кот» – 2025
+                Программа II Всероссийского предпринимательского хакатона «Бизнес-кот» – 2025
             </h1>
-            <h2 className="program-subtitle">Дата проведения: 18–20 марта 2025</h2>
+            <h2 className="program-subtitle">Дни проведения: 18–20 марта 2025</h2>
 
             <section className="program-section">
-                <h2>18 марта 2025</h2>
+                <h2>18 марта</h2>
                 <ul>
                     <li>
                         <strong>13:30 – 14:00:</strong> Регистрация участников (МКЦ ТПУ, ул. Усова, 13В, Танцевальный
@@ -35,7 +35,7 @@ const ProgramPage = () => {
             </section>
 
             <section className="program-section">
-                <h2>19 марта 2025</h2>
+                <h2>19 марта</h2>
                 <ul>
                     <li>
                         <strong>08:30 – 14:00:</strong> Работа команд над кейсами (Коворкинг – ул. Белинского, 51)
@@ -50,7 +50,7 @@ const ProgramPage = () => {
             </section>
 
             <section className="program-section">
-                <h2>20 марта 2025</h2>
+                <h2>20 марта</h2>
                 <ul>
                     <li>
                         <strong>08:30 – 12:15:</strong> Подготовка презентационных материалов (Коворкинг – ул.
@@ -188,6 +188,7 @@ const ProgramPage = () => {
                     <li>ООО «ВИН БИЗНЕС РЕШЕНИЯ»</li>
                     <li>ПАО Сбербанк</li>
                     <li>Компания СИБУР ООО «Томскнефтехим»</li>
+                    <li>ООО «Томский инструментальный завод»</li>
                     <li>ООО «НЯМ-НЯМ»</li>
                     <li>Столовая «В главном» ООО «Энерго-тракт»</li>
                 </ul>
@@ -197,12 +198,12 @@ const ProgramPage = () => {
                 <h2>Документ</h2>
                 <p>
                     <a
-                        href="//hakaton-zeta.vercel.app/Programma_el_vid_10_03.pdf"
+                        href="//hakaton-zeta.vercel.app/Programma_el_vid_11_03.docx"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="program-link"
                     >
-                        📄 Открыть PDF
+                        📄 Открыть DOC
                     </a>
                 </p>
             </section>
