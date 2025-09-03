@@ -85,7 +85,7 @@ const CommentsSection = () => {
 
     return (
         <section className='comments-section'>
-            <h1>Ваши коментарии</h1>
+            <h1>Ваши отзывы</h1>
 
             <section className="scroll_section" ref={commentsContainerRef}>
                 {commentsElements.length ? commentsElements : noCommentsElements}
