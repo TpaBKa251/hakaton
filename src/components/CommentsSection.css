@@ -1,0 +1,160 @@
+form{
+    width: 100%;
+    height:70% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.comments-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.commentmain{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+
+}
+.b1{
+    width: 84%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    height:50px ;
+    padding: 10px;
+    width: 100%;
+    margin: 3px;
+    background-color:rgb(255, 255, 255) ;
+    border-radius: 5px;
+}
+label{width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+textarea{
+    margin-top: 5px;
+    height: 200px;
+    width: 50%;
+    padding: 10px;
+    background-color:rgb(255, 255, 255) ;
+    
+    border-radius: 5px;
+}
+button{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    background: linear-gradient(90deg,rgba(255, 255, 255, 1) 12%, rgba(91, 235, 225, 1) 50%, rgba(83, 237, 188, 1) 88%);
+    transition-duration: 0.3s;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+button :hover{
+    background: linear-gradient(90deg,rgba(83, 237, 188, 1) 12%, rgba(91, 235, 225, 1) 51%, rgba(255, 255, 255, 1) 88%);
+    transition-duration: 0.3s;
+    width: 16%;
+}
+
+.scroll_section{
+    width: 75%;
+    max-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width:3px ;
+    flex-shrink: 0;
+   
+    overflow-y: auto;
+}
+
+.left_blok{
+    width: 100%;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.right_blok{
+    width: 100%;
+    max-height: 700px;
+     display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+.com{
+    min-height: 150px;
+    max-height: 700px;
+    max-width: 65%;
+    min-width: 450px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: 5px;
+    box-shadow: black;
+    border: black;
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 15px;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+
+h4 {
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .com {
+        min-width: 250px;
+    }
+
+    h1 {
+        font-size: 3rem; /* Уменьшаем размер заголовка */
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 425px) {
+    h1 {
+        font-size: 3.2rem; /* Уменьшаем размер заголовка */
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 375px) {
+    h1 {
+        font-size: 2.8rem; /* Уменьшаем размер заголовка */
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 2.2rem; /* Уменьшаем размер заголовка */
+        margin-bottom: 2rem;
+    }
+}
