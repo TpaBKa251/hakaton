@@ -53,14 +53,14 @@ const CommentsSection = () => {
 
     useEffect(() => {
         load()
-        function handleScroll() {
-            const { scrollTop, scrollHeight, clientHeight } = commentsContainerRef.current
-            const remaining = scrollHeight - scrollTop - clientHeight
-            if (remaining < 100) { load() }
-        }
-
-        commentsContainerRef.current?.addEventListener("scroll", handleScroll)
-        return () => commentsContainerRef.current.removeEventListener("scroll", handleScroll)
+        // function handleScroll() {
+        //     const { scrollTop, scrollHeight, clientHeight } = commentsContainerRef.current
+        //     const remaining = scrollHeight - scrollTop - clientHeight
+        //     if (remaining < 100) { load() }
+        // }
+        //
+        // commentsContainerRef.current?.addEventListener("scroll", handleScroll)
+        // return () => commentsContainerRef.current.removeEventListener("scroll", handleScroll)
     }, [])
 
     const commentsElements = comments.map((c, i) => {
