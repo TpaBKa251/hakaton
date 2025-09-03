@@ -5,6 +5,7 @@ import HeroSection from './components/HeroSection';
 import ScheduleSection from './components/ScheduleSection';
 import NewsSection from './components/NewsSection';
 import HistorySection from './components/HistorySection';
+import CommentsSection from "./components/CommentsSection";
 import PartnersSection from './components/PartnersSection';
 import ContactSection from './components/ContactSection';
 import MapSection from './components/MapSection';
@@ -21,6 +22,7 @@ function MainPage() {
         { name: 'hero', label: 'Главная', component: HeroSection },
         { name: 'news', label: 'Новости', component: NewsSection },
         { name: 'history', label: 'История', component: HistorySection },
+        { name: 'comments', label: 'Комментарии', component: CommentsSection},
         { name: 'partners', label: 'Партнеры', component: PartnersSection },
         { name: 'contact', label: 'Контакты', component: ContactSection },
         { name: 'map', label: 'Карта', component: MapSection },
