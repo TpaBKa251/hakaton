@@ -2,8 +2,8 @@ import React, {useEffect, useState, useRef} from "react"
 import "./CommentsSection.css"
 
 const CommentsSection = () => {
-    const API_GET_URL = "https://176.108.246.8:8080/sasha/birthday/social/network/get"
-    const API_POST_URL = "https://176.108.246.8:8080/sasha/birthday/social/network"
+    const API_GET_URL = "https://176.108.246.8/sasha/birthday/social/network/get"
+    const API_POST_URL = "https://176.108.246.8/sasha/birthday/social/network"
 
     const [comments, setComments] = useState([])
 
