@@ -35,7 +35,7 @@ const CommentsSection = () => {
     function add(e) {
         e.preventDefault()
         const formData = new FormData(formRef.current)
-        const query = "?name=" + formRef.current.name.value + "&message" + formRef.current.message.value
+        const query = "?name=" + formRef.current.name.value + "&message=" + formRef.current.message.value
 
         fetch(API_POST_URL + query, {
             method: "POST",
