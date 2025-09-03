@@ -35,11 +35,11 @@ const CommentsSection = () => {
     function add(e) {
         e.preventDefault()
         const formData = new FormData(formRef.current)
+        const query = "?name=" + formData.current.name.value + "&message" + formData.current.message.value
 
-        fetch(API_POST_URL, {
+        fetch(API_POST_URL + query, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: formData
         })
             .then(r => {
             if (!r.ok) throw new Error(r.status.toString())
