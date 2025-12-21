@@ -8,9 +8,9 @@ const ProgramPage = () => {
         <div className="program-container">
             <Navbar className="navbar visible"/>
             <h1 className="program-title">
-                Программа II Всероссийского предпринимательского хакатона «Бизнес-кот» – 2025
+                Программа II Всероссийского предпринимательского хакатона «Бизнес-кот» – 2026
             </h1>
-            <h2 className="program-subtitle">Дни проведения: 18–20 марта 2025</h2>
+            <h2 className="program-subtitle">Дни проведения: 21–23 мая 2026</h2>
 
             <section className="program-section">
                 <h2>18 марта</h2>
