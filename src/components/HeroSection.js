@@ -15,8 +15,8 @@ const HeroSection = () => {
             <div className="hero-content">
                 <h2>Всероссийский предпринимательский хакатон</h2>
                 <h1>Бизнес-кот</h1>
-                <p className="data">18 - 20 марта 2025</p>
-                <p className="request">Прием заявок до 10 марта 2025</p>
+                <p className="data">21 - 23 мая 2026</p>
+                <p className="request">Прием заявок до 12 мая 2026</p>
                 <a href="https://forms.gle/fE2cNBDmo8Yty8pJ9" className="register-button2" target="_blank"
                    rel="noopener noreferrer">Зарегистрироваться</a>
             </div>
