@@ -23,7 +23,7 @@ import Navbar from "./NavBar";
 
 const partnersData = [
     {
-        name: 'Администрация города Томска',
+        name: 'Администрация города Омска',
         logo: partnersBackground3,
         href: 'https://admin.tomsk.ru/',
         description: 'Администрация города Томска — орган исполнительной власти, реализующий государственные программы региона'
