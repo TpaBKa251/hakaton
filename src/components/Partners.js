@@ -21,6 +21,7 @@ import chernogolovka from '../assets/images/partners/черноголовка.pn
 import interrao from '../assets/images/partners/img.png'
 import Navbar from "./NavBar";
 
+
 const partnersData = [
     {
         name: 'Администрация города Томска',
