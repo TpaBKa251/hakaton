@@ -10,7 +10,7 @@ const ProgramPage = () => {
             <h1 className="program-title">
                 Программа II Всероссийского предпринимательского хакатона «Бизнес-кот» – 2026
             </h1>
-            <h2 className="program-subtitle">Дни проведения: 21–23 мая 2026</h2>
+            <h2 className="program-subtitle">Дни проведения: 14–16 апреля 2026</h2>
 
             <section className="program-section">
                 <h2>18 марта</h2>
