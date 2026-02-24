@@ -13,7 +13,7 @@ const ProgramPage = () => {
             <h2 className="program-subtitle">Дни проведения: 14–16 апреля 2026</h2>
 
             <section className="program-section">
-                <h2>18 марта</h2>
+                <h2>14 апреля</h2>
                 <ul>
                     <li>
                         <strong>13:30 – 14:00:</strong> Регистрация участников (МКЦ ТПУ, ул. Усова, 13В, Танцевальный
@@ -35,7 +35,7 @@ const ProgramPage = () => {
             </section>
 
             <section className="program-section">
-                <h2>19 марта</h2>
+                <h2>15 апреля</h2>
                 <ul>
                     <li>
                         <strong>08:30 – 14:00:</strong> Работа команд над кейсами (Коворкинг – ул. Белинского, 51)
@@ -50,7 +50,7 @@ const ProgramPage = () => {
             </section>
 
             <section className="program-section">
-                <h2>20 марта</h2>
+                <h2>16 апреля</h2>
                 <ul>
                     <li>
                         <strong>08:30 – 12:15:</strong> Подготовка презентационных материалов (Коворкинг – ул.

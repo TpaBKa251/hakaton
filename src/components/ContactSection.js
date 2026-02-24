@@ -23,6 +23,9 @@ const ContactSection = () => {
                     <div className="social-media">
                         <a href="https://vk.com/id303047664" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
                     </div>
+                    <div className="social-media">
+                        <a href="https://t.me/Tatiana_V_Kalashnikova" target="_blank" rel="noopener noreferrer">Telegram</a>
+                    </div>
                 </div>
             </div>
         </section>
