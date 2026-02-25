@@ -30,7 +30,7 @@ function History() {
                 Присоединяйтесь к нам, чтобы совместно воплотить мечты в жизнь и создать новую, вдохновляющую
                 среду для будущих поколений предпринимателей!
             </p>
-            <h2 className="history-subtitle">О нас:</h2>
+            <h2 className="history-subtitle">Люди о нас:</h2>
             <ul className="history-list">
                 <li className="history-item">
                     Владимир Игоревич Самокиш - депутат Государственной думы Российской Федерации: <a
@@ -54,7 +54,7 @@ function History() {
                 </li>
             </ul>
             <h2 className="history-subtitle">
-                Вузы участники 2024:
+                Вузы участники за всю историю хакатона:
             </h2>
             <ul className="history-list">
                 <li><a className="history-a"

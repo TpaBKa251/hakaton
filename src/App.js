@@ -1,8 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, {useEffect, useRef, useState} from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.css';
 import HeroSection from './components/HeroSection';
-import ScheduleSection from './components/ScheduleSection';
 import NewsSection from './components/NewsSection';
 import HistorySection from './components/HistorySection';
 import CommentsSection from "./components/CommentsSection";

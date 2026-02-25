@@ -114,7 +114,7 @@ const PartnersSection = () => {
     return (
         <section className="partners-section">
             <div className="partners-content">
-                <h2>Партнёры 2025</h2>
+                <h2>Партнёры 2026</h2>
                 <div className="partners-list">
                     {partnersData.map((partner, index) => (
                         <div key={index} className="partner-item">

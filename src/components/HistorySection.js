@@ -7,6 +7,12 @@ import historyImage4 from '../assets/images/хакатон 4.jpg';
 import historyImage5 from '../assets/images/хакатон 5.jpg';
 import historyImage6 from '../assets/images/хакатон 6.jpg';
 import historyImage7 from '../assets/images/хакатон 7.jpg';
+import historyImage8 from '../assets/images/partners/Hacaton2025_1.jpg';
+import historyImage9 from '../assets/images/partners/Hacaton2025_2.jpg';
+import historyImage10 from '../assets/images/partners/Hacaton2025_3.jpg';
+import historyImage11 from '../assets/images/partners/Hacaton2025_4.jpg';
+import historyImage12 from '../assets/images/partners/Hacaton2025_5.jpg';
+import historyImage13 from '../assets/images/partners/Hacaton2025_6.jpg';
 
 const historyImages = [
     historyImage1,
@@ -15,7 +21,13 @@ const historyImages = [
     historyImage4,
     historyImage5,
     historyImage6,
-    historyImage7
+    historyImage7,
+    historyImage8,
+    historyImage9,
+    historyImage10,
+    historyImage11,
+    historyImage12,
+    historyImage13,
 ];
 
 const HistorySection = () => {
