@@ -17,7 +17,8 @@ const newsData = [
     },
     {
         title: 'Предлагаем размещение',
-        description: 'Санаторий-профилакторий ТПУ, ул. Усова д. 13\nСтоимость размещения: 700 руб./сутки на человека'
+        isAccommodation: true,
+        price: '700 руб./сутки на человека'
     }
 ];
 
@@ -39,7 +40,25 @@ const NewsSection = () => {
                     {newsData.map((news, index) => (
                         <div key={index} className="news-item">
                             <h3>{news.title}</h3>
-                            <p>{formatTextWithNewLines(news.description)}</p>
+
+                            {news.isAccommodation ? (
+                                <p>
+                                    <a
+                                        href="https://kurort.minzdrav.gov.ru/search/2397"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="news-link"
+                                    >
+                                        Санаторий-профилакторий ТПУ
+                                    </a>
+                                    , ул. Усова д. 13
+                                    <br />
+                                    Стоимость размещения: {news.price}
+                                </p>
+                            ) : (
+                                <p>{news.description && formatTextWithNewLines(news.description)}</p>
+                            )}
+
                             <p className="news-text">
                                 {news.link && (
                                     <Link to={news.link} target="_blank" className="news-link">
