@@ -32,6 +32,24 @@
     text-align: left;
     max-width: 1100px; /* Увеличиваем ширину секций */
 }
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-link svg,
+.contact-link img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.contact-link:hover {
+    opacity: 0.8;
+}
 
 .hackathon-section h2 {
     font-size: 1.8rem;
