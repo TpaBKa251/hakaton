@@ -1,5 +1,5 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import HeroSection from './components/HeroSection';
 import NewsSection from './components/NewsSection';
@@ -18,80 +18,77 @@ import ProgramPage from "./components/ProgramPage";
 
 function MainPage() {
     const sections = [
-        { name: 'hero', label: 'Главная', component: HeroSection },
-        { name: 'news', label: 'Новости', component: NewsSection },
-        { name: 'history', label: 'История', component: HistorySection },
-        { name: 'comments', label: 'Комментарии', component: CommentsSection},
-        { name: 'partners', label: 'Партнеры', component: PartnersSection },
-        { name: 'contact', label: 'Контакты', component: ContactSection },
-        { name: 'map', label: 'Карта', component: MapSection },
+        { name: 'hero',     label: 'Главная',       component: HeroSection },
+        { name: 'news',     label: 'Новости',        component: NewsSection },
+        { name: 'history',  label: 'История',        component: HistorySection },
+        { name: 'comments', label: 'Комментарии',    component: CommentsSection },
+        { name: 'partners', label: 'Партнеры',       component: PartnersSection },
+        { name: 'contact',  label: 'Контакты',       component: ContactSection },
+        { name: 'map',      label: 'Карта',          component: MapSection },
     ];
 
-    const sectionRefs = useRef(sections.map(() => React.createRef())); // Массив рефов для каждой секции
+    const sectionRefs = useRef(sections.map(() => React.createRef()));
     const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
-    const [navbarVisible, setNavbarVisible] = useState(false);
+    const [navbarVisible, setNavbarVisible] = useState(true);
+
+    // Храним текущий индекс в ref — чтобы читать в scroll-хендлере без зависимостей
+    const currentIndexRef = useRef(0);
 
     const scrollToSection = (index) => {
-        const targetSection = sectionRefs.current[index]?.current;
-        if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth',
-            });
+        const target = sectionRefs.current[index]?.current;
+        if (target) {
+            window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
         }
     };
 
     useEffect(() => {
+        // Показываем навбар сразу
+        setNavbarVisible(true);
+
         const handleScroll = () => {
             const viewportHeight = window.innerHeight;
-
-            // Определяем текущую видимую секцию
-            let mostVisibleIndex = currentSectionIndex;
-
-            if (window.scrollY > 0 && !navbarVisible) {
-                setNavbarVisible(true); // Показываем Navbar, когда начинается прокрутка
-            }
+            let mostVisibleIndex = currentIndexRef.current;
 
             sectionRefs.current.forEach((ref, index) => {
                 if (ref.current) {
                     const rect = ref.current.getBoundingClientRect();
-                    const visibleHeight =
-                        Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
-
-                    if (visibleHeight > viewportHeight * 0.5) {
+                    const visible = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
+                    if (visible > viewportHeight * 0.5) {
                         mostVisibleIndex = index;
                     }
                 }
             });
 
-            if (mostVisibleIndex !== currentSectionIndex) {
-                const isScrollingDown = mostVisibleIndex > currentSectionIndex;
+            if (mostVisibleIndex !== currentIndexRef.current) {
+                const isDown = mostVisibleIndex > currentIndexRef.current;
 
-                // Убираем старые классы у текущей секции
-                const currentRef = sectionRefs.current[currentSectionIndex]?.current;
-                if (currentRef) {
-                    currentRef.classList.remove('visible');
-                    currentRef.classList.add(isScrollingDown ? 'hidden-up' : 'hidden-down'); // Сначала удаляем "visible"
+                const prevRef = sectionRefs.current[currentIndexRef.current]?.current;
+                if (prevRef) {
+                    prevRef.classList.remove('visible');
+                    prevRef.classList.add(isDown ? 'hidden-up' : 'hidden-down');
                 }
 
                 const nextRef = sectionRefs.current[mostVisibleIndex]?.current;
                 if (nextRef) {
-                    nextRef.classList.remove('hidden-up', 'hidden-down'); // Убираем "скрытые" классы
-                    nextRef.classList.add('visible'); // Добавляем "visible" последним
+                    nextRef.classList.remove('hidden-up', 'hidden-down');
+                    nextRef.classList.add('visible');
                 }
 
-
+                currentIndexRef.current = mostVisibleIndex;
                 setCurrentSectionIndex(mostVisibleIndex);
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        // ВАЖНО: passive: true — не блокирует нативный скролл браузера
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [currentSectionIndex]);
+
+        // Пустой массив зависимостей — listener вешается один раз и не пересоздаётся
+    }, []);
 
     return (
         <div className="App">
-            <Navbar className={`navbar ${navbarVisible ? 'visible' : 'visible'}`} />
+            <Navbar className={`navbar ${navbarVisible ? 'visible' : ''}`} />
             <SideNavigation
                 sections={sections}
                 currentSectionIndex={currentSectionIndex}
@@ -102,17 +99,14 @@ function MainPage() {
                     key={section.name}
                     ref={sectionRefs.current[index]}
                     className={`section ${
-                        currentSectionIndex === index
+                        index === 0
                             ? 'visible'
-                            : index > currentSectionIndex
-                                ? 'hidden-down'
-                                : 'hidden-up'
+                            : 'hidden-down'
                     }`}
                 >
                     {React.createElement(section.component)}
                 </div>
             ))}
-
         </div>
     );
 }
@@ -121,13 +115,13 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<MainPage />} />
-                <Route path="/news" element={<News />} />
+                <Route path="/"         element={<MainPage />} />
+                <Route path="/news"     element={<News />} />
                 <Route path="/partners" element={<Partners />} />
-                <Route path="/history" element={<History />} />
-                <Route path="/doc" element={<Document />} />
-                <Route path="/program" element={<ProgramPage />} />
-                <Route path="*" element={<h1>404 - Страница не найдена</h1>} />
+                <Route path="/history"  element={<History />} />
+                <Route path="/doc"      element={<Document />} />
+                <Route path="/program"  element={<ProgramPage />} />
+                <Route path="*"         element={<h1>404 - Страница не найдена</h1>} />
             </Routes>
         </Router>
     );
