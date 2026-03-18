@@ -1,145 +1,414 @@
+/*.navbar {*/
+/*    position: fixed;*/
+/*    margin: 5px;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: calc(100% - 10px);*/
+/*    max-height: 60px;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    padding: 5px 20px;*/
+/*    background-color: rgba(0, 0, 0, 0.8);*/
+/*    color: white;*/
+/*    opacity: 0;*/
+/*    transform: translateY(-40px);*/
+/*    transition: opacity 1s ease, transform 1s ease, max-height 0.5s ease; !* Плавные переходы *!*/
+/*    z-index: 1000;*/
+/*    border-radius: 30px;*/
+/*    backdrop-filter: blur(5px);*/
+/*}*/
+
+/*.navbar-logo {*/
+/*    max-width: 100%; !* Укажите нужный размер *!*/
+/*    max-height: 50px; !* Укажите нужный размер *!*/
+/*    margin-right: 10px; !* Расстояние между изображением и текстом *!*/
+/*    border-radius: 50%; !* Если нужно сделать изображение круглым *!*/
+/*    object-fit: cover; !* Для правильного масштабирования изображения *!*/
+/*}*/
+
+/*.navbar.visible {*/
+/*    opacity: 1;*/
+/*    transform: translateY(0);*/
+/*}*/
+
+/*.navbar-left {*/
+/*    font-weight: bold;*/
+/*    font-size: 1.2rem;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.navbar-right {*/
+/*    display: flex;*/
+/*    gap: 10px;*/
+/*    align-items: center;*/
+/*    font-size: 1.2rem;*/
+/*    transition: transform 0.5s ease, opacity 0.5s ease; !* Плавное появление/скрытие *!*/
+/*}*/
+
+
+/*.menu-toggle {*/
+/*    background: none;*/
+/*    border: none;*/
+/*    color: white;*/
+/*    font-size: 1.8rem;*/
+/*    cursor: pointer;*/
+/*    z-index: 1001;*/
+/*    display: none; !* Скрываем кнопку по умолчанию *!*/
+/*}*/
+
+/*.navbar-right a,*/
+/*.register-button {*/
+/*    font-size: 1.2rem;*/
+/*    margin: 0.5rem 0;*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.register-button {*/
+/*    padding: 5px 12px;*/
+/*    border: 1px solid white;*/
+/*    border-radius: 8px;*/
+/*    transition: 0.3s;*/
+/*}*/
+
+/*.register-button:hover {*/
+/*    background-color: white;*/
+/*    color: black;*/
+/*    transition: 0.5s;*/
+/*}*/
+
+/*!* Адаптивные стили *!*/
+/*@media (max-width: 768px) {*/
+/*    .navbar {*/
+/*        transition: max-height 1.5s ease, transform .75s ease, opacity 1s; !* Плавные анимации для navbar *!*/
+/*        backdrop-filter: blur(5px);*/
+/*        flex-direction: column;*/
+/*        align-items: stretch;*/
+/*    }*/
+
+/*    .navbar-right {*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        gap: 10%;*/
+/*        align-items: center;*/
+/*        font-size: 1.2rem;*/
+/*        transition: opacity 0.5s ease, transform 1s ease;*/
+/*        opacity: 0;*/
+/*        transform: translateY(-20px); !* Изначально скрыты *!*/
+/*    }*/
+
+/*    .navbar-right.inactive {*/
+/*        pointer-events: none; !* Запрещает клики *!*/
+/*        opacity: 0; !* Прячет элементы *!*/
+/*        transform: translateY(-20px); !* Скрывает элементы *!*/
+/*    }*/
+
+/*    .navbar.menu-open {*/
+/*        max-height: 100vh; !* Навбар заполняет весь экран *!*/
+/*        transform: translateY(0); !* Показываем navbar *!*/
+/*    }*/
+
+/*    .navbar-center {*/
+/*        position: absolute;*/
+/*        left: 50%;*/
+/*        transform: translateX(-50%); !* Центрируем по горизонтали *!*/
+/*        font-size: 1.5rem;*/
+/*        font-weight: bold;*/
+/*        color: white; !* Цвет текста *!*/
+/*    }*/
+
+
+/*    .navbar-left {*/
+/*        position: relative;*/
+/*        z-index: 2;*/
+/*        display: flex;*/
+/*        align-items: center;*/
+/*        justify-content: space-between; !* Распределяем элементы по краям *!*/
+/*        width: 100%;*/
+/*    }*/
+
+/*    .navbar.menu-open .navbar-right {*/
+/*        pointer-events: auto;*/
+/*        opacity: 1; !* Появление элементов *!*/
+/*        transform: translateY(0); !* Элементы плавно поднимутся *!*/
+/*    }*/
+
+/*    .menu-toggle {*/
+/*        display: block; !* Показываем кнопку меню только на мобильных *!*/
+/*    }*/
+
+/*    .register-button:active {*/
+/*        transform: scale(0.75);*/
+/*    }*/
+/*}*/
 .navbar {
     position: fixed;
-    margin: 5px;
-    top: 0;
-    left: 0;
-    width: calc(100% - 10px);
-    max-height: 60px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-80px);
+    width: calc(100% - 28px);
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    opacity: 0;
-    transform: translateY(-40px);
-    transition: opacity 1s ease, transform 1s ease, max-height 0.5s ease; /* Плавные переходы */
+    padding: 0 20px;
+    height: 54px;
+    background: rgba(26, 46, 37, 0.82);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border: 1px solid rgba(6,193,103,0.22);
+    border-radius: 18px;
     z-index: 1000;
-    border-radius: 30px;
-    backdrop-filter: blur(5px);
-}
-
-.navbar-logo {
-    max-width: 100%; /* Укажите нужный размер */
-    max-height: 50px; /* Укажите нужный размер */
-    margin-right: 10px; /* Расстояние между изображением и текстом */
-    border-radius: 50%; /* Если нужно сделать изображение круглым */
-    object-fit: cover; /* Для правильного масштабирования изображения */
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease, max-height 0.4s ease;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    box-sizing: border-box;
+    overflow: hidden;
+    max-height: 54px;
+    color: white;
 }
 
 .navbar.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+
+.navbar-logo {
+    width: 36px; height: 36px; min-width: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+    flex-shrink: 0;
+    border: 2px solid rgba(6,193,103,0.4);
 }
 
 .navbar-left {
-    font-weight: bold;
-    font-size: 1.2rem;
     display: flex;
     align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.navbar-center {
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    white-space: nowrap;
 }
 
 .navbar-right {
     display: flex;
-    gap: 10px;
     align-items: center;
-    font-size: 1.2rem;
-    transition: transform 0.5s ease, opacity 0.5s ease; /* Плавное появление/скрытие */
+    gap: 4px;
 }
 
-
-.menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.8rem;
-    cursor: pointer;
-    z-index: 1001;
-    display: none; /* Скрываем кнопку по умолчанию */
-}
-
-.navbar-right a,
-.register-button {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-    color: white;
-    text-decoration: none;
-}
-
-.register-button {
-    padding: 5px 12px;
-    border: 1px solid white;
+.navbar-right a {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+    padding: 6px 10px;
     border-radius: 8px;
-    transition: 0.3s;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+}
+
+.navbar-right a:hover {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.register-button {
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    padding: 7px 16px !important;
+    background: var(--accent) !important;
+    color: white !important;
+    border-radius: 20px !important;
+    border: none;
+    white-space: nowrap;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s !important;
+    box-shadow: 0 2px 10px rgba(6,193,103,0.35);
 }
 
 .register-button:hover {
-    background-color: white;
-    color: black;
-    transition: 0.5s;
+    background: var(--accent-dark) !important;
+    transform: scale(1.03) !important;
 }
 
-/* Адаптивные стили */
+/* Мобильный блок (кнопка + бургер) — скрыт на десктопе */
+.navbar-mobile-right {
+    display: none;
+}
+
+/* Drawer — скрыт на десктопе полностью */
+.navbar-drawer {
+    display: none;
+}
+
+/* Гамбургер */
+.menu-toggle {
+    display: none;
+    background: rgba(255,255,255,0.12) !important;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    padding: 0;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 8px !important;
+    margin-top: 0 !important;
+    align-items: center;
+    justify-content: center;
+    background-image: none !important;
+}
+
+/* ── МОБИЛЬНЫЙ ── */
 @media (max-width: 768px) {
+    /* Navbar — одна строка: лого | название | кнопка регистрации | бургер */
     .navbar {
-        transition: max-height 1.5s ease, transform .75s ease, opacity 1s; /* Плавные анимации для navbar */
-        backdrop-filter: blur(5px);
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .navbar-right {
-        display: flex;
-        flex-direction: column;
-        gap: 10%;
+        top: 8px;
+        left: 8px;
+        width: calc(100% - 16px);
+        transform: translateY(-80px);
+        max-height: 54px;
+        padding: 0 12px;
+        border-radius: 14px;
+        flex-direction: row;        /* горизонтальный ряд, как на десктопе */
+        justify-content: space-between;
         align-items: center;
-        font-size: 1.2rem;
-        transition: opacity 0.5s ease, transform 1s ease;
-        opacity: 0;
-        transform: translateY(-20px); /* Изначально скрыты */
+        overflow: hidden;
+        transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
-    .navbar-right.inactive {
-        pointer-events: none; /* Запрещает клики */
-        opacity: 0; /* Прячет элементы */
-        transform: translateY(-20px); /* Скрывает элементы */
-    }
+    .navbar.visible { transform: translateY(0); }
 
-    .navbar.menu-open {
-        max-height: 100vh; /* Навбар заполняет весь экран */
-        transform: translateY(0); /* Показываем navbar */
+    /* Левая часть: лого + название */
+    .navbar-left {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-shrink: 0;
+        height: 54px;
+        width: auto;
+        position: static;
     }
 
     .navbar-center {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%); /* Центрируем по горизонтали */
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: white; /* Цвет текста */
+        position: static;
+        transform: none;
+        pointer-events: auto;
+        font-size: 0.95rem;
+        white-space: nowrap;
     }
 
+    /* Правая часть: кнопка регистрации + бургер */
+    .navbar-right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        padding: 0;
+        width: auto;
+        flex-wrap: nowrap;
+    }
 
-    .navbar-left {
-        position: relative;
-        z-index: 2;
+    /* Показываем drawer только на мобиле */
+    .navbar-drawer {
+        display: block;
+    }
+
+    /* Скрываем десктопный navbar-right на мобиле */
+    .navbar-right {
+        display: none !important;
+    }
+
+    /* Показываем мобильный блок: кнопка + бургер */
+    .navbar-mobile-right {
         display: flex;
         align-items: center;
-        justify-content: space-between; /* Распределяем элементы по краям */
-        width: 100%;
+        gap: 8px;
+        flex-shrink: 0;
     }
 
-    .navbar.menu-open .navbar-right {
+    /* Кнопка регистрации — всегда видна */
+    .register-button {
+        display: inline-block !important;
+        font-size: 0.82rem !important;
+        padding: 7px 12px !important;
+        white-space: nowrap;
+        width: auto !important;
+        margin-top: 0 !important;
+    }
+
+    /* Бургер — показываем */
+    .menu-toggle { display: flex !important; }
+
+    /* ── Выезжающее меню снизу навбара (отдельный оверлей) ── */
+    .navbar-right.inactive { /* ничего не скрываем — скрыты через a:not(.register-button) */ }
+
+    /* Когда меню открыто — показываем выпадающую панель */
+    .navbar.menu-open {
+        border-radius: 14px 14px 0 0;
+        max-height: 54px; /* сам навбар не растягиваем */
+    }
+
+    /* Drawer — выдвигается поверх контента под навбаром */
+    .navbar-drawer {
+        position: fixed;
+        top: calc(54px + 8px + 8px); /* высота navbar + top + margin */
+        left: 8px;
+        width: calc(100% - 16px);
+        background: rgba(26, 46, 37, 0.96);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        border: 1px solid rgba(6,193,103,0.22);
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+        z-index: 999;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1),
+        opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .navbar-drawer.open {
+        max-height: 320px;
+        opacity: 1;
         pointer-events: auto;
-        opacity: 1; /* Появление элементов */
-        transform: translateY(0); /* Элементы плавно поднимутся */
     }
 
-    .menu-toggle {
-        display: block; /* Показываем кнопку меню только на мобильных */
+    .navbar-drawer-links {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 12px 16px;
+        gap: 4px;
     }
 
-    .register-button:active {
-        transform: scale(0.75);
+    .navbar-drawer-links a {
+        font-size: 1rem;
+        font-weight: 500;
+        color: rgba(255,255,255,0.88);
+        padding: 12px 16px;
+        border-radius: 10px;
+        text-align: left;
+        transition: background 0.2s;
+        text-decoration: none;
+        display: block;
+    }
+
+    .navbar-drawer-links a:hover,
+    .navbar-drawer-links a:active {
+        background: rgba(255,255,255,0.1);
+        color: white;
     }
 }

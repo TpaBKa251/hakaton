@@ -1,228 +1,309 @@
+/*.hero {*/
+/*    position: relative;*/
+/*    height: 100vh; !* Высота секции 100% экрана *!*/
+/*    display: flex;*/
+/*    flex-direction: column; !* Элементы располагаются в колонку *!*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    text-align: center;*/
+/*    overflow: hidden; !* Скрывает лишние части изображения *!*/
+/*}*/
+
+/*.hero-images {*/
+/*    display: flex; !* Выравниваем изображения в линию *!*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*     !* Отступ от изображений до текста *!*/
+/*}*/
+
+/*.register-button2 {*/
+/*    display: inline-block;*/
+/*    background-color: rgba(255, 255, 255, 0);*/
+/*    color: black;*/
+/*    font-size: 1.5rem;*/
+/*    font-weight: bold;*/
+/*    text-transform: uppercase;*/
+/*    padding: 15px 30px;*/
+/*    margin-top: 20px;*/
+/*    border: 2px solid black;*/
+/*    border-radius: 8px;*/
+/*    text-decoration: none;*/
+/*    transition: all 0.3s ease-in-out;*/
+/*}*/
+
+/*.register-button2:hover {*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*}*/
+
+/*.hero-image {*/
+/*    width: 80%; !* Примерная ширина каждого изображения *!*/
+/*    height: auto; !* Сохраняет пропорции *!*/
+/*    margin-bottom: calc(2 / 3 * 5%);*/
+/*}*/
+
+/*.hero-image:not(:first-child) {*/
+/*    margin-left: calc(2 / 3 * 20%); !* Отступ между изображениями (2/3 от ширины изображения) *!*/
+/*}*/
+
+/*.hero-content {*/
+/*    position: relative;*/
+/*    z-index: 2; !* Текст размещается поверх фона *!*/
+/*    color: #000; !* Цвет текста *!*/
+/*}*/
+
+/*.hero-content h1 {*/
+/*    font-size: 6rem;*/
+/*}*/
+
+/*.data {*/
+/*    font-size: 3rem;*/
+/*    margin-bottom: 3rem;*/
+/*}*/
+
+/*.request {*/
+/*    font-size: 2rem;*/
+/*}*/
+
+/*.hero-content p {*/
+/*    /font-size: 2rem;*/
+/*}*/
+
+/*.hero-content h2 {*/
+/*    font-size: 3rem;*/
+/*    !*max-width: 800px; !* Ограничение на ширину текста *!*!*/
+/*    margin: 0 auto; !* Центрирование с отступами *!*/
+/*    padding: 0 20px; !* Отступы по краям *!*/
+/*    text-align: center; !* Дополнительно выравнивание по центру текста *!*/
+/*}*/
+
+
+
+/*!* Адаптация для мобильных устройств *!*/
+/*@media (max-width: 768px) {*/
+/*    .hero-content h1 {*/
+/*        font-size: 4rem;*/
+/*        padding: 0 20px; !* Отступы для мобильных устройств *!*/
+/*        margin: 0 auto; !* Центрирование с отступами *!*/
+/*        text-align: center; !* Дополнительно выравнивание по центру текста *!*/
+
+/*    }*/
+
+/*    .hero-content p {*/
+/*        font-size: 1.5rem;*/
+/*        padding: 0 20px; !* Отступы для мобильных устройств *!*/
+/*        margin: 0 auto; !* Центрирование с отступами *!*/
+/*        text-align: center; !* Дополнительно выравнивание по центру текста *!*/
+
+/*    }*/
+
+/*    .hero-content h2 {*/
+/*        font-size: 2rem;*/
+/*        padding: 0 20px; !* Отступы для мобильных устройств *!*/
+/*        margin: 0 auto; !* Центрирование с отступами *!*/
+/*        text-align: center; !* Дополнительно выравнивание по центру текста *!*/
+
+/*    }*/
+
+/*    .hero-images {*/
+/*        flex-wrap: wrap; !* Если места недостаточно, изображения будут переноситься на следующую строку *!*/
+/*    }*/
+
+/*    .hero-image {*/
+/*        width: 70%; !* Уменьшаем размер изображений на мобильных *!*/
+/*    }*/
+
+/*    .hero-image:not(:first-child) {*/
+/*        margin-left: calc(2 / 3 * 15%);*/
+/*    }*/
+/*}*/
+
+
+/*    !* Адаптация для мобильных устройств (425px и меньше) *!*/
+/*    @media (max-width: 425px) {*/
+/*        .hero-content h1 {*/
+/*            font-size: 3rem; !* Еще меньше размер текста *!*/
+/*            padding: 0 15px; !* Уменьшенные отступы для узких экранов *!*/
+/*            margin: 0 auto;*/
+/*            text-align: center;*/
+/*        }*/
+
+/*        .hero-content p {*/
+/*            font-size: 1.2rem; !* Еще меньше размер текста *!*/
+/*            padding: 0 15px; !* Уменьшенные отступы для узких экранов *!*/
+/*            margin: 0 auto;*/
+/*            text-align: center;*/
+/*        }*/
+
+/*        .hero-content h2 {*/
+/*            font-size: 1.8rem; !* Еще меньше размер текста *!*/
+/*            padding: 0 15px; !* Уменьшенные отступы для узких экранов *!*/
+/*            margin: 0 auto;*/
+/*            text-align: center;*/
+/*        }*/
+
+/*        .hero-images {*/
+/*            flex-wrap: wrap;*/
+/*        }*/
+
+/*        .hero-image {*/
+/*            width: 70%; !* Делаем изображения немного крупнее для более комфортного просмотра *!*/
+/*        }*/
+
+/*        .hero-image:not(:first-child) {*/
+/*            margin-left: 5%; !* Регулируем отступы между изображениями *!*/
+/*        }*/
+/*    }*/
+
+/*!* Адаптация для очень маленьких устройств (375px и меньше) *!*/
+/*@media (max-width: 375px) {*/
+/*    .hero-content h1 {*/
+/*        font-size: 2.5rem; !* Еще меньше размер текста *!*/
+/*        padding: 0 10px; !* Минимальные отступы по краям *!*/
+/*        margin: 0 auto;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .hero-content p {*/
+/*        font-size: 1rem; !* Еще меньше размер текста *!*/
+/*        padding: 0 10px; !* Минимальные отступы по краям *!*/
+/*        margin: 0 auto;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .hero-content h2 {*/
+/*        font-size: 1.5rem; !* Еще меньше размер текста *!*/
+/*        padding: 0 10px; !* Минимальные отступы по краям *!*/
+/*        margin: 0 auto;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .hero-images {*/
+/*        flex-wrap: wrap;*/
+/*    }*/
+
+/*    .hero-image {*/
+/*        width: 70%; !* Увеличиваем изображения на самых маленьких экранах *!*/
+/*    }*/
+
+/*    .hero-image:not(:first-child) {*/
+/*        margin-left: 5%;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 320px) {*/
+/*    .hero-content h1 {*/
+/*        font-size: 2.5rem; !* Еще меньше размер текста *!*/
+/*        padding: 0 10px; !* Минимальные отступы по краям *!*/
+/*        margin: 0 auto;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .hero-content p {*/
+/*        font-size: 1rem; !* Еще меньше размер текста *!*/
+/*        padding: 0 10px; !* Минимальные отступы по краям *!*/
+/*        margin: 0 auto;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .hero-content h2 {*/
+/*        font-size: 1.3rem; !* Еще меньше размер текста *!*/
+/*        padding: 0 10px; !* Минимальные отступы по краям *!*/
+/*        margin: 0 auto;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .hero-images {*/
+/*        flex-wrap: wrap;*/
+/*    }*/
+
+/*    .hero-image {*/
+/*        width: 70%; !* Увеличиваем изображения на самых маленьких экранах *!*/
+/*    }*/
+
+/*    .hero-image:not(:first-child) {*/
+/*        margin-left: 5%;*/
+/*    }*/
+/*}*/
 .hero {
-    position: relative;
-    height: 100vh; /* Высота секции 100% экрана */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Элементы располагаются в колонку */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden; /* Скрывает лишние части изображения */
+    padding: clamp(90px, 14vw, 150px) clamp(20px, 5vw, 60px) clamp(48px, 7vw, 90px);
+    background: transparent;
+    overflow: visible;
 }
 
 .hero-images {
-    display: flex; /* Выравниваем изображения в линию */
+    display: flex;
     justify-content: center;
-    align-items: center;
-     /* Отступ от изображений до текста */
+    margin-bottom: clamp(16px, 3vw, 32px);
+}
+
+.hero-image {
+    width: min(70%, 460px);
+    height: auto;
+    border-radius: 28px;
+    filter: drop-shadow(0 24px 56px rgba(6,193,103,0.22)) drop-shadow(0 8px 24px rgba(0,0,0,0.12));
+}
+
+.hero-content { max-width: 800px; width: 100%; }
+
+.hero-content h2 {
+    font-size: clamp(0.9rem, 2.2vw, 1.25rem);
+    font-weight: 500;
+    color: var(--accent-dark);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: clamp(8px, 2vw, 14px);
+}
+
+.hero-content h1 {
+    font-size: clamp(3.2rem, 12vw, 7.5rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    color: var(--dark);
+    margin-bottom: clamp(14px, 2.5vw, 24px);
+}
+
+.data {
+    font-size: clamp(1.1rem, 3vw, 1.7rem);
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 6px;
+}
+
+.request {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-weight: 400;
+    color: var(--mid-gray);
+    margin-bottom: clamp(22px, 4vw, 40px);
 }
 
 .register-button2 {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0);
-    color: black;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 15px 30px;
-    margin-top: 20px;
-    border: 2px solid black;
-    border-radius: 8px;
+    padding: clamp(13px, 2vw, 17px) clamp(28px, 5vw, 48px);
+    background: var(--accent);
+    color: white;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    font-weight: 600;
+    border-radius: 30px;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    box-shadow: 0 6px 24px rgba(6,193,103,0.4);
+    letter-spacing: 0.01em;
 }
 
 .register-button2:hover {
-    background-color: black;
-    color: white;
+    background: var(--accent-dark);
+    transform: scale(1.03);
+    box-shadow: 0 10px 36px rgba(6,193,103,0.5);
 }
 
-.hero-image {
-    width: 80%; /* Примерная ширина каждого изображения */
-    height: auto; /* Сохраняет пропорции */
-    margin-bottom: calc(2 / 3 * 5%);
+@media (max-width: 480px) {
+    .hero-image { width: 85%; border-radius: 18px; }
 }
-
-.hero-image:not(:first-child) {
-    margin-left: calc(2 / 3 * 20%); /* Отступ между изображениями (2/3 от ширины изображения) */
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2; /* Текст размещается поверх фона */
-    color: #000; /* Цвет текста */
-}
-
-.hero-content h1 {
-    font-size: 6rem;
-}
-
-.data {
-    font-size: 3rem;
-    margin-bottom: 3rem;
-}
-
-.request {
-    font-size: 2rem;
-}
-
-.hero-content p {
-    /font-size: 2rem;
-}
-
-.hero-content h2 {
-    font-size: 3rem;
-    /*max-width: 800px; !* Ограничение на ширину текста *!*/
-    margin: 0 auto; /* Центрирование с отступами */
-    padding: 0 20px; /* Отступы по краям */
-    text-align: center; /* Дополнительно выравнивание по центру текста */
-}
-
-
-
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 4rem;
-        padding: 0 20px; /* Отступы для мобильных устройств */
-        margin: 0 auto; /* Центрирование с отступами */
-        text-align: center; /* Дополнительно выравнивание по центру текста */
-
-    }
-
-    .hero-content p {
-        font-size: 1.5rem;
-        padding: 0 20px; /* Отступы для мобильных устройств */
-        margin: 0 auto; /* Центрирование с отступами */
-        text-align: center; /* Дополнительно выравнивание по центру текста */
-
-    }
-
-    .hero-content h2 {
-        font-size: 2rem;
-        padding: 0 20px; /* Отступы для мобильных устройств */
-        margin: 0 auto; /* Центрирование с отступами */
-        text-align: center; /* Дополнительно выравнивание по центру текста */
-
-    }
-
-    .hero-images {
-        flex-wrap: wrap; /* Если места недостаточно, изображения будут переноситься на следующую строку */
-    }
-
-    .hero-image {
-        width: 70%; /* Уменьшаем размер изображений на мобильных */
-    }
-
-    .hero-image:not(:first-child) {
-        margin-left: calc(2 / 3 * 15%);
-    }
-}
-
-
-    /* Адаптация для мобильных устройств (425px и меньше) */
-    @media (max-width: 425px) {
-        .hero-content h1 {
-            font-size: 3rem; /* Еще меньше размер текста */
-            padding: 0 15px; /* Уменьшенные отступы для узких экранов */
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem; /* Еще меньше размер текста */
-            padding: 0 15px; /* Уменьшенные отступы для узких экранов */
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .hero-content h2 {
-            font-size: 1.8rem; /* Еще меньше размер текста */
-            padding: 0 15px; /* Уменьшенные отступы для узких экранов */
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .hero-images {
-            flex-wrap: wrap;
-        }
-
-        .hero-image {
-            width: 70%; /* Делаем изображения немного крупнее для более комфортного просмотра */
-        }
-
-        .hero-image:not(:first-child) {
-            margin-left: 5%; /* Регулируем отступы между изображениями */
-        }
-    }
-
-/* Адаптация для очень маленьких устройств (375px и меньше) */
-@media (max-width: 375px) {
-    .hero-content h1 {
-        font-size: 2.5rem; /* Еще меньше размер текста */
-        padding: 0 10px; /* Минимальные отступы по краям */
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .hero-content p {
-        font-size: 1rem; /* Еще меньше размер текста */
-        padding: 0 10px; /* Минимальные отступы по краям */
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .hero-content h2 {
-        font-size: 1.5rem; /* Еще меньше размер текста */
-        padding: 0 10px; /* Минимальные отступы по краям */
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .hero-images {
-        flex-wrap: wrap;
-    }
-
-    .hero-image {
-        width: 70%; /* Увеличиваем изображения на самых маленьких экранах */
-    }
-
-    .hero-image:not(:first-child) {
-        margin-left: 5%;
-    }
-}
-
-@media (max-width: 320px) {
-    .hero-content h1 {
-        font-size: 2.5rem; /* Еще меньше размер текста */
-        padding: 0 10px; /* Минимальные отступы по краям */
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .hero-content p {
-        font-size: 1rem; /* Еще меньше размер текста */
-        padding: 0 10px; /* Минимальные отступы по краям */
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .hero-content h2 {
-        font-size: 1.3rem; /* Еще меньше размер текста */
-        padding: 0 10px; /* Минимальные отступы по краям */
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .hero-images {
-        flex-wrap: wrap;
-    }
-
-    .hero-image {
-        width: 70%; /* Увеличиваем изображения на самых маленьких экранах */
-    }
-
-    .hero-image:not(:first-child) {
-        margin-left: 5%;
-    }
-}
-

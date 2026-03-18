@@ -1,131 +1,191 @@
+/*.hackathon-container {*/
+/*    text-align: center;*/
+/*    padding-top: 70px;*/
+/*    background-image: url('../assets/images/main-final-tochno.svg'); !* Добавляем фоновое изображение *!*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    font-family: Arial, sans-serif;*/
+/*    min-height: 100vh;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.hackathon-title {*/
+/*    font-size: 2.5rem;*/
+/*    font-weight: bold;*/
+/*    color: #000000;*/
+/*    margin-bottom: 30px;*/
+/*}*/
+
+/*.hackathon-subtitle {*/
+/*    font-size: 1.8rem;*/
+/*    color: #666;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*.hackathon-section {*/
+/*    background: rgba(255, 255, 255, 0.85); !* Полупрозрачный фон *!*/
+/*    padding: 20px;*/
+/*    margin: 15px auto;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+/*    text-align: left;*/
+/*    max-width: 1100px; !* Увеличиваем ширину секций *!*/
+/*}*/
+/*.contact-link {*/
+/*    display: inline-flex;*/
+/*    align-items: center;*/
+/*    gap: 15px;*/
+/*    text-decoration: none;*/
+/*    color: inherit;*/
+/*}*/
+
+/*.contact-link svg,*/
+/*.contact-link img {*/
+/*    width: 24px;*/
+/*    height: 24px;*/
+/*    display: block;*/
+/*}*/
+
+/*.contact-link:hover {*/
+/*    opacity: 0.8;*/
+/*}*/
+
+/*.hackathon-section h2 {*/
+/*    font-size: 1.8rem;*/
+/*    color: #222;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*.hackathon-section ul {*/
+/*    list-style: disc;*/
+/*    padding-left: 40px; !* Отступ для списка *!*/
+/*}*/
+
+/*.hackathon-section li {*/
+/*    margin-bottom: 10px;*/
+/*    font-size: 1.5rem; !* Увеличенный размер шрифта *!*/
+/*}*/
+
+/*.hackathon-section p {*/
+/*    font-size: 1.5rem;*/
+/*    margin: auto;*/
+/*    text-align: justify;*/
+/*    max-width: 1100px;*/
+/*    padding-left: 2rem;*/
+/*    color: #272626;*/
+/*    line-height: 1.8;*/
+/*    text-indent: 2rem; !* Отступ в начале абзацев *!*/
+/*}*/
+
+/*.hackathon-section a {*/
+/*    color: #2a5d9e;*/
+/*    text-decoration: none;*/
+/*    font-size: 1.5rem;*/
+/*}*/
+
+/*.hackathon-section a:hover {*/
+/*    text-decoration: underline;*/
+/*    color: #1d3f6e;*/
+/*}*/
+
+/*!* Адаптивность *!*/
+/*@media (max-width: 768px) {*/
+/*    .hackathon-container {*/
+/*        padding-top: 75px;*/
+/*        padding-left: 5px;*/
+/*        padding-right: 5px;*/
+/*        overflow-x: hidden;*/
+/*    }*/
+
+/*    .hackathon-title {*/
+/*        font-size: 1.5rem;*/
+/*        margin-bottom: 20px;*/
+/*    }*/
+
+/*    .hackathon-section {*/
+/*        max-width: 100%;*/
+/*        margin: 5px auto;*/
+/*    }*/
+
+/*    .hackathon-section p {*/
+/*        font-size: 1.2rem;*/
+/*        max-width: 100%;*/
+/*        word-wrap: break-word;*/
+/*        hyphens: auto;*/
+/*    }*/
+
+/*    .hackathon-section li {*/
+/*        font-size: 1.2rem;*/
+/*    }*/
+
+/*    .hackathon-section a {*/
+/*        font-size: 1.2rem;*/
+/*    }*/
+
+/*    .hackathon-section h2 {*/
+/*        font-size: 1.35rem;*/
+/*        color: #222;*/
+/*        margin-bottom: 10px;*/
+/*    }*/
+/*}*/
 .hackathon-container {
-    text-align: center;
-    padding-top: 70px;
-    background-image: url('../assets/images/main-final-tochno.svg'); /* Добавляем фоновое изображение */
-    background-size: cover;
-    background-position: center;
-    font-family: Arial, sans-serif;
+    padding: clamp(80px, 12vw, 130px) clamp(20px, 5vw, 60px) 60px;
+    background-image: url('../assets/images/main-final-tochno.svg');
+    background-size: cover; background-position: center;
     min-height: 100vh;
-    align-items: center;
-    justify-content: center;
+    box-sizing: border-box; overflow-x: hidden;
 }
 
 .hackathon-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #000000;
-    margin-bottom: 30px;
-}
-
-.hackathon-subtitle {
-    font-size: 1.8rem;
-    color: #666;
-    margin-bottom: 20px;
+    font-size: clamp(1.3rem, 4vw, 2.2rem);
+    font-weight: 700; letter-spacing: -0.02em;
+    color: var(--dark); line-height: 1.25;
+    max-width: 900px; margin: 0 auto 24px;
+    text-align: center;
 }
 
 .hackathon-section {
-    background: rgba(255, 255, 255, 0.85); /* Полупрозрачный фон */
-    padding: 20px;
-    margin: 15px auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    max-width: 1100px; /* Увеличиваем ширину секций */
+    background: var(--card-bg);
+    backdrop-filter: blur(14px);
+    padding: clamp(20px, 3vw, 34px);
+    margin: 14px auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--light-line);
+    box-shadow: 0 4px 16px rgba(6,193,103,0.1);
+    text-align: left; max-width: 900px;
+    box-sizing: border-box;
 }
+
 .contact-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    color: inherit;
+    display: inline-flex; align-items: center;
+    gap: 10px; color: inherit; transition: opacity 0.2s;
+    word-break: break-word;
 }
-
-.contact-link svg,
-.contact-link img {
-    width: 24px;
-    height: 24px;
-    display: block;
-}
-
-.contact-link:hover {
-    opacity: 0.8;
+.contact-link:hover { opacity: 0.7; }
+.contact-link svg, .contact-link img {
+    width: 26px; height: 26px;
+    flex-shrink: 0; display: block; object-fit: contain;
 }
 
 .hackathon-section h2 {
-    font-size: 1.8rem;
-    color: #222;
-    margin-bottom: 10px;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    font-weight: 600; color: var(--dark); margin-bottom: 12px;
 }
 
-.hackathon-section ul {
-    list-style: disc;
-    padding-left: 40px; /* Отступ для списка */
-}
-
+.hackathon-section ul { list-style: disc; padding-left: 24px; }
 .hackathon-section li {
-    margin-bottom: 10px;
-    font-size: 1.5rem; /* Увеличенный размер шрифта */
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    margin-bottom: 8px; color: var(--dark); line-height: 1.6;
 }
-
 .hackathon-section p {
-    font-size: 1.5rem;
-    margin: auto;
-    text-align: justify;
-    max-width: 1100px;
-    padding-left: 2rem;
-    color: #272626;
-    line-height: 1.8;
-    text-indent: 2rem; /* Отступ в начале абзацев */
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    line-height: 1.7; color: var(--dark);
+    hyphens: auto; word-break: break-word;
 }
-
 .hackathon-section a {
-    color: #2a5d9e;
-    text-decoration: none;
-    font-size: 1.5rem;
+    color: var(--accent-dark);
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    word-break: break-word;
 }
-
-.hackathon-section a:hover {
-    text-decoration: underline;
-    color: #1d3f6e;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .hackathon-container {
-        padding-top: 75px;
-        padding-left: 5px;
-        padding-right: 5px;
-        overflow-x: hidden;
-    }
-
-    .hackathon-title {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
-
-    .hackathon-section {
-        max-width: 100%;
-        margin: 5px auto;
-    }
-
-    .hackathon-section p {
-        font-size: 1.2rem;
-        max-width: 100%;
-        word-wrap: break-word;
-        hyphens: auto;
-    }
-
-    .hackathon-section li {
-        font-size: 1.2rem;
-    }
-
-    .hackathon-section a {
-        font-size: 1.2rem;
-    }
-
-    .hackathon-section h2 {
-        font-size: 1.35rem;
-        color: #222;
-        margin-bottom: 10px;
-    }
-}
+.hackathon-section a:hover { text-decoration: underline; }

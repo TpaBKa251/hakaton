@@ -1,306 +1,417 @@
+/*.map-section {*/
+/*    position: relative;*/
+/*    padding: 2rem;*/
+/*    color: #333;*/
+/*    overflow: hidden;*/
+/*    min-height: 100vh;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*}*/
+
+/*.map-section::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    background: inherit;*/
+/*    filter: blur(10px);*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.map-section {*/
+/*    padding: 20px;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.map-header h2 {*/
+/*    font-size: 24px;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*.map-container {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    gap: 20px;*/
+/*    width: 100%;*/
+/*    padding: 1rem;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*.map-image {*/
+/*    width: 100%;*/
+/*    height: 60%;*/
+/*    max-width: 800px;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 10px;*/
+/*    object-fit: cover;*/
+/*}*/
+
+/*.map-content {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: flex-start;*/
+/*    gap: 20px;*/
+/*    width: 100%;*/
+/*    max-width: 800px;*/
+/*    margin-top: 20px;*/
+/*}*/
+
+/*.map-details {*/
+/*    flex: 1;*/
+/*    width: 100%;*/
+/*    max-width: 800px;*/
+/*    text-align: left;*/
+/*    font-size: 1.5rem;*/
+/*}*/
+
+/*.map-locations {*/
+/*    list-style: none;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*}*/
+
+/*.map-locations li {*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*.map-qr {*/
+/*    flex-shrink: 0;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.qr-code {*/
+/*    width: 150px;*/
+/*    height: auto;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*.map-section h2 {*/
+/*    font-size: 5rem;*/
+/*}*/
+
+/*.map-header {*/
+/*    position: relative;*/
+/*    z-index: 2;*/
+/*    text-align: center;*/
+/*    font-size: 4rem;*/
+/*    margin-bottom: 0rem;*/
+/*    padding: 1.8rem 0;*/
+/*}*/
+
+/*.map-container {*/
+/*    flex-grow: 1; !* Дает контейнеру карты возможность занимать оставшееся пространство *!*/
+/*    width: 100%;*/
+/*    height: calc(100vh - 200px); !* Высота контейнера карты будет равна 100% высоты экрана минус высота заголовка *!*/
+/*    max-width: 1200px;*/
+/*    border-radius: 8px;*/
+/*    overflow: hidden;*/
+/*    z-index: 2;*/
+/*    position: relative;*/
+/*    display: flex; !* Добавляем флекс-контейнер *!*/
+/*    justify-content: center; !* Центрируем по горизонтали *!*/
+/*    align-items: center; !* Центрируем по вертикали *!*/
+/*}*/
+
+/*.map-container > div {*/
+/*    width: 100%; !* Задаем ширину 100% *!*/
+/*    height: 100%; !* Задаем высоту 100% *!*/
+/*}*/
+
+/*.map-container iframe {*/
+/*    width: 100%;*/
+/*    height: 100%; !* Высота 100% для iframe *!*/
+/*    border: none; !* Убираем рамку *!*/
+/*}*/
+
+/*!* Адаптация для мобильных устройств *!*/
+/*@media (max-width: 768px) {*/
+/*    .map-header {*/
+/*        font-size: 2.5rem; !* Уменьшаем размер шрифта заголовка *!*/
+/*        padding: 0.5rem 0;*/
+/*        margin-bottom: 0;*/
+/*        margin-top: 1rem;*/
+/*    }*/
+
+/*    .map-locations {*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .map-content {*/
+/*        flex-direction: column; !* Меняем направление на колонку *!*/
+/*        align-items: center;   !* Центрируем содержимое *!*/
+/*    }*/
+
+/*    .map-container {*/
+/*        height: 50vh; !* Снижаем высоту карты для удобства просмотра *!*/
+/*        border-radius: 6px;*/
+/*        margin-top: 0;*/
+/*    }*/
+
+/*    .map-section h2 {*/
+/*        font-size: 3rem;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .map-image {*/
+/*        display: none; !* Убираем картинку на мобильных устройствах *!*/
+/*    }*/
+
+/*    .map-details {*/
+/*        font-size: 1.2rem;*/
+/*        margin-bottom: 1rem;*/
+/*    }*/
+
+/*    .map-qr {*/
+/*        display: block; !* Изменяем на блочный элемент *!*/
+/*        justify-content: center;*/
+/*        margin-top: 1rem; !* Добавляем отступ сверху *!*/
+/*        text-align: center; !* Центрируем содержимое *!*/
+/*        margin-bottom: 15rem;*/
+/*    }*/
+
+/*    .qr-code {*/
+/*        width: 150px;*/
+/*        margin: 0 auto; !* Размещаем QR-код под текстом *!*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 425px) {*/
+/*    .map-header {*/
+/*        font-size: 2.5rem; !* Уменьшаем размер шрифта заголовка *!*/
+/*        padding: 0;*/
+/*        margin-bottom: 0;*/
+/*        margin-top: 1rem;*/
+/*    }*/
+
+/*    .map-locations {*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .map-content {*/
+/*        flex-direction: column; !* Меняем направление на колонку *!*/
+/*        align-items: center;   !* Центрируем содержимое *!*/
+/*    }*/
+
+/*    .map-container {*/
+/*        height: 50vh; !* Снижаем высоту карты для удобства просмотра *!*/
+/*        border-radius: 6px;*/
+/*        margin-top: 0;*/
+/*    }*/
+
+/*    .map-section h2 {*/
+/*        font-size: 3rem;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .map-image {*/
+/*        display: none; !* Убираем картинку на мобильных устройствах *!*/
+/*    }*/
+
+/*    .map-details {*/
+/*        font-size: 1.2rem;*/
+/*        margin-bottom: 0rem;*/
+/*    }*/
+
+/*    .map-qr {*/
+/*        display: block; !* Изменяем на блочный элемент *!*/
+/*        justify-content: center;*/
+/*        margin-top: 0rem; !* Добавляем отступ сверху *!*/
+/*        text-align: center; !* Центрируем содержимое *!*/
+/*        margin-bottom: 15rem;*/
+/*    }*/
+
+/*    .qr-code {*/
+/*        width: 150px;*/
+/*        margin: 0 auto; !* Размещаем QR-код под текстом *!*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 375px) {*/
+/*    .map-header {*/
+/*        font-size: 2.5rem; !* Уменьшаем размер шрифта заголовка *!*/
+/*        padding: 0;*/
+/*        margin-bottom: 0;*/
+/*        margin-top: 1rem;*/
+/*    }*/
+
+/*    .map-locations {*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .map-content {*/
+/*        flex-direction: column; !* Меняем направление на колонку *!*/
+/*        align-items: center;   !* Центрируем содержимое *!*/
+/*    }*/
+
+/*    .map-container {*/
+/*        height: 50vh; !* Снижаем высоту карты для удобства просмотра *!*/
+/*        border-radius: 6px;*/
+/*        margin-top: 0;*/
+/*    }*/
+
+/*    .map-section h2 {*/
+/*        font-size: 3rem;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .map-image {*/
+/*        display: none; !* Убираем картинку на мобильных устройствах *!*/
+/*    }*/
+
+/*    .map-details {*/
+/*        font-size: 1.2rem;*/
+/*        margin-bottom: 0rem;*/
+/*    }*/
+
+/*    .map-qr {*/
+/*        display: block; !* Изменяем на блочный элемент *!*/
+/*        justify-content: center;*/
+/*        margin-top: 0rem; !* Добавляем отступ сверху *!*/
+/*        text-align: center; !* Центрируем содержимое *!*/
+/*        margin-bottom: 15rem;*/
+/*    }*/
+
+/*    .qr-code {*/
+/*        width: 150px;*/
+/*        margin: 0 auto; !* Размещаем QR-код под текстом *!*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 320px) {*/
+/*    .map-header {*/
+/*        font-size: 2.5rem; !* Уменьшаем размер шрифта заголовка *!*/
+/*        padding: 0.5rem 0;*/
+/*        margin-bottom: 0;*/
+/*        margin-top: 1.5rem;*/
+/*    }*/
+
+/*    .map-container {*/
+/*        height: 50vh; !* Снижаем высоту карты для удобства просмотра *!*/
+/*        border-radius: 6px;*/
+/*        margin-top: 0;*/
+/*    }*/
+
+/*    .map-section h2 {*/
+/*        font-size: 2.7rem;*/
+/*    }*/
+/*}*/
 .map-section {
-    position: relative;
-    padding: 2rem;
-    color: #333;
-    overflow: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-size: cover;
-    background-position: center;
+    justify-content: center;
+    padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px);
+    background: transparent;
+    gap: clamp(24px, 4vw, 44px);
 }
 
-.map-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit;
-    filter: blur(10px);
-    z-index: 1;
-}
+.map-header { width: 100%; max-width: 980px; }
 
-.map-section {
-    padding: 20px;
-    text-align: center;
-}
-
-.map-header h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+.map-header h2,
+.map-section h2 {
+    font-size: clamp(2.2rem, 7vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--dark);
+    text-align: left;
 }
 
 .map-container {
+    width: 100%;
+    max-width: 980px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
+    gap: clamp(18px, 3vw, 32px);
 }
 
+/* Картинка карты — ВИДНА на всех экранах, включая мобиле */
 .map-image {
     width: 100%;
-    height: 60%;
-    max-width: 800px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--light-line);
     object-fit: cover;
+    box-shadow: 0 6px 28px rgba(6,193,103,0.14);
+    display: block; /* никогда display:none */
+    max-height: 380px;
+    object-position: center;
 }
 
 .map-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;
+    gap: clamp(16px, 3vw, 36px);
     width: 100%;
-    max-width: 800px;
-    margin-top: 20px;
 }
 
-.map-details {
-    flex: 1;
-    width: 100%;
-    max-width: 800px;
-    text-align: left;
-    font-size: 1.5rem;
-}
+.map-details { flex: 1; text-align: left; }
 
 .map-locations {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0; margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .map-locations li {
-    margin-bottom: 10px;
+    font-size: clamp(0.88rem, 2vw, 1.1rem);
+    color: var(--dark);
+    padding: 12px 16px;
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    border: 1px solid var(--light-line);
+    line-height: 1.4;
+    counter-increment: none;
 }
 
 .map-qr {
     flex-shrink: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 8px;
+}
+
+.map-qr p {
+    font-size: 0.78rem;
+    color: var(--mid-gray);
+    text-align: center;
 }
 
 .qr-code {
-    width: 150px;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    width: 130px; height: 130px;
+    border-radius: 14px;
+    border: 1px solid var(--light-line);
+    object-fit: contain;
+    background: white;
+    padding: 6px;
+    box-shadow: 0 4px 14px rgba(6,193,103,0.12);
+    display: block;
 }
 
-.map-section h2 {
-    font-size: 5rem;
-}
-
-.map-header {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    font-size: 4rem;
-    margin-bottom: 0rem;
-    padding: 1.8rem 0;
-}
-
-.map-container {
-    flex-grow: 1; /* Дает контейнеру карты возможность занимать оставшееся пространство */
-    width: 100%;
-    height: calc(100vh - 200px); /* Высота контейнера карты будет равна 100% высоты экрана минус высота заголовка */
-    max-width: 1200px;
-    border-radius: 8px;
-    overflow: hidden;
-    z-index: 2;
-    position: relative;
-    display: flex; /* Добавляем флекс-контейнер */
-    justify-content: center; /* Центрируем по горизонтали */
-    align-items: center; /* Центрируем по вертикали */
-}
-
-.map-container > div {
-    width: 100%; /* Задаем ширину 100% */
-    height: 100%; /* Задаем высоту 100% */
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 100%; /* Высота 100% для iframe */
-    border: none; /* Убираем рамку */
-}
-
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    .map-header {
-        font-size: 2.5rem; /* Уменьшаем размер шрифта заголовка */
-        padding: 0.5rem 0;
-        margin-bottom: 0;
-        margin-top: 1rem;
-    }
-
-    .map-locations {
-        text-align: center;
-    }
+/* ── МОБИЛЬНЫЙ ── */
+@media (max-width: 600px) {
+    /* Картинку карты на мобиле показываем, но ограничиваем высоту */
+    .map-image { max-height: 200px; border-radius: 14px; }
 
     .map-content {
-        flex-direction: column; /* Меняем направление на колонку */
-        align-items: center;   /* Центрируем содержимое */
+        flex-direction: column;
+        align-items: center;
     }
 
-    .map-container {
-        height: 50vh; /* Снижаем высоту карты для удобства просмотра */
-        border-radius: 6px;
-        margin-top: 0;
-    }
+    .map-details { width: 100%; text-align: center; }
 
-    .map-section h2 {
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    .map-image {
-        display: none; /* Убираем картинку на мобильных устройствах */
-    }
-
-    .map-details {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-    }
-
-    .map-qr {
-        display: block; /* Изменяем на блочный элемент */
-        justify-content: center;
-        margin-top: 1rem; /* Добавляем отступ сверху */
-        text-align: center; /* Центрируем содержимое */
-        margin-bottom: 15rem;
-    }
-
-    .qr-code {
-        width: 150px;
-        margin: 0 auto; /* Размещаем QR-код под текстом */
-    }
-}
-
-@media (max-width: 425px) {
-    .map-header {
-        font-size: 2.5rem; /* Уменьшаем размер шрифта заголовка */
-        padding: 0;
-        margin-bottom: 0;
-        margin-top: 1rem;
-    }
-
-    .map-locations {
-        text-align: center;
-    }
-
-    .map-content {
-        flex-direction: column; /* Меняем направление на колонку */
-        align-items: center;   /* Центрируем содержимое */
-    }
-
-    .map-container {
-        height: 50vh; /* Снижаем высоту карты для удобства просмотра */
-        border-radius: 6px;
-        margin-top: 0;
-    }
-
-    .map-section h2 {
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    .map-image {
-        display: none; /* Убираем картинку на мобильных устройствах */
-    }
-
-    .map-details {
-        font-size: 1.2rem;
-        margin-bottom: 0rem;
-    }
-
-    .map-qr {
-        display: block; /* Изменяем на блочный элемент */
-        justify-content: center;
-        margin-top: 0rem; /* Добавляем отступ сверху */
-        text-align: center; /* Центрируем содержимое */
-        margin-bottom: 15rem;
-    }
-
-    .qr-code {
-        width: 150px;
-        margin: 0 auto; /* Размещаем QR-код под текстом */
-    }
-}
-
-@media (max-width: 375px) {
-    .map-header {
-        font-size: 2.5rem; /* Уменьшаем размер шрифта заголовка */
-        padding: 0;
-        margin-bottom: 0;
-        margin-top: 1rem;
-    }
-
-    .map-locations {
-        text-align: center;
-    }
-
-    .map-content {
-        flex-direction: column; /* Меняем направление на колонку */
-        align-items: center;   /* Центрируем содержимое */
-    }
-
-    .map-container {
-        height: 50vh; /* Снижаем высоту карты для удобства просмотра */
-        border-radius: 6px;
-        margin-top: 0;
-    }
-
-    .map-section h2 {
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    .map-image {
-        display: none; /* Убираем картинку на мобильных устройствах */
-    }
-
-    .map-details {
-        font-size: 1.2rem;
-        margin-bottom: 0rem;
-    }
-
-    .map-qr {
-        display: block; /* Изменяем на блочный элемент */
-        justify-content: center;
-        margin-top: 0rem; /* Добавляем отступ сверху */
-        text-align: center; /* Центрируем содержимое */
-        margin-bottom: 15rem;
-    }
-
-    .qr-code {
-        width: 150px;
-        margin: 0 auto; /* Размещаем QR-код под текстом */
-    }
-}
-
-@media (max-width: 320px) {
-    .map-header {
-        font-size: 2.5rem; /* Уменьшаем размер шрифта заголовка */
-        padding: 0.5rem 0;
-        margin-bottom: 0;
-        margin-top: 1.5rem;
-    }
-
-    .map-container {
-        height: 50vh; /* Снижаем высоту карты для удобства просмотра */
-        border-radius: 6px;
-        margin-top: 0;
-    }
-
-    .map-section h2 {
-        font-size: 2.7rem;
-    }
+    .map-qr { width: 100%; align-items: center; }
 }

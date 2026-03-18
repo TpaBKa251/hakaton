@@ -1,79 +1,114 @@
+/*.schedule {*/
+/*    position: relative; !* Для правильного наложения текста *!*/
+/*    padding: 2rem;*/
+/*    color: #333;*/
+/*    text-align: center;*/
+/*    overflow: hidden; !* Скрывает лишние части размытого фона *!*/
+/*    display: flex; !* Включаем Flexbox *!*/
+/*    align-items: center; !* Вертикальное выравнивание по центру *!*/
+/*    justify-content: center; !* Горизонтальное выравнивание по центру *!*/
+/*    min-height: 100vh; !* Минимальная высота секции *!*/
+/*}*/
+
+/*.schedule::before {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    background: inherit; !* Использует фоновое изображение секции *!*/
+/*    filter: blur(10px); !* Настройте уровень размытия *!*/
+/*    z-index: 1; !* Помещает наложение под текст *!*/
+/*}*/
+
+/*.schedule-content {*/
+/*    position: relative; !* Для правильного наложения текста *!*/
+/*    z-index: 2; !* Помещает текст выше размытого фона *!*/
+/*}*/
+
+/*.schedule h2 {*/
+/*    font-size: 5rem;*/
+/*}*/
+
+/*.schedule ul {*/
+/*    list-style-type: none;*/
+/*    padding: 0;*/
+/*}*/
+
+/*.schedule li {*/
+/*    font-size: 3rem;*/
+/*    margin: 8rem 0;*/
+/*}*/
+
+/*!* Адаптация для мобильных устройств *!*/
+/*@media (max-width: 768px) {*/
+/*    .schedule h2 {*/
+/*        font-size: 3.5rem; !* Уменьшаем размер заголовка для мобильных *!*/
+/*        margin-bottom: 2rem; !* Уменьшаем отступ *!*/
+/*    }*/
+
+/*    .schedule li {*/
+/*        font-size: 1.8rem; !* Уменьшаем размер шрифта для пунктов списка на мобильных *!*/
+/*        margin: 2rem 0; !* Уменьшаем отступы между элементами списка на мобильных *!*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 375px) {*/
+/*    .schedule h2 {*/
+/*        font-size: 3.5rem; !* Уменьшаем размер заголовка для мобильных *!*/
+/*        margin-bottom: 2rem; !* Уменьшаем отступ *!*/
+/*    }*/
+
+/*    .schedule li {*/
+/*        font-size: 1.5rem; !* Уменьшаем размер шрифта для пунктов списка на мобильных *!*/
+/*        margin: 2rem 0; !* Уменьшаем отступы между элементами списка на мобильных *!*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 320px) {*/
+/*    .schedule h2 {*/
+/*        font-size: 2.8rem; !* Уменьшаем размер заголовка для мобильных *!*/
+/*        margin-bottom: 2rem; !* Уменьшаем отступ *!*/
+/*    }*/
+
+/*    .schedule li {*/
+/*        font-size: 1.3rem; !* Уменьшаем размер шрифта для пунктов списка на мобильных *!*/
+/*        margin: 2rem 0; !* Уменьшаем отступы между элементами списка на мобильных *!*/
+/*    }*/
+/*}*/
 .schedule {
-    position: relative; /* Для правильного наложения текста */
-    padding: 2rem;
-    color: #333;
-    text-align: center;
-    overflow: hidden; /* Скрывает лишние части размытого фона */
-    display: flex; /* Включаем Flexbox */
-    align-items: center; /* Вертикальное выравнивание по центру */
-    justify-content: center; /* Горизонтальное выравнивание по центру */
-    min-height: 100vh; /* Минимальная высота секции */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px);
+    background: transparent;
 }
 
-.schedule::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit; /* Использует фоновое изображение секции */
-    filter: blur(10px); /* Настройте уровень размытия */
-    z-index: 1; /* Помещает наложение под текст */
-}
-
-.schedule-content {
-    position: relative; /* Для правильного наложения текста */
-    z-index: 2; /* Помещает текст выше размытого фона */
-}
+.schedule-content { width: 100%; max-width: 900px; }
 
 .schedule h2 {
-    font-size: 5rem;
+    font-size: clamp(2.2rem, 7vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--dark);
+    margin-bottom: clamp(28px, 4vw, 52px);
+    text-align: left;
 }
 
-.schedule ul {
-    list-style-type: none;
-    padding: 0;
-}
+.schedule ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 14px; }
 
 .schedule li {
-    font-size: 3rem;
-    margin: 8rem 0;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: var(--dark);
+    padding: 20px 24px;
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    border-radius: 14px;
+    border: 1px solid var(--light-line);
+    box-shadow: 0 2px 10px rgba(6,193,103,0.08);
+    transition: transform 0.2s;
 }
 
-/* Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    .schedule h2 {
-        font-size: 3.5rem; /* Уменьшаем размер заголовка для мобильных */
-        margin-bottom: 2rem; /* Уменьшаем отступ */
-    }
-
-    .schedule li {
-        font-size: 1.8rem; /* Уменьшаем размер шрифта для пунктов списка на мобильных */
-        margin: 2rem 0; /* Уменьшаем отступы между элементами списка на мобильных */
-    }
-}
-
-@media (max-width: 375px) {
-    .schedule h2 {
-        font-size: 3.5rem; /* Уменьшаем размер заголовка для мобильных */
-        margin-bottom: 2rem; /* Уменьшаем отступ */
-    }
-
-    .schedule li {
-        font-size: 1.5rem; /* Уменьшаем размер шрифта для пунктов списка на мобильных */
-        margin: 2rem 0; /* Уменьшаем отступы между элементами списка на мобильных */
-    }
-}
-
-@media (max-width: 320px) {
-    .schedule h2 {
-        font-size: 2.8rem; /* Уменьшаем размер заголовка для мобильных */
-        margin-bottom: 2rem; /* Уменьшаем отступ */
-    }
-
-    .schedule li {
-        font-size: 1.3rem; /* Уменьшаем размер шрифта для пунктов списка на мобильных */
-        margin: 2rem 0; /* Уменьшаем отступы между элементами списка на мобильных */
-    }
-}
+.schedule li:hover { transform: translateX(5px); }

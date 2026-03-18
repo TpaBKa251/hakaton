@@ -1,96 +1,151 @@
+/*.side-navigation {*/
+/*    position: fixed;*/
+/*    top: 50%;*/
+/*    right: 20px;*/
+/*    transform: translateY(-50%);*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    gap: 10px;*/
+/*    z-index: 1000;*/
+/*    transition: gap 0.5s;*/
+/*}*/
+
+/*.side-navigation:hover {*/
+/*    gap: 15px;*/
+/*}*/
+
+/*.nav-dot {*/
+/*    width: 24px;*/
+/*    height: 24px;*/
+/*    border-radius: 50%;*/
+/*    background-color: #888888;*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.5s, transform 0.5s, width 0.5s, border-radius 1s;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    position: relative;*/
+/*    color: rgba(136, 136, 136, 0);*/
+/*}*/
+
+/*.nav-dot.active {*/
+/*    background-color: black;*/
+/*    transform: scale(1.25);*/
+/*    color: rgba(0, 0, 0, 0);*/
+/*}*/
+
+/*.nav-dot.hover {*/
+/*    width: 120px;*/
+/*    height: 24px;*/
+/*    border-radius: 12px;*/
+/*    color: white;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    font-size: 1.2em;*/
+/*    transition: background-color 0.5s, transform 0.5s, width 0.5s, color 0.5s 0.5s, border-radius 1s;*/
+/*}*/
+
+/*.nav-dot:hover {*/
+/*    transform: scale(1.5) translateX(-25px);*/
+/*}*/
+
+/*.section-label {*/
+/*    color: white;*/
+/*    font-size: 0.8em;*/
+/*}*/
+
+/*!* Адаптивные стили для мобильных устройств *!*/
+/*@media (max-width: 768px) {*/
+/*    .side-navigation {*/
+/*        color: transparent;*/
+/*        right: 10px; !* Слегка смещаем ближе к краю *!*/
+/*        gap: 8px;*/
+/*    }*/
+
+/*    .nav-dot {*/
+/*        width: 18px; !* Уменьшение размера точек *!*/
+/*        height: 18px;*/
+/*        /transition: none; !* Отключаем анимацию на мобильных устройствах *!*/
+/*    }*/
+
+/*    .nav-dot:hover {*/
+/*        transform: scale(1.25) translateX(0); !* Лёгкое увеличение при наведении без смещения *!*/
+/*    }*/
+
+/*    .nav-dot.hover,*/
+/*    .nav-dot:hover {*/
+/*        font-size: 0.8em;*/
+/*        color: transparent;*/
+/*        width: 18px;*/
+/*        height: 18px;*/
+/*        border-radius: 50%;*/
+/*    }*/
+
+/*    .side-navigation:hover {*/
+/*        gap: 8px;*/
+/*    }*/
+
+/*    .nav-dot:active {*/
+/*        transform: scale(.7)*/
+/*    }*/
+
+/*    .section-label {*/
+/*        display: none; !* Скрываем подписи к точкам для экономии пространства *!*/
+/*    }*/
+/*}*/
 .side-navigation {
     position: fixed;
     top: 50%;
-    right: 20px;
+    right: 18px;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    z-index: 1000;
-    transition: gap 0.5s;
-}
-
-.side-navigation:hover {
-    gap: 15px;
+    gap: 8px;
+    z-index: 999;
 }
 
 .nav-dot {
-    width: 24px;
-    height: 24px;
+    width: 8px; height: 8px;
     border-radius: 50%;
-    background-color: #888888;
+    background: rgba(26,46,37,0.25);
     cursor: pointer;
-    transition: background-color 0.5s, transform 0.5s, width 0.5s, border-radius 1s;
+    transition: background 0.3s, transform 0.3s, width 0.35s, border-radius 0.5s;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    color: rgba(136, 136, 136, 0);
+    color: transparent;
 }
 
 .nav-dot.active {
-    background-color: black;
-    transform: scale(1.25);
-    color: rgba(0, 0, 0, 0);
+    background: var(--accent);
+    transform: scale(1.5);
+    box-shadow: 0 0 8px rgba(6,193,103,0.5);
 }
 
 .nav-dot.hover {
-    width: 120px;
-    height: 24px;
-    border-radius: 12px;
+    width: 96px; height: 28px;
+    border-radius: 14px;
+    background: var(--dark);
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2em;
-    transition: background-color 0.5s, transform 0.5s, width 0.5s, color 0.5s 0.5s, border-radius 1s;
+    font-size: 0.75rem;
+    letter-spacing: 0.01em;
 }
 
-.nav-dot:hover {
-    transform: scale(1.5) translateX(-25px);
-}
+.nav-dot:hover { transform: scale(1.5) translateX(-3px); }
 
-.section-label {
-    color: white;
-    font-size: 0.8em;
-}
-
-/* Адаптивные стили для мобильных устройств */
 @media (max-width: 768px) {
-    .side-navigation {
-        color: transparent;
-        right: 10px; /* Слегка смещаем ближе к краю */
-        gap: 8px;
-    }
+    .side-navigation { right: 8px; gap: 6px; }
 
-    .nav-dot {
-        width: 18px; /* Уменьшение размера точек */
-        height: 18px;
-        /transition: none; /* Отключаем анимацию на мобильных устройствах */
-    }
+    .nav-dot { width: 6px; height: 6px; color: transparent !important; }
 
-    .nav-dot:hover {
-        transform: scale(1.25) translateX(0); /* Лёгкое увеличение при наведении без смещения */
-    }
-
-    .nav-dot.hover,
-    .nav-dot:hover {
-        font-size: 0.8em;
-        color: transparent;
-        width: 18px;
-        height: 18px;
+    .nav-dot.hover {
+        width: 6px; height: 6px;
         border-radius: 50%;
+        font-size: 0;
+        background: rgba(26,46,37,0.25);
     }
 
-    .side-navigation:hover {
-        gap: 8px;
-    }
-
-    .nav-dot:active {
-        transform: scale(.7)
-    }
-
-    .section-label {
-        display: none; /* Скрываем подписи к точкам для экономии пространства */
-    }
+    .nav-dot.active { background: var(--accent); transform: scale(1.4); }
+    .nav-dot:hover  { transform: scale(1.3); }
 }

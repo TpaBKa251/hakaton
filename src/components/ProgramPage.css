@@ -1,171 +1,259 @@
+/*.program-container {*/
+/*    text-align: center;*/
+/*    padding-top: 70px;*/
+/*    background-image: url('../assets/images/main-final-tochno.svg');*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    font-family: Arial, sans-serif;*/
+/*    line-height: 1.6;*/
+/*    min-height: 100vh;*/
+/*    /display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.program-title {*/
+/*    font-size: 2.5rem;*/
+/*    font-weight: bold;*/
+/*    color: #000000;*/
+/*    margin-bottom: 30px;*/
+/*}*/
+
+/*.program-subtitle {*/
+/*    font-size: 1.8rem;*/
+/*    color: #000000;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*.program-section {*/
+/*    background: rgba(255, 255, 255, 0.85);*/
+/*    padding: 20px;*/
+/*    margin: 15px auto;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+/*    text-align: left;*/
+/*    max-width: 1100px;*/
+/*}*/
+
+/*.contact-link {*/
+/*    display: inline-flex;*/
+/*    align-items: center;*/
+/*    gap: 15px;*/
+/*    text-decoration: none;*/
+/*    color: inherit;*/
+/*}*/
+
+/*.contact-link svg,*/
+/*.contact-link img {*/
+/*    width: 24px;*/
+/*    height: 24px;*/
+/*    display: block;*/
+/*}*/
+
+/*.contact-link:hover {*/
+/*    opacity: 0.8;*/
+/*}*/
+
+/*.program-section h2 {*/
+/*    font-size: 1.8rem;*/
+/*    color: #222;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*.program-section ul {*/
+/*    list-style: disc;*/
+/*    padding-left: 40px;*/
+/*}*/
+
+/*.program-section li {*/
+/*    margin-bottom: 10px;*/
+/*    font-size: 1.5rem;*/
+/*}*/
+
+/*.program-section p {*/
+/*    font-size: 1.5rem;*/
+/*    margin: auto;*/
+/*    text-align: justify;*/
+/*    max-width: 1100px;*/
+/*    padding-left: 2rem;*/
+/*    color: #272626;*/
+/*    line-height: 1.8;*/
+/*    text-indent: 2rem;*/
+/*}*/
+
+/*.program-section a {*/
+/*    color: #2a5d9e;*/
+/*    text-decoration: none;*/
+/*    font-size: 1.5rem;*/
+/*}*/
+
+/*.program-section a:hover {*/
+/*    text-decoration: underline;*/
+/*    color: #1d3f6e;*/
+/*}*/
+
+
+/*.evaluation-table {*/
+/*    width: 100%;*/
+/*    border-collapse: collapse;*/
+/*    margin: 1rem 0;*/
+/*    font-size: 1.5rem;*/
+/*}*/
+
+/*.evaluation-table th,*/
+/*.evaluation-table td {*/
+/*    border: 1px solid #ddd;*/
+/*    padding: 10px;*/
+/*    text-align: left;*/
+/*}*/
+
+/*.evaluation-table th {*/
+/*    background-color: #f2f2f2;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.evaluation-table td {*/
+/*    background-color: #fff;*/
+/*}*/
+
+/*@media (max-width: 768px) {*/
+/*    .program-container {*/
+/*        padding-top: 75px;*/
+/*        padding-left: 5px;*/
+/*        padding-right: 5px;*/
+/*        overflow-x: hidden;*/
+/*    }*/
+
+/*    .program-title {*/
+/*        font-size: 1.5rem;*/
+/*        margin-bottom: 20px;*/
+/*    }*/
+
+/*    .program-subtitle {*/
+/*        font-size: 1.3rem;*/
+/*        color: #000000;*/
+/*        margin-bottom: 20px;*/
+/*    }*/
+
+/*    .program-section {*/
+/*        max-width: 100%;*/
+/*        margin: 5px auto;*/
+/*    }*/
+
+/*    .program-section p {*/
+/*        font-size: 1.2rem;*/
+/*        max-width: 100%;*/
+/*        word-wrap: break-word;*/
+/*        hyphens: auto;*/
+/*    }*/
+
+/*    .program-section li {*/
+/*        font-size: 1.2rem;*/
+/*    }*/
+
+/*    .program-section a {*/
+/*        font-size: 1.2rem;*/
+/*    }*/
+
+/*    .program-section h2 {*/
+/*        font-size: 1.35rem;*/
+/*        color: #222;*/
+/*        margin-bottom: 10px;*/
+/*    }*/
+
+/*    .evaluation-table {*/
+/*        width: 100%;*/
+/*        border-collapse: collapse;*/
+/*        margin: 1rem 0;*/
+/*        font-size: 1.2rem;*/
+/*    }*/
+/*}*/
 .program-container {
-    text-align: center;
-    padding-top: 70px;
+    padding: clamp(80px, 12vw, 130px) clamp(20px, 5vw, 60px) 60px;
     background-image: url('../assets/images/main-final-tochno.svg');
-    background-size: cover;
-    background-position: center;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-size: cover; background-position: center;
     min-height: 100vh;
-    /display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    box-sizing: border-box; overflow-x: hidden;
 }
 
 .program-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #000000;
-    margin-bottom: 30px;
+    font-size: clamp(1.3rem, 4vw, 2.2rem);
+    font-weight: 700; letter-spacing: -0.02em;
+    color: var(--dark); line-height: 1.25;
+    max-width: 900px; margin: 0 auto 12px;
+    text-align: center;
 }
 
 .program-subtitle {
-    font-size: 1.8rem;
-    color: #000000;
-    margin-bottom: 20px;
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    font-weight: 500; color: var(--mid-gray);
+    margin-bottom: 28px; text-align: center;
+    max-width: 900px; margin-left: auto; margin-right: auto;
 }
 
 .program-section {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 20px;
-    margin: 15px auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    max-width: 1100px;
+    background: var(--card-bg);
+    backdrop-filter: blur(14px);
+    padding: clamp(20px, 3vw, 34px);
+    margin: 14px auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--light-line);
+    box-shadow: 0 4px 16px rgba(6,193,103,0.1);
+    text-align: left; max-width: 900px;
+    box-sizing: border-box;
 }
 
 .contact-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    color: inherit;
+    display: inline-flex; align-items: center;
+    gap: 10px; color: inherit; transition: opacity 0.2s;
 }
-
-.contact-link svg,
-.contact-link img {
-    width: 24px;
-    height: 24px;
-    display: block;
-}
-
-.contact-link:hover {
-    opacity: 0.8;
+.contact-link:hover { opacity: 0.7; }
+.contact-link svg, .contact-link img {
+    width: 26px; height: 26px;
+    flex-shrink: 0; display: block; object-fit: contain;
 }
 
 .program-section h2 {
-    font-size: 1.8rem;
-    color: #222;
-    margin-bottom: 10px;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    font-weight: 600; color: var(--dark); margin-bottom: 12px;
 }
 
-.program-section ul {
-    list-style: disc;
-    padding-left: 40px;
-}
-
+.program-section ul { list-style: disc; padding-left: 24px; }
 .program-section li {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    margin-bottom: 8px; color: var(--dark); line-height: 1.6;
 }
-
 .program-section p {
-    font-size: 1.5rem;
-    margin: auto;
-    text-align: justify;
-    max-width: 1100px;
-    padding-left: 2rem;
-    color: #272626;
-    line-height: 1.8;
-    text-indent: 2rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    line-height: 1.7; color: var(--dark);
+    hyphens: auto; word-break: break-word;
 }
+.program-section a { color: var(--accent-dark); }
+.program-section a:hover { text-decoration: underline; }
+.program-link { color: var(--accent-dark); }
 
-.program-section a {
-    color: #2a5d9e;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
-.program-section a:hover {
-    text-decoration: underline;
-    color: #1d3f6e;
-}
-
-
+/* Таблица с горизонтальным скроллом на мобиле */
 .evaluation-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-    font-size: 1.5rem;
+    width: 100%; border-collapse: collapse;
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+    margin: 12px 0;
 }
 
-.evaluation-table th,
-.evaluation-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
+.evaluation-table th, .evaluation-table td {
+    border: 1px solid var(--light-line);
+    padding: 10px 12px;
+    text-align: left; word-break: break-word; vertical-align: top;
 }
 
 .evaluation-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
+    background: rgba(6,193,103,0.08);
+    font-weight: 600; color: var(--dark);
 }
 
-.evaluation-table td {
-    background-color: #fff;
-}
+.evaluation-table td { background: rgba(255,255,255,0.6); }
 
-@media (max-width: 768px) {
-    .program-container {
-        padding-top: 75px;
-        padding-left: 5px;
-        padding-right: 5px;
-        overflow-x: hidden;
-    }
-
-    .program-title {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
-
-    .program-subtitle {
-        font-size: 1.3rem;
-        color: #000000;
-        margin-bottom: 20px;
-    }
-
-    .program-section {
-        max-width: 100%;
-        margin: 5px auto;
-    }
-
-    .program-section p {
-        font-size: 1.2rem;
-        max-width: 100%;
-        word-wrap: break-word;
-        hyphens: auto;
-    }
-
-    .program-section li {
-        font-size: 1.2rem;
-    }
-
-    .program-section a {
-        font-size: 1.2rem;
-    }
-
-    .program-section h2 {
-        font-size: 1.35rem;
-        color: #222;
-        margin-bottom: 10px;
-    }
-
-    .evaluation-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 1rem 0;
-        font-size: 1.2rem;
-    }
+@media (max-width: 600px) {
+    .program-section { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .evaluation-table { min-width: 480px; }
 }
