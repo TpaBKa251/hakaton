@@ -143,7 +143,7 @@ const PartnersSection = () => {
         <section className="partners-wrapper">
             <Navbar className={`navbar visible`} />
             <div className="partners-content-new">
-                <h2 className="partners-header">Наши партнёры</h2>
+                <h2 className="partners-header">Партнёры за всю историю мероприятия</h2>
                 {partnersData.map((partner, index) => (
                     <div key={index} className="partner-item-new" lang="ru">
                         <img

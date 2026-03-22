@@ -53,13 +53,13 @@ function NavBar({ className }) {
                     <Link to="/" onClick={closeMenu}>
                         <img src={kot} alt="кот" className="navbar-logo" />
                     </Link>
-                    <span className="navbar-center" onClick={closeMenu}>Бизнес-кот</span>
+                    <span className="navbar-center" onClick={closeMenu}>Бизнес–кот</span>
                 </div>
 
                 <div className="navbar-right">
                     <Link to="/history" target="_blank" onClick={closeMenu}>О хакатоне</Link>
                     <Link to="/partners" target="_blank" onClick={closeMenu}>Партнеры</Link>
-                    <Link to="/doc" target="_blank" onClick={closeMenu}>Информационное письмо</Link>
+                    <Link to="/doc" target="_blank" onClick={closeMenu}>О главном</Link>
                     <Link to="/program" target="_blank" onClick={closeMenu}>Программа</Link>
                     <a
                         href="https://forms.gle/fE2cNBDmo8Yty8pJ9"
@@ -92,7 +92,7 @@ function NavBar({ className }) {
                 <div className="navbar-drawer-links">
                     <Link to="/history" target="_blank" onClick={closeMenu}>О хакатоне</Link>
                     <Link to="/partners" target="_blank" onClick={closeMenu}>Партнеры</Link>
-                    <Link to="/doc" target="_blank" onClick={closeMenu}>Информационное письмо</Link>
+                    <Link to="/doc" target="_blank" onClick={closeMenu}>О главном</Link>
                     <Link to="/program" target="_blank" onClick={closeMenu}>Программа</Link>
                 </div>
             </div>
