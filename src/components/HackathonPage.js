@@ -7,14 +7,12 @@ const HackathonPage = () => {
     return (
         <div className="hackathon-container" lang="ru">
             <Navbar className={`navbar visible`}/> {/* Добавляем навбар */}
-            <h1 className="hackathon-title">III Всероссийский предпринимательский хакатон «Бизнес-кот»-2026 с
-                международным участием</h1>
+            <h1 className="hackathon-title">III Всероссийский предпринимательский хакатон «Бизнес-кот» – 2026 </h1>
 
             <section className="hackathon-section">
                 <p>
-                    Бизнес-школа Национального исследовательского Томского политехнического университета приглашает
-                    студентов принять участие в
-                    III Всероссийском предпринимательском хакатоне с международным участием «Бизнес-кот»-2026.
+                    Бизнес-школа Томского политехнического университета приглашает
+                    студентов принять участие в III Всероссийском предпринимательском хакатоне «Бизнес-кот» – 2026.
                 </p>
                 <p><strong>Дата проведения:</strong> 14-16 апреля 2026 г.</p>
                 <p><strong>Формат:</strong> Очный</p>
@@ -113,18 +111,11 @@ const HackathonPage = () => {
                 </p>
             </section>
 
-            <section className="hackathon-section">
-                <h2>Сайт хакатона</h2>
-                <p>
-                    🌐 <a href="https://hakaton-zeta.vercel.app/" target="_blank" rel="noopener noreferrer">
-                    hakaton-zeta.vercel.app
-                </a>
-                </p>
-            </section>
+
             <section className="hackathon-section">
                 <h2>Документ</h2>
                 <p>
-                    📄 <a href="//hakaton-zeta.vercel.app/Inf_pismo_biznes-kot.docx" target="_blank" rel="noopener noreferrer">
+                    📄 <a href="//hakaton-zeta.vercel.app/informatsionnoe_pismo_2026.pdf" target="_blank" rel="noopener noreferrer">
                     Открыть/скачать документ
                 </a>
                 </p>
