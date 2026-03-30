@@ -61,6 +61,8 @@
     margin-bottom: 8px;
     color: var(--dark);
     line-height: 1.6;
+    /* justify убран с li — он ломает flex на мобиле */
+    text-align: left;
 }
 
 .program-section li::before {
@@ -69,15 +71,30 @@
     line-height: 1.6;
 }
 
+/* время (strong) не переносится никогда */
+.program-section li > strong {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* контентный div растягивается на оставшееся место */
+.program-section li > div {
+    flex: 1;
+    min-width: 0;
+    text-align: justify;
+}
+
 .program-section li em {
     display: block;
     font-style: italic;
+    text-align: left; /* адрес курсивом — без justify, выглядит чище */
 }
 
 .program-section p {
     font-size: clamp(0.95rem, 2vw, 1.1rem);
     line-height: 1.7; color: var(--dark);
     hyphens: auto; word-break: break-word;
+    text-align: justify;
 }
 .program-section a { color: var(--accent-dark); }
 .program-section a:hover { text-decoration: underline; }
@@ -101,19 +118,24 @@
     font-weight: 600; color: var(--dark);
 }
 
-.evaluation-table td { background: rgba(255,255,255,0.6); }
-
-.program-section li,
-.program-section p,
 .evaluation-table td {
+    background: rgba(255,255,255,0.6);
     text-align: justify;
 }
+
 .evaluation-table th:last-child,
 .evaluation-table td:last-child {
     white-space: nowrap;
     width: 1%;
+    text-align: center;
 }
+
 @media (max-width: 600px) {
     .program-section { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     .evaluation-table { min-width: 480px; }
+
+    /* на мобиле justify в ячейках таблицы тоже отключаем — слишком узко */
+    .evaluation-table td {
+        text-align: left;
+    }
 }
