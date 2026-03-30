@@ -20,7 +20,7 @@ const ProgramPage = () => {
                 <h2>14 апреля</h2>
                 <ul>
                     <li>
-                        <strong>13:30 – 14:00</strong>
+                        <strong className="text-green">13:30 – 14:00</strong>
                         <div>
                             Регистрация участников
                             <em>ул. Белинского, 51, 3 этаж, 309 зал Воробьева</em>
@@ -28,13 +28,13 @@ const ProgramPage = () => {
                         </div>
                     </li>
                 <li>
-                    <strong>14:00 – 15:00</strong> Приветственное слово организаторов и экспертов
+                    <strong className="text-green">14:00 – 15:00</strong> Приветственное слово организаторов и экспертов
                 </li>
                 <li>
-                    <strong>15:00 – 15:30</strong> Жеребьевка, распределение кейсов по командам
+                    <strong className="text-green">15:00 – 15:30</strong> Жеребьевка, распределение кейсов по командам
                 </li>
                 <li>
-                    <strong>15:30 – 16:45</strong> Тренинг по командообразованию
+                    <strong className="text-green">15:30 – 16:45</strong> Тренинг по командообразованию
                 </li>
                 </ul>
             </section>
@@ -43,21 +43,21 @@ const ProgramPage = () => {
                 <h2>15 апреля</h2>
                 <ul>
                     <li>
-                        <strong>08:30 – 14:30</strong>
+                        <strong className="text-green">08:30 – 14:30</strong>
                         <div>
                             Работа команд над кейсами
                             <em>Коворкинг – ул. Белинского, 51</em>
                         </div>
                     </li>
                     <li>
-                        <strong>14:30 – 15:15</strong>
+                        <strong className="text-green">14:30 – 15:15</strong>
                         <div>
                             Обед (от спонсоров)
                             <em>Главный корпус ТПУ, пр. Ленина, 30</em>
                         </div>
                     </li>
                     <li>
-                        <strong>15:30 – 21:00</strong>
+                        <strong className="text-green">15:30 – 21:00</strong>
                         <div>
                             Работа команд над кейсами
                             <em>Коворкинг – ул. Белинского, 51</em>
@@ -70,39 +70,39 @@ const ProgramPage = () => {
                 <h2>16 апреля</h2>
                 <ul>
                     <li>
-                        <strong> 08:30 – 12:15 </strong>
+                        <strong className="text-green"> 08:30 – 12:15 </strong>
                         <div>
                             Подготовка презентационных материалов
                             <em>Коворкинг – ул. Белинского, 51</em>
                         </div>
                     </li>
                     <li>
-                        <strong>12:15 – 12:30</strong>
+                        <strong className="text-green">12:15 – 12:30</strong>
                         <div>
                             Сдача презентационных материалов
                         </div>
                     </li>
                     <li>
-                        <strong> 12:30 – 13:00 </strong>
+                        <strong className="text-green"> 12:30 – 13:00 </strong>
                         <div>
                             Сбор участников
                             <em> ул. Белинского, 51, 3-й этаж, <br/>Предпринимательская точка кипения </em>
                         </div>
                     </li>
                     <li>
-                        <strong> 13:00 – 15:00 </strong>
+                        <strong className="text-green"> 13:00 – 15:00 </strong>
                         <div>
                             Защита решений кейсов
                         </div>
                     </li>
                     <li>
-                        <strong> 15:00 – 15:30 </strong>
+                        <strong className="text-green"> 15:00 – 15:30 </strong>
                         <div>
                             Фуршет (от спонсоров)
                         </div>
                     </li>
                     <li>
-                        <strong> 15:30 – 16:30 </strong>
+                        <strong className="text-green"> 15:30 – 16:30 </strong>
                         <div>
                             Подведение итогов. Награждение.
                         </div>
@@ -115,28 +115,28 @@ const ProgramPage = () => {
                 <ul>
                     <li>
                         <div>
-                            <strong>Командная работа:</strong> Участники Хакатона должныработать в команде,
+                            <strong className="text-green">Командная работа:</strong> Участники Хакатона должныработать в команде,
                             поддерживая взаимоуважение и профессиональное общение внутри
                             своей команды и с другими участниками, организаторами и заказчиками.
                         </div>
                         </li>
                     <li>
                         <div>
-                            <strong>Соблюдение сроков:</strong> Все участники должны соблюдать установленные
+                            <strong className="text-green">Соблюдение сроков:</strong> Все участники должны соблюдать установленные
                             сроки для презентаций, начала и завершения работ. Невыполнение
                             сроков может привести к дисквалификации.
                         </div>
                     </li>
                     <li>
                         <div>
-                            <strong>Бережное обращение с оборудованием и помещениями: </strong>
+                            <strong className="text-green">Бережное обращение с оборудованием и помещениями: </strong>
                             Участники должны бережно использовать предоставленное оборудование и помещения.
                             Повреждение имущества могут повлечь за собой финансовую ответственность.
                         </div>
                     </li>
                     <li>
                         <div>
-                        <strong>Смена команды и задания: </strong>
+                        <strong className="text-green">Смена команды и задания: </strong>
                             Изменение команды после начала Хакатона
                             запрещено, за исключением случаев, согласованных с организаторами.
                         </div>
@@ -155,44 +155,44 @@ const ProgramPage = () => {
                     </thead>
                     <tbody>
                     <tr>
-                        <td><strong>Анализ проблемы</strong> - насколько верно,
+                        <td><strong className="text-green">Анализ проблемы</strong> - насколько верно,
                             комплексно, и в соответствие с действительностью, участники Хакатона
                             смогли выделить причины возникновения проблемы на объекте, описанной в кейсе
                         </td>
                         <td>1–5</td>
                     </tr>
                     <tr>
-                        <td><strong>Структурирование проблемы</strong> – насколько четко, логично,
+                        <td><strong className="text-green">Структурирование проблемы</strong> – насколько четко, логично,
                             последовательно изложена проблема, её последствия и риски для объекта
                         </td>
                         <td>1–5</td>
                     </tr>
                     <tr>
-                        <td><strong>Обоснование решения</strong> – насколько аргументирована позиция участников относительно предложенного решения кейса</td>
+                        <td><strong className="text-green">Обоснование решения</strong> – насколько аргументирована позиция участников относительно предложенного решения кейса</td>
                         <td>1–5</td>
                     </tr>
                     <tr>
-                        <td><strong>Логичность и реализуемость плана внедрения стратегической инициативы</strong> – насколько соблюдены законы логики
+                        <td><strong className="text-green">Логичность и реализуемость плана внедрения стратегической инициативы</strong> – насколько соблюдены законы логики
                             при планировании реализации решения,
                             можно ли осуществить предложенный план в текущих экономических условиях
                         </td>
                         <td>1–5</td>
                     </tr>
                     <tr>
-                        <td><strong>Качество презентации</strong> – насколько презентация решения, представленная командой,
+                        <td><strong className="text-green">Качество презентации</strong> – насколько презентация решения, представленная командой,
                             соответствует общепринятым требованиям к бизнес-презентациям
                         </td>
                         <td>1–5</td>
                     </tr>
                     <tr>
-                        <td><strong>Качество выступления</strong> – умение четко и уверенно доносить свои мысли,
+                        <td><strong className="text-green">Качество выступления</strong> – умение четко и уверенно доносить свои мысли,
                             использовать подходящие интонацию и темп речи,
                             способность «зажечь» аудиторию с первых минут своего выступления и поддерживать интерес слушателей
                         </td>
                         <td>1–5</td>
                     </tr>
                     <tr>
-                        <td><strong>Ответы на вопросы</strong> - умение взаимодействовать с аудиторией, динамично
+                        <td><strong className="text-green">Ответы на вопросы</strong> - умение взаимодействовать с аудиторией, динамично
                             реагировать на вопросы и аргументировать свою точку зрения
                         </td>
                         <td>1–5</td>
@@ -205,9 +205,9 @@ const ProgramPage = () => {
             <section className="program-section">
                 <h2>Контакты</h2>
 
-                <p><strong>Калашникова Татьяна Владимировна</strong></p>
+                <p className="no-justify"><strong>Калашникова Татьяна Владимировна</strong></p>
 
-                <p>
+                <p className="no-justify">
                     📞 <a href="tel:+79039515173"
                          target="_blank"
                          rel="noopener noreferrer"
@@ -217,7 +217,7 @@ const ProgramPage = () => {
                 </a>
                 </p>
 
-                <p>
+                <p className="no-justify">
                     ✉️ <a href="mailto:tvkalash@tpu.ru"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -227,7 +227,7 @@ const ProgramPage = () => {
                 </a>
                 </p>
 
-                <p>
+                <p className="no-justify">
                     <a
                         href="https://vk.com/id303047664"
                         target="_blank"
@@ -246,7 +246,7 @@ const ProgramPage = () => {
                     </a>
                 </p>
 
-                <p>
+                <p className="no-justify">
                     <a
                         href="https://t.me/Tatiana_V_Kalashnikova"
                         target="_blank"
@@ -265,7 +265,7 @@ const ProgramPage = () => {
                     </a>
                 </p>
 
-                <p>
+                <p className="no-justify">
                     <a
                         href="https://max.ru/u/f9LHodD0cOKeHiTuFAR2f4ohNnjN7JKohIumiAKYl7eYjYLwJmJWbMxNL4Q"
                         target="_blank"
@@ -284,7 +284,7 @@ const ProgramPage = () => {
             <section className="program-section">
                 <h2>Состав жюри</h2>
                 <ul>
-                    <li><div><strong>Лисицын Александр Владимирович</strong>, начальник Управления молодежной политики
+                    <li><div><strong >Лисицын Александр Владимирович</strong>, начальник Управления молодежной политики
                         Администрации г.
                         Томска
                         </div>

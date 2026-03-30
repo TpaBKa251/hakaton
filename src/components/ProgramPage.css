@@ -129,6 +129,15 @@
     width: 1%;
     text-align: center;
 }
+.no-justify {
+    text-align: left !important;
+}
+.text-green {
+    color: var(--accent-dark);
+}  /* читаемый, для текста */
+.text-green-bright {
+    color: var(--accent);
+}        /* яркий, для иконок/акцентов */
 
 @media (max-width: 600px) {
     .program-section { overflow-x: auto; -webkit-overflow-scrolling: touch; }
