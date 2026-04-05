@@ -1,7 +1,7 @@
 import React from 'react';
 import './MapSection.css';
-import mapBackground from '../assets/images/main_map.png';
-import mapQRcode from '../assets/images/qrCodeMap.png';
+import mapBackground from '../assets/images/MAPCA.png';
+import mapQRcode from '../assets/images/QR.png';
 
 const MapSection = () => {
     return (
@@ -15,9 +15,8 @@ const MapSection = () => {
                     <div className="map-details">
                         <ul className="map-locations">
                             <li>1. Главный корпус ТПУ, пр. Ленина, 30</li>
-                            <li>2. Коворкинг «Кварк», ул. Белинского, 51</li>
+                            <li>2. Предпринимательская точка кипения, ул. Белинского, 51</li>
                             <li>3. Санаторий-профилакторий ТПУ, ул. Усова, 13</li>
-                            <li>4. МКЦ ТПУ, ул. Усова, 13в</li>
                         </ul>
                     </div>
                     <div className="map-qr">
