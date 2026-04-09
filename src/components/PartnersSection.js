@@ -1,27 +1,16 @@
 import React from 'react';
 import './PartnersSection.css';
 import partnersBackground1 from '../assets/images/partners/Rrosatom.png';
-import partnersBackground2 from '../assets/images/partners/Sber.png';
 import partnersBackground3 from '../assets/images/partners/Администрация Томска.png';
 import partnersBackground4 from '../assets/images/partners/Оранжевое лого.png';
-import partnersBackground5 from '../assets/images/partners/ca2d361a7d63d66c3ff0fb96420e6569.png';
-import partnersBackground6 from '../assets/images/partners/НИПИнефть.png';
-import partnersBackground7 from '../assets/images/Рисунок7.png';
 import partnersBackground8 from '../assets/images/partners/Risunok8.png';
-import partnersBackground9 from '../assets/images/Рисунок12.png';
 import partnersBackground10 from '../assets/images/partners/Stolovka.png';
-import partnersBackground11 from '../assets/images/partners/soyuz_mashinostroiteley.png';
-import partnersBackground12 from '../assets/images/partners/mikran.png';
 import partnersBackground13 from '../assets/images/partners/Sibur_logo.png';
-import partnersBackground14 from '../assets/images/partners/TIZ.png';
 import partnersBackground15 from '../assets/images/partners/logo mlp.png';
 import partnersBackground16 from '../assets/images/partners/Надпись 2.png';
-import partnersBackground17 from '../assets/images/partners/Лого дополнительная версия красный.png';
-import tomskEnergoSbit from '../assets/images/partners/512x512bb.png';
-import lubatovo from '../assets/images/partners/Любятово.png';
+import partnersBackground17 from '../assets/images/partners/alfa-bank-logo-red.png';
 import rgd from '../assets/images/partners/ржд.png';
-import chernogolovka from '../assets/images/partners/черноголовка.png';
-import interrao from '../assets/images/partners/img.png'
+ 
 
 
 const partnersData = [
