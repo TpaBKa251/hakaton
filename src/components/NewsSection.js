@@ -13,7 +13,7 @@ const newsData = [
         title: 'Программа хакатона',
         description: 'Ознакомьтесь с программой хакатона Бизнес–кот. Вы узнаете, что Вас ждет в каждый из дней проведения, а также Вы сможете ознакомиться с правилами, критериями и составом жюри',
         link: '/program', // Ссылка на страницу новостей
-        file: '//hakaton-zeta.vercel.app/Programma2026.pdf'
+        file: '//hakaton-zeta.vercel.app/Programma_K_kopp.pdf'
     },
     {
         title: 'Предлагаем размещение',

@@ -34,8 +34,16 @@ const ProgramPage = () => {
                     <strong className="text-green">15:00 – 15:30</strong> Жеребьевка, распределение кейсов по командам
                 </li>
                 <li>
-                    <strong className="text-green">15:30 – 16:45</strong> Тренинг по командообразованию
+                    <strong className="text-green">15:30 – 16:30</strong> Тренинг по командообразованию
                 </li>
+                    <li>
+
+                            <strong className="text-green">16:30 – 18:00</strong>
+                        <div>
+                            Автобусная экскурсию по городу Томску
+                            <em> Место отправления – Профилакторий ТПУ, ул. Усова, 13</em>
+                        </div>
+                    </li>
                 </ul>
             </section>
 
@@ -286,7 +294,7 @@ const ProgramPage = () => {
                 <ul>
                     <li>
                         <div>
-                        <strong >Лисицын Александр Владимирович</strong>, начальник Управления молодежной политики
+                        <strong>Лисицын Александр Владимирович</strong>, начальник Управления молодежной политики
                         Администрации г. Томска
                         </div>
                     </li>
@@ -334,16 +342,47 @@ const ProgramPage = () => {
 
             <section className="program-section">
                 <h2>Спонсоры</h2>
-                {/*<ul>*/}
-                {/*    <li>Администрация города Томска</li>*/}
-                {/*</ul>*/}
+                <ul>
+                    <strong className="text-green">Администрация города Томска</strong>
+                </ul>
+                <ul>
+                    <strong className="text-green">ООО Ням-Ням</strong>
+                </ul>
+                <ul>
+                    <strong className="text-green">АО «Сибирский химический комбинат»</strong>
+                </ul>
+                <ul>
+                    <strong className="text-green">ООО «ВИН БИЗНЕС РЕШЕНИЯ»</strong>
+                </ul>
+                <ul>
+                    <strong className="text-green">ООО «Открытый космос» (Make Love Pizza Томск)</strong>
+                </ul>
+                <ul>
+                    <strong className="text-green">Западно-Сибирская железная дорога - филиал «ОАО РЖД»</strong>
+                </ul>
+                <ul>
+                    <strong className="text-green">ООО «Томскнефтехим» (Компания СИБУР)</strong>
+                </ul>
+                <ul>
+                    <strong className="text-green">АО «Альфа-Банк»</strong>
+                </ul>
+                <ul>
+                    <strong className="text-green">ООО «Бочкари»</strong>
+                </ul>
+                <ul>
+                    <strong className="text-green">Столовая «В главном», ООО «Энерго-тракт»</strong>
+                </ul>
+                <ul>
+                    <strong className="text-green">Томское РО ООО «СоюзМаш России»</strong>
+                </ul>
+
             </section>
 
             <section className="program-section">
                 <h2>Документ</h2>
                 <p>
                     <a
-                        href="//hakaton-zeta.vercel.app/Programma2026.pdf"
+                        href="//hakaton-zeta.vercel.app/Programma_K_kopp.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="program-link"
