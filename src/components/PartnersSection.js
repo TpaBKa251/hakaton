@@ -5,6 +5,7 @@ import partnersBackground3 from '../assets/images/partners/Администра�
 import partnersBackground4 from '../assets/images/partners/Оранжевое лого.png';
 import partnersBackground8 from '../assets/images/partners/Risunok8.png';
 import partnersBackground10 from '../assets/images/partners/Stolovka.png';
+import partnersBackground11 from '../assets/images/partners/soyuz_mashinostroiteley.png';
 import partnersBackground13 from '../assets/images/partners/Sibur_logo.png';
 import partnersBackground15 from '../assets/images/partners/logo mlp.png';
 import partnersBackground16 from '../assets/images/partners/Надпись 2.png';
@@ -20,9 +21,34 @@ const partnersData = [
         href: 'https://admin.tomsk.ru/'
     },
     {
-        name: 'Альфа банк',
+        name: 'Росатом',
+        logo: partnersBackground1,
+        href: 'https://www.rosatom.ru/index.html'
+    },
+    {
+        name: 'РЖД',
+        logo: rgd,
+        href: 'https://zszd.rzd.ru/#'
+    },
+    {
+        name: 'ТомскНефтеХим',
+        logo: partnersBackground13,
+        href: 'https://www.sibur.ru/TomskNeftehim/'
+    },
+    {
+        name: 'Альфа-банк',
         logo: partnersBackground17,
         href: 'https://alfabank.ru/?ysclid=mnigvd4c1d80575011'
+    },
+    {
+        name: 'Союз машиностроителей России',
+        logo: partnersBackground11,
+        href: 'https://soyuzmash.ru/regional-offices/tomskoe-regionalnoe-otdelenie/'
+    },
+    {
+        name: 'ВИН БИЗНЕС РЕШЕНИЯ',
+        logo: partnersBackground8,
+        href: 'https://winbd.ru/'
     },
     {
         name: 'Ням-Ням',
@@ -30,12 +56,7 @@ const partnersData = [
         href: 'https://nyam-nyam.me/'
     },
     {
-        name: 'СИБУР',
-        logo: partnersBackground13,
-        href: 'https://www.sibur.ru/TomskNeftehim/'
-    },
-    {
-        name: 'MakeLove',
+        name: 'MakeLovePizza',
         logo: partnersBackground15,
         href: 'https://makelovepizza.ru/tomsk'
     },
@@ -45,25 +66,11 @@ const partnersData = [
         href: 'https://www.google.com/url?q=https://bochkari.ru/?ysclid%3Dmnigmyt5rd296068200&sa=D&source=editors&ust=1775729069362679&usg=AOvVaw0x3X9JPds6crxJsGCn2BU9'
     },
     {
-        name: 'ВИН БИЗНЕС РЕШЕНИЯ',
-        logo: partnersBackground8,
-        href: 'https://winbd.ru/'
-    },
-    {
         name: 'В главном',
         logo: partnersBackground10,
         href: 'https://yandex.ru/maps/org/stolovaya/1141781494/?ll=84.950164%2C56.465391&z=17'
     },
-    {
-        name: 'РЖД',
-        logo: rgd,
-        href: 'https://zszd.rzd.ru/#'
-    },
-    {
-        name: 'Росатом',
-        logo: partnersBackground1,
-        href: 'https://www.rosatom.ru/index.html'
-    },
+
     // {
     //     name: 'Сбер',
     //     logo: partnersBackground2,
@@ -94,11 +101,6 @@ const partnersData = [
     //     name: 'Любятово',
     //     logo: lubatovo,
     //     href: 'https://chernogolovka.com/'
-    // },
-    // {
-    //     name: 'Союз машиностроителей России',
-    //     logo: partnersBackground11,
-    //     href: 'https://soyuzmash.ru/regional-offices/tomskoe-regionalnoe-otdelenie/'
     // },
     // {
     //     name: 'Микран',

@@ -20,6 +20,9 @@ import rgd from '../assets/images/partners/ржд.png';
 import chernogolovka from '../assets/images/partners/черноголовка.png';
 import interrao from '../assets/images/partners/img.png'
 import Navbar from "./NavBar";
+import partnersBackground17 from "../assets/images/partners/alfa-bank-logo-red.png";
+import partnersBackground15 from "../assets/images/partners/logo mlp.png";
+import partnersBackground16 from "../assets/images/partners/Надпись 2.png";
 
 const partnersData = [
     {
@@ -41,10 +44,22 @@ const partnersData = [
         description: 'Сбер — крупнейший банк России, предоставляющий широкий спектр финансовых услуг'
     },
     {
+        name: 'АО Альфа-банк',
+        logo: partnersBackground17,
+        href: 'https://alfabank.ru/?ysclid=mnigvd4c1d80575011',
+        description: "Альфа-банк - "
+    },
+    {
         name: 'ООО "НЯМ-НЯМ"',
         logo: partnersBackground4,
         href: 'https://nyam-nyam.me/',
         description: 'Ням-Ням — кафе вкусной и качественной еды в Томске'
+    },
+    {
+        name: 'Make Love Pizza Томск (ООО «Открытый космос»)',
+        logo: partnersBackground15,
+        href: 'https://makelovepizza.ru/tomsk',
+        description: 'Make Love pizza -'
     },
     {
         name: 'СИБУР ООО "Томскнефтехим"',
@@ -93,6 +108,12 @@ const partnersData = [
         logo: tomskEnergoSbit,
         href: 'https://tomskenergosbyt.ru/',
         description: 'Томскэнергосбыт — российская энергосбытовая компания'
+    },
+    {
+        name: 'ООО "Бочкари"',
+        logo: partnersBackground16,
+        href: 'https://www.google.com/url?q=https://bochkari.ru/?ysclid%3Dmnigmyt5rd296068200&sa=D&source=editors&ust=1775729069362679&usg=AOvVaw0x3X9JPds6crxJsGCn2BU9',
+        description: 'Бочкари - '
     },
     {
         name: 'ГК "Черноголовка"',

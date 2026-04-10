@@ -343,37 +343,37 @@ const ProgramPage = () => {
             <section className="program-section">
                 <h2>Спонсоры</h2>
                 <ul>
-                    <strong className="text-green">Администрация города Томска</strong>
-                </ul>
-                <ul>
-                    <strong className="text-green">ООО Ням-Ням</strong>
+                    <strong className="text-green">Управление молодежной политики администрации города Томска</strong>
                 </ul>
                 <ul>
                     <strong className="text-green">АО «Сибирский химический комбинат»</strong>
                 </ul>
                 <ul>
-                    <strong className="text-green">ООО «ВИН БИЗНЕС РЕШЕНИЯ»</strong>
-                </ul>
-                <ul>
-                    <strong className="text-green">ООО «Открытый космос» (Make Love Pizza Томск)</strong>
-                </ul>
-                <ul>
                     <strong className="text-green">Западно-Сибирская железная дорога - филиал «ОАО РЖД»</strong>
                 </ul>
                 <ul>
-                    <strong className="text-green">ООО «Томскнефтехим» (Компания СИБУР)</strong>
+                    <strong className="text-green">ООО «Томскнефтехим» (Группа компании СИБУР)</strong>
                 </ul>
                 <ul>
                     <strong className="text-green">АО «Альфа-Банк»</strong>
+                </ul>
+                <ul>
+                    <strong className="text-green">Томское РО ООО «СоюзМаш России»</strong>
+                </ul>
+                <ul>
+                    <strong className="text-green">ООО «ВИН БИЗНЕС РЕШЕНИЯ»</strong>
+                </ul>
+                <ul>
+                    <strong className="text-green">Кафе «Ням-Ням»</strong>
+                </ul>
+                <ul>
+                    <strong className="text-green">Make Love Pizza Томск (ООО «Открытый космос»)</strong>
                 </ul>
                 <ul>
                     <strong className="text-green">ООО «Бочкари»</strong>
                 </ul>
                 <ul>
                     <strong className="text-green">Столовая «В главном», ООО «Энерго-тракт»</strong>
-                </ul>
-                <ul>
-                    <strong className="text-green">Томское РО ООО «СоюзМаш России»</strong>
                 </ul>
 
             </section>
