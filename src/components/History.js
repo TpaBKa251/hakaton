@@ -38,6 +38,11 @@ function History() {
                     href="https://tomsk.gov.ru/news/front/view?id=164639">https://tomsk.gov.ru/news/front/view?id=164639</a>
                 </li>
                 <li className="history-list-item">
+                    Управления молодежной политики Администрации города Томска:<br/><a
+                className="history-a"
+                href="https://vk.ru/wall-37286626_15045">https://vk.ru/wall-37286626_15045</a>
+                </li>
+                <li className="history-list-item">
                     РЖД:<br/><a
                     className="history-a"
                     href="https://zszd.rzd.ru/ru/2746/page/2452802?id=323395">https://zszd.rzd.ru/ru/2746/page/2452802?id=323395</a>
