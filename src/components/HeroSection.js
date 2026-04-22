@@ -1,7 +1,7 @@
 import React from 'react';
 import './HeroSection.css';
 
-import kot_big from '../assets/images/Dlya_polozhenia_1 (1) (1).webp'
+import kot_big from '../assets/images/kot.png'
 
 const HeroSection = () => {
     return (

@@ -30,8 +30,33 @@ function History() {
                 Присоединяйтесь к нам, чтобы совместно воплотить мечты в жизнь и создать новую, вдохновляющую
                 среду для будущих поколений предпринимателей!
             </p>
-            <h2 className="history-subtitle">Люди о нас:</h2>
+            <h2 className="history-subtitle">Люди и организации о нас:</h2>
             <ul className="history-list">
+                <li className="history-list-item">
+                    Администрация города Томска:<br/><a
+                    className="history-a"
+                    href="https://tomsk.gov.ru/news/front/view?id=164639">https://tomsk.gov.ru/news/front/view?id=164639</a>
+                </li>
+                <li className="history-list-item">
+                    РЖД:<br/><a
+                    className="history-a"
+                    href="https://zszd.rzd.ru/ru/2746/page/2452802?id=323395">https://zszd.rzd.ru/ru/2746/page/2452802?id=323395</a>
+                </li>
+                <li className="history-list-item">
+                    ИЭиУ | Институт Экономики и Управления | КемГУ: <br/><a
+                    className="history-a"
+                    href="https://vk.ru/wall-128862079_3127">https://vk.ru/wall-128862079_3127</a>
+                </li>
+                <li className="history-list-item">
+                    Бизнес-школа ТПУ:<br/><a
+                    className="history-a"
+                    href="https://vk.ru/wall-42828574_7266">https://vk.ru/wall-42828574_7266</a>
+                </li>
+                <li className="history-list-item">
+                    Томский Политехнический университет:<br/><a
+                className="history-a"
+                href="https://business.tpu.ru/news/Tomsksnovastaltsentromnovykhideyiresheniy/">https://business.tpu.ru/news/Tomsksnovastaltsentromnovykhideyiresheniy/</a>
+                </li>
                 <li className="history-item">
                     Владимир Игоревич Самокиш - депутат Государственной думы Российской Федерации: <a
                     className="history-a"

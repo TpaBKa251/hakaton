@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
-import kot from '../assets/images/kot (1) (1).png';
+import kot from '../assets/images/kot.png';
 
 function NavBar({ className }) {
     const [menuOpen, setMenuOpen] = useState(false);

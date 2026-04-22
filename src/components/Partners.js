@@ -12,11 +12,11 @@ import partnersBackground9 from '../assets/images/Рисунок12.png';
 import partnersBackground10 from '../assets/images/TPU-logo.png';
 import partnersBackground11 from '../assets/images/союз машиностроителей.png';
 import partnersBackground12 from '../assets/images/микран.png';
-import partnersBackground13 from '../assets/images/sibur.png';
+import partnersBackground13 from '../assets/images/partners/sibur1.jpg';
 import partnersBackground14 from '../assets/images/partners/TIZ.png';
 import tomskEnergoSbit from '../assets/images/partners/512x512bb.png';
 import lubatovo from '../assets/images/partners/Любятово.png';
-import rgd from '../assets/images/partners/ржд.png';
+import rgd from '../assets/images/partners/rzd.png';
 import chernogolovka from '../assets/images/partners/черноголовка.png';
 import interrao from '../assets/images/partners/img.png'
 import Navbar from "./NavBar";

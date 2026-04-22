@@ -6,11 +6,11 @@ import partnersBackground4 from '../assets/images/partners/Оранжевое л
 import partnersBackground8 from '../assets/images/partners/Risunok8.png';
 import partnersBackground10 from '../assets/images/partners/Stolovka.png';
 import partnersBackground11 from '../assets/images/partners/soyuz_mashinostroiteley.png';
-import partnersBackground13 from '../assets/images/partners/Sibur_logo.png';
+import partnersBackground13 from '../assets/images/partners/sibur1.jpg';
 import partnersBackground15 from '../assets/images/partners/logo mlp.png';
 import partnersBackground16 from '../assets/images/partners/Надпись 2.png';
 import partnersBackground17 from '../assets/images/partners/alfa-bank-logo-red.png';
-import rgd from '../assets/images/partners/ржд.png';
+import rgd from '../assets/images/partners/rzd.png';
  
 
 
