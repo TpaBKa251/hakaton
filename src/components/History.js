@@ -33,7 +33,7 @@ function History() {
             <h2 className="history-subtitle">Люди и организации о нас:</h2>
             <ul className="history-list">
                 <li className="history-list-item">
-                    Администрация города Томска:<br/><a
+                    Администрация Томской области:<br/><a
                     className="history-a"
                     href="https://tomsk.gov.ru/news/front/view?id=164639">https://tomsk.gov.ru/news/front/view?id=164639</a>
                 </li>
