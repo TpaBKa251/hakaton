@@ -82,6 +82,11 @@ function History() {
                     НоВГУ): <a className="history-a"
                                href="https://www.novsu.ru/university/press/news/229434/">https://www.novsu.ru/university/press/news/229434/</a>
                 </li>
+                <li className="history-item">
+                    Центр карьеры АО «СХК»:
+                    <a className="history-a"
+                               href="https://vk.com/wall-222847903_582">https://vk.com/wall-222847903_582</a>
+                </li>
             </ul>
             <h2 className="history-subtitle">
                 Вузы участники за всю историю хакатона:
@@ -107,6 +112,7 @@ function History() {
                     управления и радиоэлектроники (ТУСУР)</a></li>
                 <li><a className="history-a" href="https://wsb.rgup.ru/">Западно-Сибирский филиал Российского
                     государственного университета правосудия</a></li>
+
             </ul>
 
         </div>
