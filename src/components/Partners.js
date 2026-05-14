@@ -21,8 +21,8 @@ import chernogolovka from '../assets/images/partners/черноголовка.pn
 import interrao from '../assets/images/partners/img.png'
 import Navbar from "./NavBar";
 import partnersBackground17 from "../assets/images/partners/alfa-bank-logo-red.png";
-import partnersBackground15 from "../assets/images/partners/logo mlp.png";
-import partnersBackground16 from "../assets/images/partners/Надпись 2.png";
+import partnersBackground15 from "../assets/images/partners/logo-mlp.png";
+import partnersBackground16 from "../assets/images/partners/NADPISCOLA.png";
 
 const partnersData = [
     {
