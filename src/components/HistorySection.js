@@ -13,11 +13,25 @@ import historyImage10 from '../assets/images/partners/Hacaton2025_3.jpg';
 import historyImage11 from '../assets/images/partners/Hacaton2025_4.jpg';
 import historyImage12 from '../assets/images/partners/Hacaton2025_5.jpg';
 import historyImage13 from '../assets/images/partners/Hacaton2025_6.jpg';
+import historyImage14 from '../assets/images/partners/IMG_6602.jpg';
+import historyImage15 from '../assets/images/partners/IMG_6649.jpg';
+import historyImage16 from '../assets/images/partners/IMG_6662.jpg';
+import historyImage17 from '../assets/images/partners/IMG_6744.jpg';
+import historyImage18 from '../assets/images/partners/IMG_6809.jpg';
+import historyImage19 from '../assets/images/partners/IMG_6944.jpg';
+import historyImage20 from '../assets/images/partners/IMG_7170.jpg';
+import historyImage21 from '../assets/images/partners/IMG_7203.jpg';
+import historyImage22 from '../assets/images/partners/IMG_7236.jpg';
+import historyImage23 from '../assets/images/partners/IMG_7288.jpg';
+import historyImage24 from '../assets/images/partners/IMG_7355.jpg';
 
 const historyImages = [
     historyImage1, historyImage2, historyImage3, historyImage4,
     historyImage5, historyImage6, historyImage7, historyImage8,
-    historyImage9, historyImage10, historyImage11, historyImage12, historyImage13,
+    historyImage9, historyImage10, historyImage11, historyImage12, historyImage13, historyImage14, historyImage15, historyImage16, historyImage17,
+    historyImage18, historyImage19,
+    historyImage20, historyImage21, historyImage22, historyImage23, historyImage24,
+
 ];
 
 const HistorySection = () => {
